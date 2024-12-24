@@ -2,20 +2,23 @@ import { SectionBox } from "@/components/SectionBox"
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
 import { ReactNode } from "react"
 import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
-import Ribbon from "@/assets/ribbon.svg";
-import Issue2 from "@/assets/issue2.webp";
-import Issue3 from "@/assets/issue3.webp";
 import { StaticImageData } from "next/image";
 import Image from 'next-export-optimize-images/picture';
 import { MdOutlinePhoto, MdPerson, MdPersonOutline, MdPhoto } from "react-icons/md";
 import { Button3 } from "@/components/Button3";
 import { title } from "process";
 
+import Join1 from "@/assets/join1.webp";
+import Join2 from "@/assets/join2.webp";
+import Join3 from "@/assets/join3.webp";
+import Join4 from "@/assets/join4.webp";
+
 const data = [
 
     {
         num: "01",
         title: "様々な人とつながる",
+        img: Join1,
         content: <>
             オフライン交流会や各種イベントの開催<br />
             チャット上での交流<br />
@@ -25,6 +28,7 @@ const data = [
     {
         num: "02",
         title: "集客や採用ができる",
+        img: Join2,
         content: <>
             求人や案件、仕事の受発注<br />
             マルシェなどのイベント<br />
@@ -34,6 +38,7 @@ const data = [
     {
         num: "03",
         title: "スキルアップにつながる",
+        img: Join3,
         content: <>
             セミナーの開催<br />
             スキルやノウハウなど<br />
@@ -43,54 +48,67 @@ const data = [
     {
         num: "04",
         title: "朝活ができる",
+        img: Join4,
         content: <>
             平日の朝7時から8時まで<br />
             ポモドーロタイマーを活用した<br />
             Zoom朝活で生産性が高まります
         </>,
     },
-    {
-        num: "05",
-        title: "中四国を盛り上げられる",
-        content: <>
-            行政や民間と協力、協業して<br />
-            各メンバーの力と知恵で<br />
-            地域資源、問題、経済の課題解決に取り組む
-        </>,
-    },
-    {
-        num: "06",
-        title: "経済圏の構築",
-        content: <>
-            Coming soon
-        </>,
-    },
 ]
 
-export const IntroduceSection = () => {
-    return <SectionBox disablePx disableMaxWidth>
+export const HowToJoinSection = () => {
+    return <SectionBox disablePx disableMaxWidth className="mx-auto max-w-4xl !gap-8">
+        <h2 className="text-title1 w-full border-b-2 border-color3 pb-4 text-center border-dotted max-w-md">
+            入会方法
+        </h2>
 
-        <div className="w-[120%] relative">
-            <Image src={Ribbon} alt="Onayami" className="w-[120%] min-h-60 object-cover" />
-            <h2 className="absolute inset-0 m-auto mt-12 text-white flex justify-center items-center text-title1 font-bold">
-                つながるラボなら<br />
-                中四国でつながる
-            </h2>
-        </div>
-
-
-        <div className="hiddlen w-full md:grid grid-cols-3 gap-8 max-w-6xl px-8 mt-12 md:mt-0" >
+        <div className="hidden sm:grid w-full sm:grid-cols-2 md:grid-cols-4 max-w-6xl" >
             {
                 data.map((x, i) =>
                     <IntroduceItem
+                        src={x.img}
                         key={x.title}
                         num={x.num}
-                        delay={i * 100}
+                        delay={i * 200}
                         title={x.title}
                         content={x.content}
                     />
                 )
             }
+        </div>
+
+        <div className="sm:hidden" >
+            <Splide
+                className=""
+                options={{
+                    autoplay: true,
+                    rewind: true,
+                    interval: 2000, // 自動再生の間隔
+                    speed: 2000, // フェードする時間
+                    arraws: false,
+                    width: 'auto',
+                    perPage: 1,
+                    autoWidth: true,
+                } as Options}
+            >
+                {
+                    data.map((x, i) =>
+
+                        <SplideSlide key={i}>
+                            <IntroduceItem
+                                src={x.img}
+                                key={x.title}
+                                num={x.num}
+                                delay={i * 200}
+                                title={x.title}
+                                content={x.content}
+                            />
+                        </SplideSlide>
+
+                    )
+                }
+            </Splide>
         </div>
     </SectionBox>
 }
@@ -106,20 +124,9 @@ const IntroduceItem = ({ title, content, delay, num, src }: {
     return (
         <FadeAndSlideScrollTriggerAnimation
             delay={delay}
-            className="w-full -mt-12 md:mt-0"
-            innerClassName="pb-16 md:pb-8 p-8 w-full h-full flex flex-col items-center gap-4 bg-gradient4  rounded-3xl w-fit">
-            <div className="flex items-center gap-3 w-full">
-                <div className="text-color2 flex flex-col text-[1rem] md:text-[2rem]">
-                    <span> Point</span>
-                    <span className="text-[2rem] md:text-[3rem] mx-auto mt-4">{num}</span>
-                </div>
-                <h3 className="text-title2">
-                    {title}
-                </h3>
-            </div>
-
-            <MdOutlinePhoto className="text-[8rem]" />
-            <p className="text-size2">{content}</p>
+            className="w-full"
+            innerClassName="h-full flex flex-col items-center gap-4 overflow-hidden">
+            <Image src={src} alt={title} className="w-[320px] h-[540px] object-cover" />
         </ FadeAndSlideScrollTriggerAnimation>
     );
 }

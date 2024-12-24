@@ -26,11 +26,11 @@ export const OnayamiSection = () => {
                 <h2 className="text-title3 font-bold flex flex-wrap items-center gap-0">
                     <Chip delay={0}>フリーランス</Chip>
                     <span>・</span>
-                    <Chip delay={100}> 経営者</Chip>
+                    <Chip delay={200}> 経営者</Chip>
                     <span>・</span>
-                    <Chip delay={200}>大学生</Chip>
+                    <Chip delay={400}>大学生</Chip>
                     <span>・</span>
-                    <Chip delay={300}>独立を考えている方</Chip>
+                    <Chip delay={600}>独立を考えている方</Chip>
                     <span className="-ml-2 z-10">へ</span>
                 </h2>
                 <div className="mt-4 h-[2px] w-full bg-black" />

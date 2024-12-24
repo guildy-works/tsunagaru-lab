@@ -4,11 +4,9 @@ import { ScrollIndicator } from "@/components/ScrollIndicatior";
 import { TopSection } from "@/views/top/TopSection";
 import AboutSection from "@/views/top/AboutSection";
 import { ContactSection } from "@/views/top/ContactSection";
-import { ServiceSection } from "@/views/top/ServiceSection";
-import { useEffect, useState } from "react";
 import { FeaturesSection } from "@/views/top/FeaturesSection";
-import { SnsSection } from "@/views/top/SnsSection";
-import { FaqSection } from "@/views/FaqSection";
+import { FaqSection } from "@/views/top/FaqSection";
+import { HowToJoinSection } from "@/views/top/HowToJoinSection";
 
 export default function Home() {
     return (
@@ -21,6 +19,7 @@ export default function Home() {
 
             <AboutSection />
 
+            <HowToJoinSection />
             <FaqSection />
 
             <ContactSection />

@@ -50,27 +50,27 @@ const CardGrid = () => {
             />
             <CardItem
                 href="/services#service1"
-                delay={20}
+                delay={200}
                 title={<>お得なサービスが<br className="md:hidden" />受けれるお店一覧</>}
                 content="婚活～結婚に有益なお店"
                 colorClass="bg-color10"
             />
             <CardItem
-                delay={40}
+                delay={400}
                 href="#reviews"
                 title="お客様の声"
                 content={<>福山市No1の<br className="sm:hidden" />Google口コミ</>}
                 colorClass="bg-color11"
             />
             <CardItem
-                delay={60}
+                delay={600}
                 href="#mariage"
                 title="結婚相談所"
                 content={<>「入会金・登録費」<br className="sm:hidden" />初期費用が0円</>}
                 colorClass="bg-color9"
             />
             <CardItem
-                delay={80}
+                delay={800}
                 href="#events"
                 title="婚活イベント"
                 content={<>96％の確率で<br className="sm:hidden" />カップリング成立</>}
@@ -78,7 +78,7 @@ const CardGrid = () => {
             />
             <CardItem
                 href="#consultants"
-                delay={100}
+                delay={1000}
                 title="恋愛相談窓口"
                 content={<>初回15分無料<br className="sm:hidden" />まずは、ココから！</>}
                 colorClass="bg-color11"
