@@ -8,6 +8,7 @@ import { ServiceSection } from "@/views/top/ServiceSection";
 import { useEffect, useState } from "react";
 import { FeaturesSection } from "@/views/top/FeaturesSection";
 import { SnsSection } from "@/views/top/SnsSection";
+import { FaqSection } from "@/views/FaqSection";
 
 export default function Home() {
     return (
@@ -19,6 +20,8 @@ export default function Home() {
             <FeaturesSection />
 
             <AboutSection />
+
+            <FaqSection />
 
             <ContactSection />
 

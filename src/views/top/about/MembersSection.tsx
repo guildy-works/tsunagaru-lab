@@ -96,10 +96,12 @@ export const MembersSection = () => {
                     />
                 </SplideSlide>
             </Splide>
+
+            <Button3 href="#" subTitle="お気軽にお問い合わせください！" >
+                無料で入会する
+            </Button3>
         </div>
-        <Button3 href="#" subTitle="お気軽にお問い合わせください！" >
-            無料で入会する
-        </Button3>
+
     </SectionBox>
 }
 

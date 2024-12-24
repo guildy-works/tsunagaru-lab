@@ -1,3 +1,4 @@
+import { IntroduceSection } from "./about/IntroduceSection";
 import { MembersSection } from "./about/MembersSection";
 import { OnayamiSection } from "./about/OnayamiSection";
 import { PlansSection } from "./about/PlansSection";
@@ -9,9 +10,12 @@ export default function AboutSection() {
 
             <ProfileSection />
             <OnayamiSection />
+
+            <IntroduceSection />
+
             <MembersSection />
 
-            <PlansSection/> 
+            <PlansSection />
         </section>
     );
 }

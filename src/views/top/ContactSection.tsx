@@ -13,7 +13,7 @@ export const ContactSection = () => {
         <SectionType1 disableLine className="bg-gradient2" innerClassName="items-center relative">
             <div id="contacts" className="absolute -top-32" />
 
-            <div className="bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col">
+            <div className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col">
                 <h2 className="text-title2 font-jost text-center mb-2">お問い合わせ</h2>
                 <p className="text-center text-gray-600 mb-8">詳細、入会などはこちらから</p>
 
