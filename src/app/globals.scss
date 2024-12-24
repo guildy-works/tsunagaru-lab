@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Amsterdam";
+    src: url("/Amsterdam_Four.woff");
+}
+
+@font-face {
+    font-family: "Slight";
+    src: url("/Slight.woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Zen+Maru+Gothic&display=swap");
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: #fffbfb;
+    @apply text-size-p text-font1;
+    font-family: "Zen Maru Gothic", serif;
+}
+
+p,
+div {
+    @apply text-size-p;
+}
+
+::selection {
+    @apply bg-color1/70 text-font1;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+.bg-gradient-opacity {
+    background: linear-gradient(24deg, #bf5fffbd 0%, #ff9650be 100%);
+}
+
+
+.bg-gradient1 {
+    background: linear-gradient(90deg, rgba(191, 95, 255, 1) 0%, rgba(255, 150, 80, 1) 100%);
+}
+
+.bg-gradient2 {
+    background: linear-gradient(202deg, rgba(255, 126, 233, 1) 0%, rgba(250, 146, 77, 1) 100%);
+}
+
+.bg-gradient3 {
+    background: linear-gradient(90deg, #f1eea6 0%, #51cbe7 100%);
+}
+
+
+.link {
+    font-size: 0.8rem;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.active {
+    @apply pl-3;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 16px;
+        height: 1px;
+        background-color: black;
+        transform: rotate(-65deg);
+        transform-origin: left bottom;
+    }
+}
+
+.bg_noise {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.02;
+    background-size: 150px 150px;
+    pointer-events: none;
+    background-image: url("/bg_noise.png");
+}
+
+.html-editor {
+    @apply gap-2 bg-color1 rounded-lg;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        @apply text-color2;
+        color: #000;
+        text-decoration: underline;
+    }
+
+    p {
+        @apply text-size1;
+    }
+
+    h1 {
+        @apply text-title1;
+    }
+
+    h2 {
+        @apply text-title2;
+    }
+
+    h3 {
+        @apply text-title3;
+    }
+
+    h4 {
+        @apply text-title4;
+    }
+}
