@@ -126,7 +126,7 @@ const Drawer = ({ isOpen, setIsOpen, children }: React.PropsWithChildren<Props>)
             <div className="fixed inset-0 z-50">
                 <DialogPanel className="relative bg-white/80 backdrop-blur-lg w-full h-screen p-4 flex flex-col items-center">
 
-                    <h1 className='py-6 text-title2 font-slight text-color3'>Match Bond</h1>
+                    <h1 className='py-6 text-title2 font-slight text-color3'></h1>
 
                     <nav className="flex flex-col gap-6 h-full justify-center items-start">
                         {menuItems.map((item, index) => (

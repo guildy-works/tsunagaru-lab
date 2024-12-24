@@ -6,20 +6,20 @@ import Image from 'next-export-optimize-images/picture';
 export const SnsLinkList = () => {
     return (
         <div className="flex gap-2 md:gap-4 flex-wrap justify-center">
-            <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fmatch-bond.net%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5EMatchBond&region=follow_link&screen_name=MatchBond"
+            <a href="/"
                 target="_blank"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="Instagram"
             >
                 <Image src={X} alt="X" className="w-12" />
             </a>
-            <a href="https://www.instagram.com/match_bond.marriage/"
+            <a href="/"
                 target="_blank"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="X (Twitter)">
                 <Image src={Instagram} alt="Instagram" className="w-12" />
             </a>
-            <a href="https://page.line.me/070frujq?oat_content=url&openQrModal=true"
+            <a href="/"
                 target="_blank"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="LINE">
