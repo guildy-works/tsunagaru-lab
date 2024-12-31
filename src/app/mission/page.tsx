@@ -182,7 +182,7 @@ const Top = () => <>
             <span className="w-[60%] border-b-2 border-black mt-2 md:mt-4 " />
         </motion.div>
 
-        <div className="px-8">
+        <div className="px-8 w-full">
             <Profile />
         </div>
 
@@ -221,8 +221,8 @@ const Profile = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className={clsx(
-                    "grid !max-w-6xl w-full",
-                    "grid-cols-1  mx-auto !gap-4 !max-w-xl",
+                    "grid !max-w-5xl w-full",
+                    "grid-cols-1  mx-auto !gap-4",
                     "md:grid-cols-2 md:!gap-16",
                     "bg-white border-2 border-color0 p-8 md:p-16 overflow-hidden rounded-3xl"
                 )}
@@ -252,7 +252,7 @@ const Profile = () => {
                                 プロフィール
                             </SkewScrollTriggerAnimation>
                             <Hr />
-                            <SkewScrollTriggerAnimation tag="p" className="mt-4">
+                            <SkewScrollTriggerAnimation tag="p" className="mt-2">
                                 ・名前：　小早川<br />
                                 ・出身：　広島県福山市<br />
                                 ・趣味：　筋トレ、野球、スポーツ観戦<br />
@@ -264,7 +264,7 @@ const Profile = () => {
                                 ビジネス
                             </SkewScrollTriggerAnimation>
                             <Hr />
-                            <SkewScrollTriggerAnimation tag="p" className="mt-4">
+                            <SkewScrollTriggerAnimation tag="p" className="mt-2">
                                 ・元大手小売業の総合職<br />
                                 ・アドサル代表<br />
                                 ・一般社団法人創業事業継続振興会　学生部会理事<br />
@@ -277,7 +277,7 @@ const Profile = () => {
                                 メッセージ
                             </SkewScrollTriggerAnimation>
                             <Hr />
-                            <SkewScrollTriggerAnimation tag="p" className="mt-4">
+                            <SkewScrollTriggerAnimation tag="p" className="mt-2">
                                 つながるラボは、皆さんが主役です。<br />
                                 それぞれの目的達成のためにつながりましょう⭐
                             </SkewScrollTriggerAnimation>
@@ -328,4 +328,4 @@ const Hr = () => <motion.div
     transition={{ type: "spring", bounce: 1, damping: 5, mass: 0.8 }}
     initial={{ width: 0 }}
     whileInView={{ width: "100%" }}
-    className="mt-4 h-[2px] bg-black" />
+    className="h-[2px] bg-black" />

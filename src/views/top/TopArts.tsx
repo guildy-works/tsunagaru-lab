@@ -15,7 +15,7 @@ import { SkewScrollTriggerAnimation } from '@/libs/ScrollTriggerAnimations/SkewS
 
 export const TopArt = () => {
     return (
-        <div className='-mt-2 h-[90svh] relative flex flex-col justify-center items-center overflow-hidden rotate'>
+        <div className='-mt-2 h-[95svh] relative flex flex-col justify-center items-center overflow-hidden rotate'>
 
             <motion.div
                 transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.5 }}
@@ -97,21 +97,18 @@ export const TopArt = () => {
                 <Image src={Part10} alt="art1" className="size-full object-cover" />
             </motion.div>
 
-            {/* <motion.svg
-                id="Layer_2"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1895.24 113.64"
-                transition={{ pathLenght: { type: "spring", duration: 1.5, bounce: 0 } }}
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
-                <defs>
-                    <style>
-                    </style>
-                </defs>
-                <g id="Layer_1-2" data-name="Layer 1">
-                    <path className="fill-none stroke-black stroke-2" d="M.51,43.3c60.52,15.81,121.85,28.89,183.74,38.08,123.67,18.3,249.18,18.9,373.87,24.91,77.36,2.62,154.92,2.05,232.16-3.06,24.02-1.84,48.58-3.94,70.31-14.82,21.25-10.73,35.99-33.26,27.82-56.26-7.46-23.36-37.54-38.33-59.33-25.38-16.14,9.17-18.55,30.59-10.12,46.72,26.28,49.04,112.54,57.02,169.67,58.12,61.48.52,117.4-13.77,176.01-28.72C1425.53,8.51,1638.2,1.2,1894.51,102.3" />
-                </g>
-            </motion.svg> */}
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1530 113"
+                className=' absolute bottom-[20vh] left-0 w-full stroke-[6px] md:!stroke-2'>
+                <motion.path 
+                transition={{ duration: 2.2, delay: 1.5 }}
+                initial={{ strokeDasharray: 1930, strokeDashoffset:1930 }}
+                animate={{ strokeDasharray: 1930,strokeDashoffset:0 }}
+                className=' stroke-orange-600 z-50 '
+                    fill="transparent" 
+                    d="M.5,43.3c61.63,15.81,124.1,28.89,187.14,38.08,125.96,18.3,253.78,18.9,380.78,24.91,78.79,2.62,157.78,2.05,236.45-3.06,24.47-1.84,49.47-3.94,71.61-14.82,21.65-10.73,36.65-33.26,28.34-56.26-7.59-23.36-38.23-38.33-60.43-25.38-16.44,9.17-18.9,30.59-10.31,46.72,26.76,49.04,114.62,57.02,172.81,58.12,62.61.52,119.56-13.77,179.27-28.72C1451.86,8.51,1668.46,1.2,1929.5,102.3" />
+            </svg>
 
 
             <div className='flex flex-wrap gap-4 justify-center'>

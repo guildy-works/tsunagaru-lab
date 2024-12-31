@@ -13,7 +13,7 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Zen+Maru+Gothic&display=swap");
 
-html{
+html {
     scroll-behavior: smooth;
 }
 body {
@@ -40,8 +40,8 @@ div {
 }
 
 :root {
-    --bg-gradient-opacity:linear-gradient(24deg, #bf5fffbd 0%, #ff9650be 100%);
-    --bg-gradient1 :linear-gradient(90deg, rgba(191, 95, 255, 1) 0%, rgba(255, 150, 80, 1) 100%);
+    --bg-gradient-opacity: linear-gradient(24deg, #bf5fffbd 0%, #ff9650be 100%);
+    --bg-gradient1: linear-gradient(90deg, rgba(191, 95, 255, 1) 0%, rgba(255, 150, 80, 1) 100%);
 }
 
 .bg-gradient-opacity {
@@ -60,8 +60,8 @@ div {
     background: linear-gradient(90deg, #f1eea6 0%, #51cbe7 100%);
 }
 
-.bg-gradient4{
-    background: linear-gradient(30deg, rgba(252,252,135,1) 0%, rgba(235,108,92,1) 100%);
+.bg-gradient4 {
+    background: linear-gradient(30deg, rgba(252, 252, 135, 1) 0%, rgba(235, 108, 92, 1) 100%);
 }
 
 .link {
