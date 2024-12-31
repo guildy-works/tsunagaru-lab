@@ -221,6 +221,7 @@ const Profile = () => {
     return (
         <>
             <motion.div
+                viewport={{ once: true }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className={clsx(
@@ -295,6 +296,7 @@ const Profile = () => {
 
 const Sns = () => <div className="flex gap-4">
     <motion.a
+        viewport={{ once: true }}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         href="/"
@@ -305,6 +307,7 @@ const Sns = () => <div className="flex gap-4">
         <Image src={X} alt="X" className="w-12" />
     </motion.a>
     <motion.a
+        viewport={{ once: true }}
         transition={{ delay: 0.2 }}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -315,6 +318,7 @@ const Sns = () => <div className="flex gap-4">
         <Image src={Instagram} alt="Instagram" className="w-12" />
     </motion.a>
     <motion.a
+        viewport={{ once: true }}
         transition={{ delay: 0.4 }}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -328,6 +332,7 @@ const Sns = () => <div className="flex gap-4">
 </div>
 
 const Hr = () => <motion.div
+    viewport={{ once: true }}
     transition={{ type: "spring", bounce: 1, damping: 5, mass: 0.8 }}
     initial={{ width: 0 }}
     whileInView={{ width: "100%" }}

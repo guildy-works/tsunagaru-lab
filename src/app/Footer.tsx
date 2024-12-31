@@ -16,6 +16,7 @@ export const Footer = () => {
     return (
         <footer className="bg-color0 text-white pt-16 pb-8 w-full">
             <motion.div
+                viewport={{ once: true }}
                 className="mx-auto w-fit"
                 initial={{ opacity: 0, scale: 0.7 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -43,6 +44,7 @@ export const Footer = () => {
                         <ul className="grid  gap-4">
                             {menuItems.map((item, index) => (
                                 <motion.li
+                                    viewport={{ once: true }}
                                     initial={{ opacity: 0, translateY: "100%", scale: 0.9 }}
                                     whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
                                     transition={{ duration: 0.2, delay: index * 0.05 }}
@@ -61,6 +63,7 @@ export const Footer = () => {
                         <ul className="grid  gap-4">
                             {footerItems.map((item, index) => (
                                 <motion.li initial={{ opacity: 0, translateY: "100%", scale: 0.9 }}
+                                    viewport={{ once: true }}
                                     whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
                                     transition={{ duration: 0.2, delay: index * 0.05 }}
                                     key={item.label}>
