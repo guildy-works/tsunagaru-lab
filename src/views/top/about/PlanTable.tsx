@@ -6,13 +6,16 @@ export const PlanTable = () => {
         <div className="bg-gradient1 size-full">
             {/* テーブルをラップして横スクロールを有効にする */}
             <table className="table-auto size-full min-w-[600px]">
-                <thead className="bg-gradient1 sticky top-0">
+                <thead className="bg-gradient1 sticky top-0 z-10">
                     <tr>
                         {resources.planTable.header.map((header, index) => (
                             <th
                                 key={index}
                                 scope="col"
-                                className=" px-2 sm:px-4 md:px-6 min-w-32 py-3 text-left text-xs font-medium text-white uppercase tracking-wider border-b border-gray-200"
+                                className={clsx(
+                                    index===0 ? "bg-fuchsia-600 sticky left-0" : "",
+                                    "z-50 px-2 sm:px-4 md:px-6 min-w-32 py-3 text-left text-xs font-medium text-white uppercase tracking-wider border-b border-gray-200"
+                                )}
                             >
                                 {header}
                             </th>
