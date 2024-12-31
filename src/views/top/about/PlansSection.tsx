@@ -26,7 +26,7 @@ export const PlansSection = () => {
                     className=""
                     options={{
                         autoplay: true,
-                        rewind: true,
+                        rewind: false,
                         interval: 2000, // 自動再生の間隔
                         speed: 2000, // フェードする時間
                         arrows: false,
@@ -78,6 +78,10 @@ export const PlansSection = () => {
                     </SplideSlide>
                 </Splide>
             </div>
+
+            <ServiceDialog buttonText="詳細" >
+                <PlanTable />
+            </ServiceDialog>
             <Button2 href="#" subTitle="Click!">
                 早期入会特典をGET！
             </Button2>
@@ -108,10 +112,6 @@ const PlanItem = ({ title, title2, price, content, delay, colorClass, href, src 
             <h3 className=" text-title3 font-bold">{title2}</h3>
             <h2 className=" text-title1 font-bold">{title}</h2>
             <p className=" h-full w-full rounded-lg">{content}</p>
-
-            <ServiceDialog buttonText="詳細" >
-                <PlanTable />
-            </ServiceDialog>
         </ motion.div>
     );
 }

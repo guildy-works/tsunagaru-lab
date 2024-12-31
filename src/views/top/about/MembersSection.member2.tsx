@@ -17,7 +17,9 @@ export const MembersSection2 = () => {
                 className="w-full"
                 options={{
                     autoplay: true,
-                    rewind: true,
+                    rewind: false,
+                    wheel: false,
+                    releaseWheel:true,
                     interval: 2000, // 自動再生の間隔
                     speed: 2000, // フェードする時間
                     arrows: false,

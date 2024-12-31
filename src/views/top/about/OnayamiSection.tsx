@@ -56,7 +56,7 @@ export const OnayamiSection = () => {
             <Splide
                 options={{
                     autoplay: true,
-                    rewind: true,
+                    rewind: false,
                     interval: 2000, // 自動再生の間隔
                     speed: 2000, // フェードする時間
                     arrows: false,

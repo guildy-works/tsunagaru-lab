@@ -15,7 +15,7 @@ import { SkewScrollTriggerAnimation } from '@/libs/ScrollTriggerAnimations/SkewS
 
 export const TopArt = () => {
     return (
-        <div className='-mt-2 h-[95svh] relative flex flex-col justify-center items-center overflow-hidden rotate'>
+        <div className='-mt-2 min-h-[90svh] relative flex flex-col justify-center items-center overflow-hidden rotate'>
 
             <motion.div
                 transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.5 }}
@@ -97,26 +97,12 @@ export const TopArt = () => {
                 <Image src={Part10} alt="art1" className="size-full object-cover" />
             </motion.div>
 
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1530 113"
-                className=' absolute bottom-[20vh] left-0 w-full stroke-[6px] md:!stroke-2'>
-                <motion.path 
-                transition={{ duration: 2.2, delay: 1.5 }}
-                initial={{ strokeDasharray: 1930, strokeDashoffset:1930 }}
-                animate={{ strokeDasharray: 1930,strokeDashoffset:0 }}
-                className=' stroke-orange-600 z-50 '
-                    fill="transparent" 
-                    d="M.5,43.3c61.63,15.81,124.1,28.89,187.14,38.08,125.96,18.3,253.78,18.9,380.78,24.91,78.79,2.62,157.78,2.05,236.45-3.06,24.47-1.84,49.47-3.94,71.61-14.82,21.65-10.73,36.65-33.26,28.34-56.26-7.59-23.36-38.23-38.33-60.43-25.38-16.44,9.17-18.9,30.59-10.31,46.72,26.76,49.04,114.62,57.02,172.81,58.12,62.61.52,119.56-13.77,179.27-28.72C1451.86,8.51,1668.46,1.2,1929.5,102.3" />
-            </svg>
-
-
-            <div className='flex flex-wrap gap-4 justify-center'>
+            <div className='mt-32 flex flex-wrap gap-4 justify-center'>
                 <div>
                     <motion.div transition={{ type: "spring", damping: 5, mass: 0.4, delay: 2.2 }}
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}>
-                        <Image src={Logo} alt="Logo" className="w-48 object-cover" />
+                        <Image src={Logo} alt="Logo" className="w-40 md:w-48 object-cover" />
                         <p className='text-[#f1ab3f] mt-1'>- 地方でつながる、地方で輝く</p>
                     </motion.div>
                 </div>
@@ -131,6 +117,19 @@ export const TopArt = () => {
                     </SkewScrollTriggerAnimation>
                 </div>
             </div>
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1530 113"
+                className='mb-40 mt-12 w-full stroke-[6px] md:!stroke-2'>
+                <motion.path
+                    transition={{ duration: 2.2, delay: 1.5 }}
+                    initial={{ strokeDasharray: 1930, strokeDashoffset: 1930 }}
+                    animate={{ strokeDasharray: 1930, strokeDashoffset: 0 }}
+                    className=' stroke-orange-600 z-50 '
+                    fill="transparent"
+                    d="M.5,43.3c61.63,15.81,124.1,28.89,187.14,38.08,125.96,18.3,253.78,18.9,380.78,24.91,78.79,2.62,157.78,2.05,236.45-3.06,24.47-1.84,49.47-3.94,71.61-14.82,21.65-10.73,36.65-33.26,28.34-56.26-7.59-23.36-38.23-38.33-60.43-25.38-16.44,9.17-18.9,30.59-10.31,46.72,26.76,49.04,114.62,57.02,172.81,58.12,62.61.52,119.56-13.77,179.27-28.72C1451.86,8.51,1668.46,1.2,1929.5,102.3" />
+            </svg>
         </div>
 
     )
