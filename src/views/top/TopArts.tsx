@@ -97,7 +97,7 @@ export const TopArt = () => {
                 <Image src={Part10} alt="art1" className="size-full object-cover" />
             </motion.div>
 
-            <motion.svg
+            {/* <motion.svg
                 id="Layer_2"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1895.24 113.64"
                 transition={{ pathLenght: { type: "spring", duration: 1.5, bounce: 0 } }}
@@ -111,7 +111,7 @@ export const TopArt = () => {
                 <g id="Layer_1-2" data-name="Layer 1">
                     <path className="fill-none stroke-black stroke-2" d="M.51,43.3c60.52,15.81,121.85,28.89,183.74,38.08,123.67,18.3,249.18,18.9,373.87,24.91,77.36,2.62,154.92,2.05,232.16-3.06,24.02-1.84,48.58-3.94,70.31-14.82,21.25-10.73,35.99-33.26,27.82-56.26-7.46-23.36-37.54-38.33-59.33-25.38-16.14,9.17-18.55,30.59-10.12,46.72,26.28,49.04,112.54,57.02,169.67,58.12,61.48.52,117.4-13.77,176.01-28.72C1425.53,8.51,1638.2,1.2,1894.51,102.3" />
                 </g>
-            </motion.svg>
+            </motion.svg> */}
 
 
             <div className='flex flex-wrap gap-4 justify-center'>
