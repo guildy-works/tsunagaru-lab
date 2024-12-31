@@ -7,7 +7,7 @@ import Image from 'next-export-optimize-images/picture';
 import { MdOutlinePhoto, MdPerson, MdPersonOutline, MdPhoto } from "react-icons/md";
 import { Button3 } from "@/components/Button3";
 import { title } from "process";
-
+import { DOMMotionComponents, motion, useInView } from "motion/react"
 import Join1 from "@/assets/join1.webp";
 import Join2 from "@/assets/join2.webp";
 import Join3 from "@/assets/join3.webp";
@@ -86,7 +86,7 @@ export const HowToJoinSection = () => {
                     rewind: true,
                     interval: 2000, // 自動再生の間隔
                     speed: 2000, // フェードする時間
-                    arraws: false,
+                    arrows: false,
                     width: 'auto',
                     perPage: 1,
                     autoWidth: true,
@@ -123,10 +123,10 @@ const IntroduceItem = ({ title, content, delay, num, src }: {
 }) => {
     return (
         <FadeAndSlideScrollTriggerAnimation
-            delay={delay}
-            className="w-full"
-            innerClassName="h-full flex flex-col items-center gap-4 overflow-hidden">
+            delay={0.2}
+            className="w-full h-full flex flex-col items-center gap-4 overflow-hidden"
+        >
             <Image src={src} alt={title} className="w-[320px] h-[540px] object-cover" />
-        </ FadeAndSlideScrollTriggerAnimation>
+        </FadeAndSlideScrollTriggerAnimation>
     );
 }

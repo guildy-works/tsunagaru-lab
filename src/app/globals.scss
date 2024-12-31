@@ -13,11 +13,15 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Zen+Maru+Gothic&display=swap");
 
+html{
+    scroll-behavior: smooth;
+}
 body {
     color: rgb(var(--foreground-rgb));
-    background: #fffbfb;
+    background: #ffffff;
     @apply text-size-p text-font1;
     font-family: "Zen Maru Gothic", serif;
+    scroll-behavior: smooth;
 }
 
 p,
@@ -35,13 +39,17 @@ div {
     }
 }
 
-.bg-gradient-opacity {
-    background: linear-gradient(24deg, #bf5fffbd 0%, #ff9650be 100%);
+:root {
+    --bg-gradient-opacity:linear-gradient(24deg, #bf5fffbd 0%, #ff9650be 100%);
+    --bg-gradient1 :linear-gradient(90deg, rgba(191, 95, 255, 1) 0%, rgba(255, 150, 80, 1) 100%);
 }
 
+.bg-gradient-opacity {
+    background: var(--bg-gradient-opacity);
+}
 
 .bg-gradient1 {
-    background: linear-gradient(90deg, rgba(191, 95, 255, 1) 0%, rgba(255, 150, 80, 1) 100%);
+    background: var(--bg-gradient1);
 }
 
 .bg-gradient2 {

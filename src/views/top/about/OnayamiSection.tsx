@@ -7,15 +7,22 @@ import Issue2 from "@/assets/issue2.webp";
 import Issue3 from "@/assets/issue3.webp";
 import { StaticImageData } from "next/image";
 import Image from 'next-export-optimize-images/picture';
+import { motion } from "motion/react";
+import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 
 export const OnayamiSection = () => {
     const Chip = ({ children, delay }: { children: ReactNode, delay: number }) =>
         <FadeAndSlideScrollTriggerAnimation
-            transform={{ translate: { y: "-60px", }, scale: 1.2 }}
-            transformTo={{ translate: { y: "0px", }, scale: 1 }}
             delay={delay}
-            tag="span" innerClassName="rounded-full px-4 bg-color3 text-title3 font-bold ">
+            className="rounded-full px-4 bg-color3 text-title3 font-bold mt-2">
             {children}
+        </FadeAndSlideScrollTriggerAnimation>
+
+    const Dot = ({ delay }: { delay: number }) =>
+        <FadeAndSlideScrollTriggerAnimation
+            delay={delay}
+            className="rounded-full px-1text-title1 font-bold mt-2">
+            ・
         </FadeAndSlideScrollTriggerAnimation>
 
     return <SectionBox disablePx disableMaxWidth>
@@ -23,18 +30,26 @@ export const OnayamiSection = () => {
         <div className="w-fit flex flex-col items-center mx-auto gap-8 justify-center">
 
             <div className="flex flex-col items-center">
-                <h2 className="text-title3 font-bold flex flex-wrap items-center gap-0">
+                <h2 className="text-title3 font-bold flex flex-wrap items-center gap-0 px-8">
                     <Chip delay={0}>フリーランス</Chip>
-                    <span>・</span>
-                    <Chip delay={200}> 経営者</Chip>
-                    <span>・</span>
-                    <Chip delay={400}>大学生</Chip>
-                    <span>・</span>
-                    <Chip delay={600}>独立を考えている方</Chip>
-                    <span className="-ml-2 z-10">へ</span>
+                    <Dot delay={0.1} />
+                    <Chip delay={0.2}> 経営者</Chip>
+                    <Dot delay={0.3} />
+                    <Chip delay={0.4}>大学生</Chip>
+                    <Dot delay={0.5} />
+                    <Chip delay={0.6}>独立を考えている方</Chip>
+                    <FadeAndSlideScrollTriggerAnimation delay={700} className="-ml-2 z-10 text-title2">へ</FadeAndSlideScrollTriggerAnimation>
                 </h2>
-                <div className="mt-4 h-[2px] w-full bg-black" />
-                <h2 className="text-title1 font-bold mt-4 mx-auto">こんな悩みありませんか？</h2>
+
+                <motion.div
+                    transition={{ type: "spring", bounce: 1, damping: 5, mass: 0.8 }}
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    className="mt-4 h-[2px] bg-black" />
+
+                <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold mt-4 mx-auto">
+                    こんな悩みありませんか？
+                </SkewScrollTriggerAnimation>
             </div>
 
             <Splide
@@ -43,10 +58,10 @@ export const OnayamiSection = () => {
                     rewind: true,
                     interval: 2000, // 自動再生の間隔
                     speed: 2000, // フェードする時間
-                    arraws: false,
+                    arrows: false,
                     width: 'auto',
                     gap: '1rem',
-                    padding: { right: '1rem', left: '1rem' },
+                    padding: { right: '4rem', left: '4rem', },
                     perPage: 1,
                     autoWidth: true,
                 } as Options}
@@ -97,10 +112,15 @@ const OnayamiItem = ({ title, content, delay, colorClass, href, src }: {
     src: StaticImageData
 }) => {
     return (
-        <FadeAndSlideScrollTriggerAnimation innerClassName="flex flex-col items-center justify-center gap-4 bg-gradient3 p-8 rounded-3xl w-fit">
-            <h3 className="text-title2">{title}</h3>
+        <FadeAndSlideScrollTriggerAnimation className="overflow-hidden flex flex-col items-center justify-center gap-4 bg-gradient3 p-8 rounded-3xl w-fit">
+            <FadeAndSlideScrollTriggerAnimation
+                delay={0.2}>
+                <h2 className="text-title2">        {title}</h2>
+            </FadeAndSlideScrollTriggerAnimation>
             <Image src={src} alt="img" className="h-24 w-auto" />
-            <p>{content}</p>
+            <FadeAndSlideScrollTriggerAnimation delay={0.3}>
+                <p>{content}</p>
+            </FadeAndSlideScrollTriggerAnimation>
         </ FadeAndSlideScrollTriggerAnimation>
     );
 }

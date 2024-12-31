@@ -19,8 +19,7 @@ export const TitleType = ({ title, subTitle, className, ancher }: { title: strin
 
 export const TitleType2 = ({ title, subTitle }: { title: string, subTitle: string, }) => {
     return (
-        <FadeAndSlideScrollTriggerAnimation
-            transform={{ scale: 0.94 }}>
+        <FadeAndSlideScrollTriggerAnimation>
             <h2 className="flex gap-2 items-center" >
                 <span className="text-title1 font-bold">
                     {subTitle}

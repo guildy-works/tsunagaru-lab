@@ -9,10 +9,14 @@ import { Button2 } from "@/components/Button2";
 import { SectionType1 } from "@/components/SectionType1";
 import { Button3 } from "@/components/Button3";
 import Issue1 from "@/assets/issue1.webp";
+import { ServiceDialog } from "@/components/ServiceDialog";
+import { PlanTable } from "./PlanTable";
+import { DOMMotionComponents, motion, useInView } from "motion/react"
 
 export const PlansSection = () => {
     return (
-        <SectionBox disablePx disableMaxWidth className="bg-gradient1 w-full py-16 !gap-8">
+        <SectionBox disablePx disableMaxWidth className="bg-gradient1 w-full py-16 !gap-8 relative">
+            <div id="plans" className="absolute -top-24" />
 
             <div className="w-full flex flex-col items-center mx-auto gap-8 justify-center">
 
@@ -25,15 +29,14 @@ export const PlansSection = () => {
                         rewind: true,
                         interval: 2000, // 自動再生の間隔
                         speed: 2000, // フェードする時間
-                        arraws: false,
+                        arrows: false,
                         width: 'auto',
                         gap: '1rem',
-                        padding: { right: '1rem', left: '1rem' },
+                        padding: { right: '4rem', left: '4rem', },
                         perPage: 1,
                         autoWidth: true,
                     } as Options}
                 >
-
                     <SplideSlide >
                         <PlanItem title="フリープラン"
                             price="¥0/月"
@@ -93,13 +96,22 @@ const PlanItem = ({ title, title2, price, content, delay, colorClass, href, src 
     src: StaticImageData
 }) => {
     return (
-        <FadeAndSlideScrollTriggerAnimation className="h-full w-full"
-            innerClassName="h-full w-full flex flex-col items-center justify-center gap-0 bg-color3 p-5 gap-4 rounded-3xl overflow-hidden">
+        <motion.div
+            viewport={{ once: true }}
+            transition={{
+                scale: { type: "spring", duration: 0.5, delay },
+                opacity: { duration: 0.3, },
+            }}
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            className="h-full w-full flex flex-col items-center justify-center bg-color3 p-5 gap-4 rounded-3xl overflow-hidden">
             <h3 className=" text-title3 font-bold">{title2}</h3>
             <h2 className=" text-title1 font-bold">{title}</h2>
             <p className=" h-full w-full rounded-lg">{content}</p>
 
-            <Button3 href="#" className="w-full" >詳細</Button3>
-        </ FadeAndSlideScrollTriggerAnimation>
+            <ServiceDialog buttonText="詳細" >
+                <PlanTable />
+            </ServiceDialog>
+        </ motion.div>
     );
 }

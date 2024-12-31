@@ -3,11 +3,9 @@ import Link from "next/link";
 import { Button, Description, Dialog, DialogBackdrop, DialogPanel, DialogTitle, Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { MdClose, MdMenu } from 'react-icons/md';
 import { SnsLinkList } from '@/components/SnsLinkList';
-import { FadeAndSlideAnimation } from '@/libs/Animations/FadeAndSlideAnimation';
 import Logo from "@/assets/logo.png";
 import Image from 'next-export-optimize-images/picture';
-
-import { useScrollState } from '@/libs/ScrollTrigger';
+import { DOMMotionComponents, motion } from "motion/react"
 
 type MenuItem = {
     href: string;
@@ -20,22 +18,22 @@ export const menuItems: MenuItem[] = [
     { href: "/#orner", label: "オーナー挨拶" },
     { href: "/#about", label: "つながるラボでできること" },
     { href: "/#plans", label: "料金プラン" },
-    { href: "/#mission", label: "ミッション" },
+    { href: "/mission", label: "ミッション" },
+    { href: "/#contacts", label: "お問い合わせ" },
 ];
 
 export const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const state = useScrollState()
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
         <>
             <header className="flex items-center sticky top-0 mt-0 bg-gradient-opacity backdrop-blur-lg z-20 border-b border-black/5">
-                <Link href="/">
-                    <Image src={Logo} alt="Logo" className='w-[60px] md:w-[120px]' />
+                <Link href="/" className='p-2'>
+                    <Image src={Logo} alt="Logo" className='w-[60px] md:w-[80px]' />
                 </Link>
 
                 {/* Desktop */}
-                <nav className="hidden w-full md:flex gap-6 justify-end py-8 px-20">
+                <nav className="flex-1 hidden w-full md:flex gap-6 justify-end py-4 pr-8">
 
                     <div className='ml-auto' />
                     {menuItems.map((item, index) => {
@@ -47,11 +45,14 @@ export const Header = () => {
                                             {() => (<>
                                                 <PopoverButton as={Fragment}>
                                                     {
-                                                        () => <button
+                                                        () => <motion.button
+                                                            initial={{ opacity: 0, scale: 0.1 }}
+                                                            animate={{ opacity: 1, scale: 1 }}
+                                                            transition={{ duration: 0.2, delay: index * 0.05 }}
                                                             onMouseEnter={({ target }) => (target as any)?.click()}
                                                             className="cursor-pointer text-navigation py-2 inline-block relative outline-0">
                                                             {item.label}
-                                                        </button>
+                                                        </motion.button>
                                                     }
                                                 </PopoverButton>
 
@@ -61,7 +62,11 @@ export const Header = () => {
                                                     className="w-80 origin-top-right rounded-xl border border-black/5 backdrop-blur-md bg-red-50/70 p-1 transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
                                                 >
                                                     {item.childlen?.map((child, index) => (
-                                                        <div key={index}>
+                                                        <motion.div
+                                                            initial={{ opacity: 0, scale: 0.1 }}
+                                                            animate={{ opacity: 1, scale: 1 }}
+                                                            transition={{  duration: 0.2, delay: index * 0.05  }}
+                                                            key={index}>
                                                             <Link
                                                                 href={child.href}
                                                                 className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-5 hover:bg-red-200/20"
@@ -71,7 +76,7 @@ export const Header = () => {
                                                                     <small className="ml-2">{child.label2}</small>
                                                                 )}
                                                             </Link>
-                                                        </div>
+                                                        </motion.div>
                                                     ))}
                                                 </PopoverPanel>
                                             </>)
@@ -79,24 +84,35 @@ export const Header = () => {
                                         </Popover>
                                     )
                                     :
-                                    <Link
-                                        href={item.href}
-                                        className="text-navigation font-bold py-2 inline-block relative "
-                                    >
-                                        {item.label}
-                                    </Link>
+                                    <motion.div
+                                        initial={{ opacity: 0, translateY: "100%", scale: 0.9 }}
+                                        animate={{ opacity: 1, translateY: 0, scale: 1 }}
+                                        transition={{ delay: index * 0.05 }}>
+                                        <Link
+                                            href={item.href}
+                                            className="text-navigation font-bold py-2 inline-block relative "
+                                        >
+                                            {item.label}
+                                        </Link>
+                                    </motion.div>
                                 }
                             </div>
                         )
                     })}
+
+                    <Button className=" min-w-32 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
+                        入会はコチラ
+                    </Button>
                 </nav>
 
-                <Button className="ml-auto min-w-32 mr-4 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
+                <Button className="md:hidden ml-auto min-w-32 mr-0 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
                     入会はコチラ
                 </Button>
 
                 {/* Mobile */}
                 <nav className="flex md:hidden gap-6 py-2">
+
+
                     <button
                         onClick={() => setIsMenuOpen(true)}
                         className="flex items-center justify-center p-2 w-12 h-12 rounded-full text-color3 hover:bg-color3/10">
@@ -119,23 +135,25 @@ const Drawer = ({ isOpen, setIsOpen, children }: React.PropsWithChildren<Props>)
     const close = () => setIsOpen(false);
 
     return (
-
         <Dialog transition open={isOpen} as="div"
             className="relative z-50 focus:outline-none transition duration-300 ease-out data-[closed]:opacity-0"
             onClose={close}>
             <div className="fixed inset-0 z-50">
-                <DialogPanel className="relative bg-white/80 backdrop-blur-lg w-full h-screen p-4 flex flex-col items-center">
-
+                <DialogPanel className="relative bg-gradient-opacity backdrop-blur-lg w-full h-screen p-4 flex flex-col items-center">
                     <h1 className='py-6 text-title2 font-slight text-color3'></h1>
-
                     <nav className="flex flex-col gap-6 h-full justify-center items-start">
                         {menuItems.map((item, index) => (
-                            <FadeAndSlideAnimation in key={item.href} delay={index * 50} className="flex flex-col gap-4">
+                            <motion.div key={item.href}
+                                initial={{ opacity: 0, translateY: "100%", scale: 0.9 }}
+                                whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
+                                transition={{  duration: 0.2, delay: index * 0.05  }}
+                                className="flex flex-col gap-4"
+                            >
                                 <Link
                                     onClick={() => setIsOpen(false)}
                                     key={index}
                                     href={item.href}
-                                    className="text-navigation hover:text-color3 transition duration-300"
+                                    className="text-navigation font-bold hover:text-color3 transition duration-300"
                                 >
                                     {item.label}
                                 </Link>
@@ -155,10 +173,17 @@ const Drawer = ({ isOpen, setIsOpen, children }: React.PropsWithChildren<Props>)
                                         )
                                     )
                                 }
-                            </FadeAndSlideAnimation>
+                            </motion.div>
                         ))}
                     </nav>
-                    <Image className="mb-8" src={Logo} alt="つながるラボ" width={120} height={120} loading="lazy" />
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.7 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6,delay:0.2 }}
+                    >
+                        <Image className="mb-8" src={Logo} alt="つながるラボ" width={120} height={120} loading="lazy" />
+                    </motion.div>
 
                     <SnsLinkList />
 

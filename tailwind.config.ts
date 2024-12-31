@@ -7,6 +7,7 @@ const config: Config = {
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
+    safelist: ["origin-right"],
     theme: {
         extend: {
             backgroundImage: {
@@ -25,8 +26,9 @@ const config: Config = {
             title4: ['min(4.2vw, 1.1rem)', { letterSpacing: "0rem", lineHeight: "1.8rem", fontWeight: "700" }],
             title3: ['min(4.6vw, 1.3rem)', { letterSpacing: "0rem", lineHeight: "2rem", fontWeight: "700" }],
             title2: ['min(5.8vw, 1.6rem)', { letterSpacing: "0rem", lineHeight: "2.2rem", fontWeight: "700" }],
-            title1: ['min(6vw, 2.2rem)', { letterSpacing: "0rem", lineHeight: "2.4rem", fontWeight: "700" }],
+            title1: ['min(6.5vw, 2.2rem)', { letterSpacing: "0rem", lineHeight: "2.4rem", fontWeight: "700" }],
         },
+
         screens: {
             sm: '600px',
             md: '1240px',

@@ -3,7 +3,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react
 import { MdArrowDownward, MdArrowDropDown } from "react-icons/md"
 import Image from 'next-export-optimize-images/picture';
 import Illust from "@/assets/illust1.webp";
-
+import { motion } from "motion/react";
 
 const data = [
     {
@@ -38,22 +38,36 @@ export const FaqSection = () => {
                     className="w-full relative group p-2 md:p-6"
                     key={x.a}
                 >
-                    <DisclosureButton className="py-2 px-3 overflow-hidden text-title4 font-bold cursor-pointer group flex w-full items-center justify-between">
-                        <h3 className="text-start text-title3 text-color1">
+                    <DisclosureButton className="py-2 px-3 overflow-hidden text-title4 font-bold cursor-pointer group w-full flex items-center justify-start gap-2">
+                        <span className="bg-color3 text-white rounded-md  font-bold px-4 py-2 size-10 flex justify-center items-center">
+                            Q
+                        </span>
+                        <h3 className="ml-4 text-start text-title3 text-color1">
                             {x.q}
                         </h3>
-                        <MdArrowDownward className="size-5 group-data-[hover]:fill-black/50 group-data-[open]:rotate-180" />
+                        <MdArrowDownward className="ml-auto size-5 group-data-[hover]:fill-black/50 group-data-[open]:rotate-180" />
                     </DisclosureButton>
-                    <DisclosurePanel transition className="p-1 pt-0 px-3 whitespace-break-spaces transition duration-200 ease-out overflow-hidden data-[closed]:-translate-y-6 data-[closed]:opacity-0">
-                        <p className="text-start text-title4 text-gray-600">
-                            {x.a}
-                        </p>
+                    <DisclosurePanel transition
+                        className="mt-4 p-1 pt-0 px-3 whitespace-break-spaces transition duration-200 ease-out overflow-hidden data-[closed]:-translate-y-6 data-[closed]:opacity-0">
+                        <div className="flex items-center gap-2">
+                            <span className="size-10 bg-color2 text-white font-bold rounded-md px-4 py-2 flex items-center justify-center">
+                                A
+                            </span>
+                            <p className="ml-4 text-start text-title4 text-gray-600">
+                                {x.a}
+                            </p>
+                        </div>
                     </DisclosurePanel>
                 </Disclosure>)
                 }
             </div>
 
-            <Image src={Illust} alt="Q&A" className="w-full" />
+            <motion.div
+            transition={{delay:0.5}}
+                initial={{ scale: 1.1, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}>
+                <Image src={Illust} alt="Q&A"  />
+            </motion.div>
         </SectionBox>
     )
 }

@@ -6,14 +6,19 @@ import LineQR from "@/assets/LineQR.png"
 import { Button2 } from "@/components/Button2";
 import { Button3 } from "@/components/Button3";
 import { Button } from "@headlessui/react";
+import { ButtonRightArrow } from "@/components/ButtonRightArrow";
+import { motion } from "motion/react";
 
 export const ContactSection = () => {
 
     return (
         <SectionType1 disableLine className="bg-gradient2" innerClassName="items-center relative">
-            <div id="contacts" className="absolute -top-32" />
+            <div id="contacts" className="absolute -top-24" />
 
-            <div className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col">
+            <motion.div
+                initial={{ scale: 1.1, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col">
                 <h2 className="text-title2 font-jost text-center mb-2">お問い合わせ</h2>
                 <p className="text-center text-gray-600 mb-8">詳細、入会などはこちらから</p>
 
@@ -23,15 +28,13 @@ export const ContactSection = () => {
                     公式LINEを追加する
                 </Button>
 
-                <div className="relative mt-8">
-                    <ArrowSvg />
-                    <div className="absolute inset-0 m-auto flex flex-col items-center justify-center gap-4 text-title4 text-white">
-                        無料で<br />
-                        つながるラボを覗いてみる？
-                    </div>
+                <ButtonRightArrow className="w-fit mx-auto mt-8">
+                    無料で<br />
+                    つながるラボを<br className="sm:hidden" />
+                    覗いてみませんか？
+                </ButtonRightArrow>
 
-                </div>
-            </div>
+            </motion.div>
 
         </SectionType1>
     )
@@ -52,7 +55,7 @@ const ArrowSvg = () => <svg xmlns="http://www.w3.org/2000/svg" width="408"
                 clipRule="nonzero" />
         </clipPath>
     </defs>
-    <rect  fill="#ffffff" y="-8.7" height="104.399995" fillOpacity="1" />
+    <rect fill="#ffffff" y="-8.7" height="104.399995" fillOpacity="1" />
     <g clipPath="url(#1)">
         <g clipPath="url(#2)">
             <path fill="#8c52ff"
