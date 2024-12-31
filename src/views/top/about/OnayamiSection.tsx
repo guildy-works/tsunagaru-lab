@@ -42,7 +42,7 @@ export const OnayamiSection = () => {
                 </h2>
 
                 <motion.div
-                     viewport={{ once: true }}
+                    viewport={{ once: true }}
                     transition={{ type: "spring", bounce: 0.4, damping: 5, mass: 0.2 }}
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
@@ -104,13 +104,13 @@ export const OnayamiSection = () => {
     </SectionBox>
 }
 
-const OnayamiItem = ({ title, content, delay, colorClass, href, src }: {
+const OnayamiItem = ({ title, content, delay, colorClass, href, src}: {
     delay?: number,
     title: ReactNode,
     content: ReactNode,
     colorClass?: string,
     href?: string
-    src: StaticImageData
+    src: StaticImageData,
 }) => {
     return (
         <FadeAndSlideScrollTriggerAnimation className="overflow-hidden flex flex-col items-center justify-center gap-4 bg-gradient3 p-8 rounded-3xl w-fit">
