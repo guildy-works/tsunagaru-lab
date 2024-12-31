@@ -20,6 +20,7 @@ export const ProfileSection = () => <SectionBox className={clsx(
         <FadeAndSlideScrollTriggerAnimation className="text-title2 font-bold">小早川（こばやかわ）</FadeAndSlideScrollTriggerAnimation>
         <FadeAndSlideScrollTriggerAnimation className="rounded-3xl border-2 border-black overflow-hidden">
             <motion.div
+                viewport={{ once: true }}
                 transition={{ bounce: 1, damping: 5, mass: 0.8 }}
                 initial={{ translateY: "100%", opacity: 0.4, scale: 1 }}
                 whileInView={{ translateY: "0", opacity: 1, scale: 1 }}

@@ -18,11 +18,12 @@ export const FadeAndSlideScrollTriggerAnimation = ({
 }: FadeAndSlideScrollTriggerAnimationProps) => {
     return (
         <motion.div
+            viewport={{ once: true }}
             style={style}
             className={className}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: (delay ?? 0.2)  }}
+            transition={{ duration: 0.4, delay: (delay ?? 0.2) }}
         >
             {children}
         </motion.div>

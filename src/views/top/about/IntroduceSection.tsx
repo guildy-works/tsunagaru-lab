@@ -131,6 +131,7 @@ const IntroduceItem = ({ title, content, num, delay, }: {
 }) => {
     return (
         <motion.div
+            viewport={{ once: true }}
             transition={{
                 translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay },
                 opacity: { duration: 0.3, },
@@ -138,18 +139,18 @@ const IntroduceItem = ({ title, content, num, delay, }: {
             initial={{ translateY: "60px", opacity: 0.4 }}
             whileInView={{ translateY: "0px", opacity: 1 }}
             className="-mt-12 md:mt-0 pb-16 md:pb-8 p-8 w-full h-full flex flex-col items-center gap-4 bg-gradient4 overflow-hidden rounded-3xl" >
-            <FadeAndSlideScrollTriggerAnimation  className="flex items-center gap-3 w-full">
-                <div className="text-color2 flex flex-col text-[1rem] md:text-[2rem]">
+            <div className="flex items-center gap-3 w-full">
+                <h3 className="text-color2 flex flex-col text-[1rem] md:text-[2rem]">
                     <span> Point</span>
                     <span className="text-[2rem] md:text-[3rem] mx-auto mt-4">{num}</span>
-                </div>
+                </h3>
                 <h3 className="text-title2">
                     {title}
                 </h3>
-            </FadeAndSlideScrollTriggerAnimation>
+            </div>
 
             <MdOutlinePhoto className="text-[8rem]" />
-            <FadeAndSlideScrollTriggerAnimation   className="text-size2">{content}</FadeAndSlideScrollTriggerAnimation>
+            <p className="text-size2">{content}</p>
         </ motion.div >
     );
 }

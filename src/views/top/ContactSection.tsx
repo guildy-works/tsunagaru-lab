@@ -16,6 +16,7 @@ export const ContactSection = () => {
             <div id="contacts" className="absolute -top-24" />
 
             <motion.div
+                 viewport={{ once: true }}
                 initial={{ scale: 1.1, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col">

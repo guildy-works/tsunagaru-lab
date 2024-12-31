@@ -32,6 +32,7 @@ const Top = () => <>
         <div className="max-w-6xl mx-auto space-y-6 px-8">
 
             <motion.div
+                viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -47,6 +48,7 @@ const Top = () => <>
             </motion.div>
 
             <motion.div
+                viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -56,6 +58,7 @@ const Top = () => <>
             </motion.div>
 
             <motion.div
+                viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}

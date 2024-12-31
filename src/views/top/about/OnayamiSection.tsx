@@ -42,6 +42,7 @@ export const OnayamiSection = () => {
                 </h2>
 
                 <motion.div
+                     viewport={{ once: true }}
                     transition={{ type: "spring", bounce: 1, damping: 5, mass: 0.8 }}
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}

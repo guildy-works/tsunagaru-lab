@@ -8,6 +8,7 @@ export const SnsLinkList = ({ disableMessage }: { disableMessage?: boolean }) =>
     return (
         <div className="flex gap-2 md:gap-4 flex-wrap justify-center p-6">
             <motion.a
+                viewport={{ once: true }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 href="/"
@@ -18,6 +19,7 @@ export const SnsLinkList = ({ disableMessage }: { disableMessage?: boolean }) =>
                 <Image src={X} alt="X" className="w-12" />
             </motion.a>
             <motion.a
+                viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -28,6 +30,7 @@ export const SnsLinkList = ({ disableMessage }: { disableMessage?: boolean }) =>
                 <Image src={Instagram} alt="Instagram" className="w-12" />
             </motion.a>
             <motion.a
+                viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
