@@ -41,10 +41,13 @@ export const SnsLinkList = ({ disableMessage }: { disableMessage?: boolean }) =>
                 <Image src={Line} alt="Line" className="w-12" />
             </motion.a>
             {!disableMessage &&
-                <motion.div initial={{ opacity: 0, y: 100 }}
+                <motion.div
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     className='w-full text-center text-color10 text-title3'>
-                    DMでお気軽に<br className='sm:hidden' />
+                    DMでお気軽に<br className='' />
                     お問い合わせください
                 </motion.div>
             }

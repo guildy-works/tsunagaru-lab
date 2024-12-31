@@ -82,7 +82,7 @@ export const HowToJoinSection = () => {
             <Splide
                 className=""
                 options={{
-                    autoplay: true,
+                    autoplay: false,
                     rewind: false,
                     interval: 2000, // 自動再生の間隔
                     speed: 2000, // フェードする時間

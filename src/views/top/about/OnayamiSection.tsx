@@ -43,7 +43,7 @@ export const OnayamiSection = () => {
 
                 <motion.div
                      viewport={{ once: true }}
-                    transition={{ type: "spring", bounce: 1, damping: 5, mass: 0.8 }}
+                    transition={{ type: "spring", bounce: 0.4, damping: 5, mass: 0.2 }}
                     initial={{ width: 0 }}
                     whileInView={{ width: "100%" }}
                     className="mt-4 h-[2px] bg-black" />
@@ -55,7 +55,7 @@ export const OnayamiSection = () => {
 
             <Splide
                 options={{
-                    autoplay: true,
+                    autoplay: false,
                     rewind: false,
                     interval: 2000, // 自動再生の間隔
                     speed: 2000, // フェードする時間

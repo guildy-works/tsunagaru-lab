@@ -107,6 +107,7 @@ const Top = () => <>
             </VisionItem>
 
             <motion.div
+                viewport={{ once: true }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className="w-fit mx-auto flex flex-col justify-center items-center">
@@ -172,6 +173,7 @@ const Top = () => <>
         </div>
 
         <motion.div
+            viewport={{ once: true }}
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="w-fit mx-auto flex flex-col justify-center items-center md:py-8">
@@ -333,7 +335,7 @@ const Sns = () => <div className="flex gap-4">
 
 const Hr = () => <motion.div
     viewport={{ once: true }}
-    transition={{ type: "spring", bounce: 1, damping: 5, mass: 0.8 }}
+    transition={{ type: "spring", bounce: 0.4, damping: 5, mass: 0.2 }}
     initial={{ width: 0 }}
     whileInView={{ width: "100%" }}
     className="h-[2px] bg-black" />

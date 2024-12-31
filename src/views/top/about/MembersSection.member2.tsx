@@ -16,7 +16,7 @@ export const MembersSection2 = () => {
             <Splide
                 className="w-full"
                 options={{
-                    autoplay: true,
+                    autoplay: false,
                     rewind: false,
                     wheel: false,
                     releaseWheel:true,
