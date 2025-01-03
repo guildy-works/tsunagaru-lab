@@ -17,7 +17,7 @@ export const MembersSection = () => {
         <div className="w-full flex flex-col items-center mx-auto gap-8 justify-center">
             <MembersSection2 />
 
-            <Button3 href="#" subTitle="お気軽にお問い合わせください！" >
+            <Button3 href="/#contacts" subTitle="お気軽にお問い合わせください！" >
                 無料で入会する
             </Button3>
         </div>

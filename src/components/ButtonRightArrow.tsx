@@ -7,8 +7,7 @@ export const ButtonRightArrow = ({ onClick, children ,className}: { onClick?: Mo
 
     return (
         <button onClick={onClick} className={clsx("flex cursor-pointer overflow-hidden", styles.button,className)}>
-            <div className={clsx("h-full  bg-color0 flex-1",styles.left)}>
-
+            <div className={clsx("h-full  bg-[#5865f2] flex-1",styles.left)}>
                 {children}
             </div>
             <div className={styles.triangle}></div>

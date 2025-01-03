@@ -9,6 +9,8 @@ import { Button } from "@headlessui/react";
 import { ButtonRightArrow } from "@/components/ButtonRightArrow";
 import { motion } from "motion/react";
 import Link from "next/link";
+import Line from '@/assets/sns/LINE.svg'
+import Discord from '@/assets/sns/Discord.svg'
 
 export const ContactSection = () => {
 
@@ -22,21 +24,36 @@ export const ContactSection = () => {
                 whileInView={{ scale: 1, opacity: 1 }}
                 className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col">
                 <h2 className="text-title2 font-jost text-center mb-2">お問い合わせ</h2>
-                <p className="text-center text-gray-600 mb-8">詳細、入会などはこちらから</p>
+                <p className="text-center text-color0/60 mb-8">詳細、入会などはこちらから</p>
 
-                <SnsLinkList />
+                <motion.div
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className='w-full text-center text-color10 text-title3'>
+                    お気軽に<br className='' />
+                    お問い合わせください
+                </motion.div>
 
                 <Link
                     target="_blank"
                     href={"https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"}
-                    className="mx-auto mt-8 bg-color3 rounded-full text-white text-title3 px-8 py-4 hover:bg-color3/70">
+                    className="mx-auto mt-8 flex items-center gap-3 bg-color3 rounded-full text-white text-title3 px-8 py-2 hover:bg-color3/70">
+                    <Image src={Line} alt="Line" className="w-12" />
                     公式LINEを追加する
                 </Link>
 
                 <ButtonRightArrow className="w-fit mx-auto mt-8">
-                    無料で<br />
-                    つながるラボを<br className="sm:hidden" />
-                    覗いてみませんか？
+                    <div className="flex items-center gap-3">
+                        <Image src={Discord} alt="Line" className="w-12" />
+                        <div className="flex flex-col items-center gap-2 text-[1rem] leading-[1.6rem]">
+                            無料で<br />
+                            つながるラボを<br/>
+                            覗いてみませんか？
+                        </div>
+                    </div>
+
                 </ButtonRightArrow>
 
             </motion.div>
