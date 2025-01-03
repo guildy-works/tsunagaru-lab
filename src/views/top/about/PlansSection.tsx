@@ -38,9 +38,9 @@ export const PlansSection = () => {
                     } as Options}
                 >
                     <SplideSlide >
-                        <PlanItem title="フリープラン"
+                        <PlanItem title={<>フリー<br />プラン</>}
                             price="¥0/月"
-                            title2="学生におすすめ！"
+                            title2={<>学生に<br />おすすめ！</>}
                             content={<>
                                 ・オフライン交流会への参加<br />
                                 ・セミナーや講演会への参加<br />
@@ -51,9 +51,10 @@ export const PlansSection = () => {
                     </SplideSlide>
                     <SplideSlide >
                         <PlanItem
-                            title="スモールプラン"
+                            title={<>スモール<br />プラン</>}
                             price="¥1,980/月"
-                            title2="フリーランスにおすすめ！"
+    
+                            title2={<>フリーランスに<br />おすすめ！</>}
                             content={<>
                                 ・フリープラン機能が全て使える<br />
                                 ・Zoom朝活<br />
@@ -65,9 +66,9 @@ export const PlansSection = () => {
                         />
                     </SplideSlide>
                     <SplideSlide >
-                        <PlanItem title="ビジネスプラン"
+                        <PlanItem title={<>ビジネス<br />プラン</>}
                             price="¥3,980/月"
-                            title2="経営者におすすめ！"
+                            title2={<>経営者に<br />おすすめ！</>}
                             content={<>
                                 ・スモールプラン機能が全て使える<br />
                                 ・各種イベントの宣伝し放題<br />
@@ -108,9 +109,9 @@ const PlanItem = ({ title, title2, price, content, delay, colorClass, href, src 
             }}
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            className="h-full w-full flex flex-col items-center justify-center bg-color3 p-5 gap-4 rounded-3xl overflow-hidden">
-            <h3 className=" text-title3 font-bold">{title2}</h3>
-            <h2 className=" text-title1 font-bold">{title}</h2>
+            className="h-full  w-72 flex flex-col items-center justify-center bg-color3 p-5 gap-4 rounded-3xl overflow-hidden">
+            <h3 className=" text-title3 font-bold text-center">{title2}</h3>
+            <h2 className=" text-title1 font-bold text-center">{title}</h2>
             <p className=" h-full w-full rounded-lg">{content}</p>
         </ motion.div>
     );

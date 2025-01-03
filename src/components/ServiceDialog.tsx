@@ -18,7 +18,7 @@ export const ServiceDialog = ({ children, buttonText }: { children: React.ReactN
         <>
             <Button1
                 onClick={open}
-                className="!min-w-52 bg-color3 text-white py-2 rounded-md hover:bg-color3/60 transition duration-300"
+                className="!min-w-52 mt-1 h-16 bg-color3 text-white py-2 rounded-md hover:bg-color3/60 transition duration-300"
             >
                 {buttonText ?? "詳細を見る"}
             </Button1>

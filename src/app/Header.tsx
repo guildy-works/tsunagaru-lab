@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button, Description, Dialog, DialogBackdrop, DialogPanel, DialogTitle, Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
 import { MdClose, MdMenu } from 'react-icons/md';
 import { SnsLinkList } from '@/components/SnsLinkList';
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/logo_circle.png";
 import Image from 'next-export-optimize-images/picture';
 import { DOMMotionComponents, motion } from "motion/react"
 
@@ -29,7 +29,7 @@ export const Header = () => {
         <>
             <header className="flex items-center sticky top-0 mt-0 bg-gradient-opacity backdrop-blur-lg z-20 border-b border-black/5">
                 <Link href="/" className='p-2'>
-                    <Image src={Logo} alt="Logo" className='w-[60px] md:w-[80px]' />
+                    <Image src={Logo} alt="Logo" className='w-[50px] md:w-[80px]' />
                 </Link>
 
                 {/* Desktop */}
@@ -110,12 +110,12 @@ export const Header = () => {
                 </Button>
 
                 {/* Mobile */}
-                <nav className="flex md:hidden gap-6 py-2">
+                <nav className="flex md:hidden gap-6">
 
 
                     <button
                         onClick={() => setIsMenuOpen(true)}
-                        className="flex items-center justify-center p-2 w-12 h-12 rounded-full text-color3 hover:bg-color3/10">
+                        className="flex items-center justify-center px-2 w-12 h-12 rounded-full text-color3 hover:bg-color3/10">
                         <MdMenu size={48} />
                     </button>
 

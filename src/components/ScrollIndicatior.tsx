@@ -12,7 +12,7 @@ export const ScrollIndicator = () => {
         style={{
             bottom: `calc(100svh - ${size.innerHeight}px + 8px)`,
         }}
-        className={clsx(styles.container, "sm:mr-6 md:8")}
+        className={clsx(styles.container, "sm:mr-6 md:8 z-10")}
     >
         <a className="bg-color3/90 backdrop-blur-md text-white p-2 sm:p-4 rounded-xl flex justify-center items-center"
             href="#contacts"

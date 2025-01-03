@@ -15,8 +15,6 @@ export default function Home() {
 
             <TopSection />
 
-            <FeaturesSection />
-
             <AboutSection />
 
             <HowToJoinSection />

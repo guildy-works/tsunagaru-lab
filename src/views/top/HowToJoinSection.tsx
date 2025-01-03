@@ -8,51 +8,52 @@ import { MdOutlinePhoto, MdPerson, MdPersonOutline, MdPhoto } from "react-icons/
 import { Button3 } from "@/components/Button3";
 import { title } from "process";
 import { DOMMotionComponents, motion, useInView } from "motion/react"
-import Join1 from "@/assets/join1.webp";
-import Join2 from "@/assets/join2.webp";
-import Join3 from "@/assets/join3.webp";
-import Join4 from "@/assets/join4.webp";
+import Join1 from "@/assets/join1.png";
+import Join2 from "@/assets/join2.png";
+import Join3 from "@/assets/join3.png";
+import Join4 from "@/assets/join4.png";
+import clsx from "clsx";
 
 const data = [
 
     {
         num: "01",
-        title: "様々な人とつながる",
+        title: "公式LINEの追加",
         img: Join1,
         content: <>
-            オフライン交流会や各種イベントの開催<br />
-            チャット上での交流<br />
-            フリーランス、経営者、学生、社会人とつながれる
+            つながるラボの<br />
+            公式LINEの追加
         </>
     },
     {
         num: "02",
-        title: "集客や採用ができる",
+        title: "無料体験申し込み",
         img: Join2,
         content: <>
-            求人や案件、仕事の受発注<br />
-            マルシェなどのイベント<br />
-            商品やサービスの宣伝し放題
+            今すぐ入会したい方も<br />
+            考え中の方も<br />
+            まずは無料体験からスタート
         </>,
     },
     {
         num: "03",
-        title: "スキルアップにつながる",
+        title: <>つながるラボの<br />コミュニティへ招待</>,
         img: Join3,
         content: <>
-            セミナーの開催<br />
-            スキルやノウハウなど<br />
-            色んな情報をメンバー同士でシェア
+            申し込みの確認ができましたら<br />
+            サロンで活用する<br />
+            Discordサーバーへ招待
         </>,
     },
     {
         num: "04",
-        title: "朝活ができる",
+        title: "正式入会",
         img: Join4,
         content: <>
-            平日の朝7時から8時まで<br />
-            ポモドーロタイマーを活用した<br />
-            Zoom朝活で生産性が高まります
+            無料体験後<br />
+            問題がなければ<br />
+            「つながるラボメンバー」<br />
+            になれます
         </>,
     },
 ]
@@ -63,12 +64,13 @@ export const HowToJoinSection = () => {
             入会方法
         </h2>
 
-        <div className="hidden sm:grid w-full sm:grid-cols-2 md:grid-cols-4 max-w-6xl" >
+        <div className="w-full flex flex-col  px-8" >
             {
                 data.map((x, i) =>
                     <IntroduceItem
+                        isLast={i === data.length - 1}
                         src={x.img}
-                        key={x.title}
+                        key={i}
                         num={x.num}
                         delay={i * 200}
                         title={x.title}
@@ -77,56 +79,45 @@ export const HowToJoinSection = () => {
                 )
             }
         </div>
-
-        <div className="sm:hidden" >
-            <Splide
-                className=""
-                options={{
-                    autoplay: false,
-                    rewind: false,
-                    interval: 2000, // 自動再生の間隔
-                    speed: 2000, // フェードする時間
-                    arrows: false,
-                    width: 'auto',
-                    perPage: 1,
-                    autoWidth: true,
-                } as Options}
-            >
-                {
-                    data.map((x, i) =>
-
-                        <SplideSlide key={i}>
-                            <IntroduceItem
-                                src={x.img}
-                                key={x.title}
-                                num={x.num}
-                                delay={i * 200}
-                                title={x.title}
-                                content={x.content}
-                            />
-                        </SplideSlide>
-
-                    )
-                }
-            </Splide>
-        </div>
     </SectionBox>
 }
 
 
-const IntroduceItem = ({ title, content, delay, num, src }: {
+const IntroduceItem = ({ title, content, delay, num, src, isLast }: {
     delay?: number,
     title: ReactNode,
     num: string,
     content: ReactNode,
+    isLast: boolean,
     src?: StaticImageData
 }) => {
     return (
         <FadeAndSlideScrollTriggerAnimation
             delay={0.2}
-            className="w-full h-full flex flex-col items-center gap-4 overflow-hidden"
+            className={clsx(
+                "w-full h-full flex flex-col gap-4 relative  pb-8",
+                isLast ? "" : "border-l-2 border-color3"
+            )}
         >
-            <Image src={src} alt={title} className="w-[320px] h-[540px] object-cover" />
+            <div className="bg-color3 rounded-full size-8 flex justify-center items-center absolute left-0 top-0 -translate-x-1/2"></div>
+
+            <div className="flex flex-wrap w-full">
+                <div className="ml-8">
+                    <h3 className="h-8 flex items-center text-title3 text-color3">
+                        <small className="mr-4">STEP</small> {num}
+                    </h3>
+                    <h2 className="mt-2 text-title3">
+                        {title}
+                    </h2>
+                    <p className="mt-2">
+                        {content}
+                    </p>
+                </div>
+                <div className="ml-auto my-auto">
+                    <Image src={src} alt={title} className="size-32 object-cover" />
+                </div>
+
+            </div>
         </FadeAndSlideScrollTriggerAnimation>
     );
 }

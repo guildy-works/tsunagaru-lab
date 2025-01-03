@@ -14,19 +14,19 @@ import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimatio
 import { resources } from "@/resources";
 
 export const IntroduceSection = () => {
-    return <SectionBox disablePx disableMaxWidth>
+    return <SectionBox disablePx disableMaxWidth className="!mt-0">
         <div id="about" />
 
         <div
             className="w-full relative flex flex-col overflow-hidden"
         >
-            <div className={clsx(styles.triangleUp, "bg-[#8c52ff]")} />
+            <div className={clsx(styles.triangleUp, "bg-[#6e35df]")} />
             <div
 
-                className="w-full flex justify-center items-center bg-[#8c52ff] pt-16 py-4 -mt-[1px]">
+                className="w-full flex justify-center items-center bg-[#6e35df] pt-16 py-4 -mt-[1px]">
 
-                <SkewScrollTriggerAnimation skewPanelClass="!bg-[#8c52ff]"
-                    className=" text-title1 font-bold "
+                <SkewScrollTriggerAnimation skewPanelClass="!bg-[#6e35df]"
+                    className="py-4 text-white text-[3rem] leading-[3.5rem] font-bold "
                 >
                     つながるラボなら<br />
                     中四国でつながる
@@ -36,7 +36,7 @@ export const IntroduceSection = () => {
             <div className={clsx(styles.triangleDown, "border-t-8")} />
         </div>
 
-        <div className="md:hidden mt-16 hiddlen w-full max-w-6xl px-8" >
+        <div className="md:hidden hiddlen w-full max-w-6xl px-8 space-y-8" >
             {
                 resources.introduces.map((x, i) =>
                     <IntroduceItem
@@ -85,22 +85,22 @@ const IntroduceItem = ({ title, content, num, delay, baloon }: {
             }}
             initial={{ translateY: "60px", opacity: 0.4 }}
             whileInView={{ translateY: "0px", opacity: 1 }}
-            className="relative -mt-12 md:mt-0 pb-16 md:pb-8 p-8 w-full h-full flex flex-col items-center gap-4 bg-gradient4 rounded-3xl" >
-            <div className="flex items-center gap-3 w-full">
-                <h3 className="text-color2 flex flex-col text-[1rem] md:text-[2rem]">
-                    <span> Point</span>
-                    <span className="text-[2rem] md:text-[3rem] mx-auto mt-4">{num}</span>
-                </h3>
-                <h3 className="text-title2">
-                    {title}
-                </h3>
-            </div>
+            className="relative p-8 w-full h-full flex flex-col items-center gap-4 bg-gradient4 rounded-3xl" >
+
+            <h3 className="text-color2 flex flex-col text-[3rem]">
+                <span> Point</span>
+                <span className="text-[4rem] mx-auto mt-8">{num}</span>
+            </h3>
+
+            <h3 className="text-title2 mt-8">
+                {title}
+            </h3>
 
             <MdOutlinePhoto className="text-[8rem]" />
             <p className="text-size2">{content}</p>
 
             {baloon && <FadeAndSlideScrollTriggerAnimation delay={0.4}
-             className="z-10 absolute -right-[48px] top-0 bottom-0 m-auto pb-24 size-fit" >
+                className="z-10 absolute -right-[32px] top-0 bottom-0 m-auto pb-24 size-fit" >
                 <Image src={Balloon1} alt="img" className="w-40" />
             </FadeAndSlideScrollTriggerAnimation>}
         </ motion.div >

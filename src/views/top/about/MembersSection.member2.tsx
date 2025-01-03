@@ -14,12 +14,12 @@ export const MembersSection2 = () => {
             <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold">早期入会者の紹介</SkewScrollTriggerAnimation>
 
             <Splide
-                className="w-full"
+                className="mx-auto"
                 options={{
                     autoplay: false,
                     rewind: false,
                     wheel: false,
-                    releaseWheel:true,
+                    releaseWheel: true,
                     interval: 2000, // 自動再生の間隔
                     speed: 2000, // フェードする時間
                     arrows: false,
@@ -33,7 +33,7 @@ export const MembersSection2 = () => {
 
                 {resources.members2.map((resource, index) => (<SplideSlide key={resource.name} >
                     <OnayamiItem title={resource.name}
-                        key={resource.name}
+                        key={index}
                         title2={resource.job}
                         content={resource.details}
                         src={resource.image}
@@ -67,16 +67,16 @@ const OnayamiItem = ({ title, title2, content, delay, colorClass, href, src }: {
 }) => {
     return (
         <FadeAndSlideScrollTriggerAnimation
-            className="h-full w-full max-w-80  md:max-w-md flex flex-col items-center justify-center bg-color4 p-5 gap-4 rounded-3xl overflow-hidden">
-            <div className="w-full gap-4 bg-color4 grid grid-cols-1 md:grid-cols-2">
+            className="h-full max-w-80 flex flex-col items-center justify-center bg-color4 p-5 gap-4 rounded-3xl overflow-hidden">
+            <div className="w-full gap-4 grid grid-cols-2">
                 <div className="rounded-lg">
-                    <Image src={src} alt={title} className="w-full h-40 rounded-lg object-cover" />
+                    <Image src={src} alt={title} className="w-full rounded-lg object-cover" />
                 </div>
-                <div className="flex-grow-1">
+                <div className="flex-grow-1 m-auto">
                     <h3 className="text-title3 font-bold">{title}</h3>
-                    <h4 className="text-title4 font-bold">{title2}</h4>
                 </div>
             </div>
+            <h4 className="text-title4 font-bold">{title2}</h4>
             <p className="p-4 h-full bg-white w-full rounded-lg">{content}</p>
         </ FadeAndSlideScrollTriggerAnimation>
     );

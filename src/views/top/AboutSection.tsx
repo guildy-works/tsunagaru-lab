@@ -6,7 +6,7 @@ import { ProfileSection } from "./about/ProfileSection";
 
 export default function AboutSection() {
     return (
-        <section className="w-full relative flex flex-col">
+        <section className="w-full relative flex flex-col gap-0">
 
             <ProfileSection />
             <OnayamiSection />

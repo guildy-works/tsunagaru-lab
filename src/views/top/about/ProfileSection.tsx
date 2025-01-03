@@ -10,7 +10,7 @@ import { Button2 } from "@/components/Button2";
 import { Button3 } from "@/components/Button3";
 
 export const ProfileSection = () => <SectionBox className={clsx(
-    "grid",
+    "grid mt-24",
     "grid-cols-1  mx-auto !gap-4 !max-w-xl",
     "md:grid-cols-2 md:!max-w-5xl md:!gap-12"
 )}>
@@ -32,16 +32,11 @@ export const ProfileSection = () => <SectionBox className={clsx(
 
     <div className="flex flex-col items-center justify-center gap-4 relative">
         <div className="mx-auto justify-start flex flex-col items-start gap-1 sm:gap-2 md:gap-3 w-full">
-            <SkewScrollTriggerAnimation tag="p" className="mt-8">
+            <SkewScrollTriggerAnimation tag="p">
                 初めまして！
             </SkewScrollTriggerAnimation>
             <SkewScrollTriggerAnimation tag="p">
                 広島県と岡山県を拠点に活動している、小早川です<br />
-            </SkewScrollTriggerAnimation>
-
-            <SkewScrollTriggerAnimation tag="p" delay={0.1}>   この度<br />
-                中四国地方に特化したオンラインコミュニティ「つながるラボ」を<br />
-                スタートさせることになりました！<br /><br />
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation tag="p">   このコミュニティでは<br />
@@ -50,7 +45,7 @@ export const ProfileSection = () => <SectionBox className={clsx(
                 創り上げることを目標としています<br /><br />
             </SkewScrollTriggerAnimation>
 
-            <SkewScrollTriggerAnimation tag="p" delay={0.1}> 「地方でつながる、地方から輝く」のコンセプトのもと<br />
+            <SkewScrollTriggerAnimation tag="p" delay={0.1}> 
                 人脈、仕事、情報をつなげていきましょう！<br />
             </SkewScrollTriggerAnimation>
 

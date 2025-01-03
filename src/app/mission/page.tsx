@@ -17,9 +17,36 @@ export default function Mission() {
     return (
         <>
             <MissionTopArt />
-            <div className="mt-52 flex flex-col relative">
+            <div className="mt-32 sm:mt-44 flex flex-col relative">
 
-                <div className="mt-24 h-24 w-full left-0 right-0 bg-gradient1 rounded-t-[100%] top-0 absolute -z-10" />
+                <motion.div
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="w-fit mx-auto flex flex-col justify-center items-center py-8">
+                    <div className="flex  text-title1 font-bold tracking-wider">
+                        <span className="text-color2">O</span>
+                        ur
+                        <span className="text-color3 ml-3">M</span>
+                        issions
+                    </div>
+
+                    <span className="w-[60%] border-b-2 border-black mt-2 md:mt-4 " />
+                </motion.div>
+
+
+                <motion.div
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="mx-auto text-title1 text-center">
+                    デジタル x リアルで<br />
+                    中国地方に新たな<br className="sm:hidden" />
+                    つながりと可能性を創出
+                </motion.div>
+
                 <Top />
             </div>
         </>)
@@ -27,36 +54,10 @@ export default function Mission() {
 
 const Top = () => <>
     <div
-        className="pb-32 flex flex-col justify-center items-center  mt-48 gap-4 bg-gradient1">
+        className="pb-32 flex flex-col justify-center items-center  mt-36 gap-4 bg-gradient1 relative">
+        <div className="-translate-y-[99%] h-24 w-full left-0 right-0 bg-gradient1 rounded-t-[100%] top-0 absolute" />
 
         <div className="max-w-6xl mx-auto space-y-6 px-8">
-
-            <motion.div
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="absolute top-0 left-0 right-0 z-10 w-fit mx-auto flex flex-col justify-center items-center py-8">
-                <div className="flex  text-title1 font-bold tracking-wider">
-                    <span className="text-color2">O</span>
-                    ur
-                    <span className="text-color3 ml-3">M</span>
-                    issions
-                </div>
-
-                <span className="w-[60%] border-b-2 border-black mt-2 md:mt-4 " />
-            </motion.div>
-
-            <motion.div
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="mx-auto text-title1 text-center">
-                デジタル x リアルで<br />
-                中国地方に新たなつながりと可能性を創出
-            </motion.div>
-
             <motion.div
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
@@ -75,7 +76,7 @@ const Top = () => <>
 
             <VisionItem
                 num="01"
-                title="人々がつながり、共創し合うコミュニティ"
+                title={<>人々がつながり、<br />共創し合うコミュニティ</>}
                 desctiption={<>
                     フリーランスと経営者と学生が、地理的・社会的な壁を取り払い、<br />
                     互いのスキルやリソースを活かして、<br />
@@ -86,7 +87,7 @@ const Top = () => <>
 
             <VisionItem
                 num="02"
-                title="デジタルで紡ぐ、地方の伝統と未来"
+                title={<>デジタルで紡ぐ、<br />地方の伝統と未来</>}
                 desctiption={<>
                     中国四国地方のデジタルリテラシーの格差を是正し、<br />
                     デジタル技術で地域資源の継承並びに最大化を図り、<br />
@@ -97,7 +98,7 @@ const Top = () => <>
 
             <VisionItem
                 num="03"
-                title="発信力を活かし、地方の未来を切り拓く"
+                title={<>発信力を活かし、<br />地方の未来を切り拓く</>}
                 desctiption={<>
                     発信力を活用して、地域イベントの活性化、<br />
                     雇用創出を促し、<br />
@@ -208,12 +209,12 @@ const VisionItem = ({
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="rounded-3xl bg-white p-8 w-full border-2 border-color0 overflow-hidden">
-            <SkewScrollTriggerAnimation className="flex gap-4 items-center mt-auto h-fit" delay={0.2} >
-                <span className="text-[3.4rem] py-4 text-color0">{num}</span>
-                <h3 className="mt-1 text-title2 text-color2 font-bold">{title}</h3>
+            <SkewScrollTriggerAnimation className="mx-auto flex flex-col gap-4 items-center mt-auto h-fit" delay={0.2} >
+                <span className="mx-auto sm:mx-0 text-[3.4rem] py-4 text-color0">{num}</span>
+                <h3 className="mt-1 text-title2 text-color3 font-bold">{title}</h3>
             </SkewScrollTriggerAnimation>
 
-            <SkewScrollTriggerAnimation tag="p" className="mt-2 text-title4">
+            <SkewScrollTriggerAnimation tag="p" className="mx-auto mt-2 sm:mt-8 text-title4">
                 {desctiption}
             </SkewScrollTriggerAnimation>
         </motion.div>

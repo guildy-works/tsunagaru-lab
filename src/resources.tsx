@@ -12,7 +12,7 @@ export const resources = {
     members2: [
         {
             name: "RYO",
-            job: "SNSインフルエンサー・パーソナルトレーナー",
+            job: <>SNSインフルエンサー<br/>パーソナルトレーナー</>,
             details: <>
                 Instagram フォロワー42万人<br />
                 YouTube チャンネル登録者21万人<br />
@@ -58,7 +58,7 @@ export const resources = {
             image: 宮本
         },
         {
-            name: "たけうちまりえ",
+            name: <>たけうち<br/>まりえ</>,
             job: "デザイナー　Jalart design",
             details: <>
                 デジタル(チラシ、名刺、ロゴなど)から<br />
