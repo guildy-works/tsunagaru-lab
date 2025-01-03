@@ -1,7 +1,6 @@
 import { SectionBox } from "@/components/SectionBox"
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
 import { ReactNode } from "react"
-import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import Issue1 from "@/assets/issue1.webp";
 import Issue2 from "@/assets/issue2.webp";
 import Issue3 from "@/assets/issue3.webp";

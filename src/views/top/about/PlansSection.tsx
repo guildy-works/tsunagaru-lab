@@ -23,7 +23,7 @@ export const PlansSection = () => {
                 <h2 className="text-title1 font-bold">料金プラン</h2>
 
                 <Splide
-                    className=""
+                     className="mx-auto max-w-full"
                     options={{
                         autoplay: false,
                         rewind: false,

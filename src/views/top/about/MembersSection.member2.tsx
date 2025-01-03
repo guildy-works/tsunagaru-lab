@@ -14,7 +14,7 @@ export const MembersSection2 = () => {
             <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold">早期入会者の紹介</SkewScrollTriggerAnimation>
 
             <Splide
-                className="mx-auto"
+                className="mx-auto max-w-full"
                 options={{
                     autoplay: false,
                     rewind: false,
