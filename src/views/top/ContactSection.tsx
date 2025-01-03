@@ -8,6 +8,7 @@ import { Button3 } from "@/components/Button3";
 import { Button } from "@headlessui/react";
 import { ButtonRightArrow } from "@/components/ButtonRightArrow";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export const ContactSection = () => {
 
@@ -16,7 +17,7 @@ export const ContactSection = () => {
             <div id="contacts" className="absolute -top-24" />
 
             <motion.div
-                 viewport={{ once: true }}
+                viewport={{ once: true }}
                 initial={{ scale: 1.1, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 flex flex-col">
@@ -25,9 +26,12 @@ export const ContactSection = () => {
 
                 <SnsLinkList />
 
-                <Button className="mx-auto mt-8 bg-color3 rounded-full text-white text-title3 px-8 py-4">
+                <Link
+                    target="_blank"
+                    href={"https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"}
+                    className="mx-auto mt-8 bg-color3 rounded-full text-white text-title3 px-8 py-4 hover:bg-color3/70">
                     公式LINEを追加する
-                </Button>
+                </Link>
 
                 <ButtonRightArrow className="w-fit mx-auto mt-8">
                     無料で<br />

@@ -65,7 +65,7 @@ export const Header = () => {
                                                         <motion.div
                                                             initial={{ opacity: 0, scale: 0.1 }}
                                                             animate={{ opacity: 1, scale: 1 }}
-                                                            transition={{  duration: 0.2, delay: index * 0.05  }}
+                                                            transition={{ duration: 0.2, delay: index * 0.05 }}
                                                             key={index}>
                                                             <Link
                                                                 href={child.href}
@@ -105,9 +105,11 @@ export const Header = () => {
                     </Button>
                 </nav>
 
-                <Button className="md:hidden ml-auto min-w-32 mr-0 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
+                <Link
+                    href="https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"
+                    className="md:hidden ml-auto min-w-32 mr-0 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
                     入会はコチラ
-                </Button>
+                </Link>
 
                 {/* Mobile */}
                 <nav className="flex md:hidden gap-6">
@@ -146,7 +148,7 @@ const Drawer = ({ isOpen, setIsOpen, children }: React.PropsWithChildren<Props>)
                             <motion.div key={item.href}
                                 initial={{ opacity: 0, translateY: "100%", scale: 0.9 }}
                                 whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
-                                transition={{  duration: 0.2, delay: index * 0.05  }}
+                                transition={{ duration: 0.2, delay: index * 0.05 }}
                                 className="flex flex-col gap-4"
                             >
                                 <Link
@@ -180,7 +182,7 @@ const Drawer = ({ isOpen, setIsOpen, children }: React.PropsWithChildren<Props>)
                     <motion.div
                         initial={{ opacity: 0, scale: 0.7 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6,delay:0.2 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <Image className="mb-8" src={Logo} alt="つながるラボ" width={120} height={120} loading="lazy" />
                     </motion.div>

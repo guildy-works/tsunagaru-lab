@@ -34,7 +34,7 @@ export const SnsLinkList = ({ disableMessage }: { disableMessage?: boolean }) =>
                 transition={{ delay: 0.4 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                href="/"
+                href="https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"
                 target="_blank"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="LINE">
