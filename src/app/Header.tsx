@@ -27,7 +27,7 @@ export const Header = () => {
 
     return (
         <>
-            <header className="flex items-center sticky top-0 mt-0 bg-gradient-opacity backdrop-blur-lg z-20 border-b border-black/5">
+            <header className="flex w-full items-center sticky top-0 mt-0 bg-gradient-opacity backdrop-blur-lg z-50 border-b border-black/5">
                 <Link href="/" className='p-2'>
                     <Image src={Logo} alt="Logo" className='w-[50px] md:w-[80px]' />
                 </Link>
@@ -107,18 +107,17 @@ export const Header = () => {
 
                 <Link
                     href="https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"
+                    target='_blank'
                     className="md:hidden ml-auto min-w-32 mr-0 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
                     入会はコチラ
                 </Link>
 
                 {/* Mobile */}
                 <nav className="flex md:hidden gap-6">
-
-
                     <button
                         onClick={() => setIsMenuOpen(true)}
-                        className="flex items-center justify-center px-2 w-12 h-12 rounded-full text-color3 hover:bg-color3/10">
-                        <MdMenu size={48} />
+                        className="ml-2 mr-4 flex items-center justify-center px-2 w-16 h-12 rounded-full text-color1 hover:bg-color3/10">
+                        <MdMenu size={52} />
                     </button>
 
                     <Drawer isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
@@ -192,7 +191,7 @@ const Drawer = ({ isOpen, setIsOpen, children }: React.PropsWithChildren<Props>)
                     <button data-collapse-toggle="navbar-hamburger"
                         onClick={() => setIsOpen(false)}
                         type="button"
-                        className="absolute top-4 right-4 inline-flex items-center justify-center p-2 w-12 h-12 text-sm rounded-full text-color3 hover:bg-color3/10"
+                        className="absolute top-4 right-4 inline-flex items-center justify-center p-2 w-16 h-12 text-sm rounded-full text-color3 hover:bg-color3/10"
                     >
                         <MdClose size={24} />
                     </button>
