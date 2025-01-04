@@ -40,6 +40,7 @@ export const IntroduceSection = () => {
             {
                 resources.introduces.map((x, i) =>
                     <IntroduceItem
+                        image={x.image}
                         baloon={x.baloon}
                         delay={0}
                         key={x.title}
@@ -51,10 +52,11 @@ export const IntroduceSection = () => {
             }
         </div>
 
-        <div className="hidden mt-16 hiddlen w-full md:grid grid-cols-3 gap-8 max-w-6xl px-8" >
+        <div className="hidden mt-16 hiddlen w-full md:grid grid-cols-3 gap-8 max-w-7xl px-8" >
             {
                 resources.introduces.map((x, i) =>
                     <IntroduceItem
+                        image={x.image}
                         delay={i * 0.1}
                         key={x.title}
                         num={x.num}
@@ -68,13 +70,15 @@ export const IntroduceSection = () => {
 }
 
 
-const IntroduceItem = ({ title, content, num, delay, baloon }: {
+const IntroduceItem = ({ title, content, num, delay, baloon, image }: {
     title: ReactNode,
     num: string,
     content: ReactNode,
     delay: number,
     src?: StaticImageData,
-    baloon?: boolean
+    baloon?: boolean,
+    image: StaticImageData | null,
+
 }) => {
     return (
         <motion.div
@@ -96,7 +100,14 @@ const IntroduceItem = ({ title, content, num, delay, baloon }: {
                 {title}
             </h3>
 
-            <MdOutlinePhoto className="text-[8rem]" />
+            {
+                image
+                    ? <div className="px-12">
+                        <Image src={image} alt="img" className="w-full" />
+                    </div>
+                    : <MdOutlinePhoto className="text-[12rem]" />
+            }
+
             <p className="text-size2">{content}</p>
 
             {baloon && <FadeAndSlideScrollTriggerAnimation delay={0.4}

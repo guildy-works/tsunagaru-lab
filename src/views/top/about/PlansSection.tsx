@@ -23,7 +23,7 @@ export const PlansSection = () => {
                 <h2 className="text-title1 font-bold">料金プラン</h2>
 
                 <Splide
-                     className="mx-auto max-w-full"
+                    className="mx-auto max-w-full"
                     options={{
                         autoplay: false,
                         rewind: false,
@@ -38,42 +38,43 @@ export const PlansSection = () => {
                     } as Options}
                 >
                     <SplideSlide >
-                        <PlanItem title={<>フリー<br />プラン</>}
+                        <PlanItem title={<>フリープラン</>}
                             price="¥0/月"
                             title2={<>学生に<br />おすすめ！</>}
-                            content={<>
-                                ・オフライン交流会への参加<br />
-                                ・セミナーや講演会への参加<br />
-                                ・地域や企業のイベント情報受け取り
-                            </>}
+                            content={<ul className="list-disc px-4">
+                                <li>オフライン交流会への参加</li>
+                                <li>セミナーや講演会への参加</li>
+                                <li>地域や企業のイベント情報受け取り</li>
+                            </ul>}
                             src={Issue1}
                         />
                     </SplideSlide>
                     <SplideSlide >
                         <PlanItem
-                            title={<>スモール<br />プラン</>}
+                            title={<>スモールプラン</>}
                             price="¥1,980/月"
-    
+
                             title2={<>フリーランスに<br />おすすめ！</>}
-                            content={<>
-                                ・フリープラン機能が全て使える<br />
-                                ・Zoom朝活<br />
-                                ・スキルやノウハウの情報共有<br />
-                                ・チャット交流<br />
-                                ・求人や仕事、案件の応募
-                            </>}
+                            content={<ul className="list-disc px-4">
+                                <li>フリープラン機能が全て使える</li>
+                                <li>Zoom朝活</li>
+                                <li>スキルやノウハウの情報共有</li>
+                                <li>チャット交流 </li>
+                                <li>求人や仕事、案件の応募</li>
+                            </ul>}
                             src={Issue1}
                         />
                     </SplideSlide>
                     <SplideSlide >
-                        <PlanItem title={<>ビジネス<br />プラン</>}
+                        <PlanItem title={<>ビジネスプラン</>}
                             price="¥3,980/月"
                             title2={<>経営者に<br />おすすめ！</>}
-                            content={<>
-                                ・スモールプラン機能が全て使える<br />
-                                ・各種イベントの宣伝し放題<br />
-                                ・求人や仕事、案件の発注し放題
-                            </>}
+                            content={<ul className="list-disc px-4">
+                                <li>スモールプラン機能が<br />
+                                    全て使える</li>
+                                <li>各種イベントの宣伝し放題</li>
+                                <li>求人や仕事、案件の発注し放題</li>
+                            </ul>}
                             src={Issue1}
                         />
                     </SplideSlide>
@@ -109,10 +110,18 @@ const PlanItem = ({ title, title2, price, content, delay, colorClass, href, src 
             }}
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            className="h-full  w-72 flex flex-col items-center justify-center bg-color3 p-5 gap-4 rounded-3xl overflow-hidden">
-            <h3 className=" text-title3 font-bold text-center">{title2}</h3>
-            <h2 className=" text-title1 font-bold text-center">{title}</h2>
-            <p className=" h-full w-full rounded-lg">{content}</p>
+            className="h-full w-80 flex flex-col items-center justify-center bg-color3 p-6 gap-3 rounded-3xl overflow-hidden">
+            <h3 className=" text-title4 font-bold text-center">{title2}</h3>
+            <h2 className=" text-title2 font-bold text-center">{title}</h2>
+
+            <div className="w-full">
+                <hr className="w-full border-font1 border" />
+
+            </div>
+
+            <h3 className="text-title2">{price}</h3>
+
+            <div className=" h-full w-full">{content}</div>
         </ motion.div>
     );
 }

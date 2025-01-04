@@ -4,6 +4,15 @@ import 田口雅弘 from '@/assets/members/田口雅弘.jpg'
 import 宮本 from '@/assets/members/宮本.jpg'
 import たけうちまりえ from '@/assets/members/たけうちまりえ.jpg'
 
+import Issue1 from "@/assets/issue1.svg";
+import Issue2 from "@/assets/issue2.svg";
+import Issue3 from "@/assets/issue3.svg";
+import Issue4 from "@/assets/issue4.svg";
+import Issue5 from "@/assets/issue5.svg";
+import Issue6 from "@/assets/issue6.svg";
+import Issue7 from "@/assets/issue7.svg";
+
+
 export const resources = {
 
     members1: [
@@ -12,7 +21,7 @@ export const resources = {
     members2: [
         {
             name: "RYO",
-            job: <>SNSインフルエンサー<br/>パーソナルトレーナー</>,
+            job: <>SNSインフルエンサー<br />パーソナルトレーナー</>,
             details: <>
                 Instagram フォロワー42万人<br />
                 YouTube チャンネル登録者21万人<br />
@@ -58,7 +67,7 @@ export const resources = {
             image: 宮本
         },
         {
-            name: <>たけうち<br/>まりえ</>,
+            name: <>たけうち<br />まりえ</>,
             job: "デザイナー　Jalart design",
             details: <>
                 デジタル(チラシ、名刺、ロゴなど)から<br />
@@ -78,7 +87,8 @@ export const resources = {
                 オフライン交流会や各種イベントの開催<br />
                 チャット上での交流<br />
                 フリーランス、経営者、学生、社会人とつながれる
-            </>
+            </>,
+            image: Issue1,
         },
         {
             num: "02",
@@ -88,6 +98,7 @@ export const resources = {
                 マルシェなどのイベント<br />
                 商品やサービスの宣伝し放題
             </>,
+            image: Issue7,
         },
         {
             num: "03",
@@ -97,6 +108,7 @@ export const resources = {
                 スキルやノウハウなど<br />
                 色んな情報をメンバー同士でシェア
             </>,
+            image: Issue6,
         },
         {
             num: "04",
@@ -107,6 +119,7 @@ export const resources = {
                 Zoom朝活で生産性が高まります
             </>,
             baloon: true,
+            image: Issue5,
         },
         {
             num: "05",
@@ -116,6 +129,7 @@ export const resources = {
                 各メンバーの力と知恵で<br />
                 地域資源、問題、経済の課題解決に取り組む
             </>,
+            image: Issue4,
         },
         {
             num: "06",
@@ -123,17 +137,10 @@ export const resources = {
             content: <>
                 Coming soon
             </>,
+            image: null,
         },
     ],
     planTable: {
-        "header": [
-            "チャンネル名",
-            "内容",
-            "一言",
-            "フリープラン",
-            "スモールプラン",
-            "ビジネスプラン"
-        ],
         "rows": [
             {
                 "チャンネル名": "交流会",

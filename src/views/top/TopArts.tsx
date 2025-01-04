@@ -165,7 +165,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
 
 const Mobile = () => <div
     style={{ height: 'calc(100svh - 62px)' }}
-    className='sm:hidden -mt-2 relative flex flex-col justify-center items-center overflow-hidden rotate'>
+    className='sm:hidden relative flex flex-col justify-center items-center overflow-hidden rotate'>
     <motion.div
         transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.5 }}
         initial={{ translateX: "-100%", opacity: 0 }}

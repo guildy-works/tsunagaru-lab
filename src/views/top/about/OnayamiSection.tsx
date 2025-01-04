@@ -1,9 +1,10 @@
 import { SectionBox } from "@/components/SectionBox"
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
 import { ReactNode } from "react"
-import Issue1 from "@/assets/issue1.webp";
-import Issue2 from "@/assets/issue2.webp";
-import Issue3 from "@/assets/issue3.webp";
+import Issue1 from "@/assets/issue1.svg";
+import Issue2 from "@/assets/issue2.svg";
+import Issue3 from "@/assets/issue3.svg";
+import Issue4 from "@/assets/issue4.svg";
 import { StaticImageData } from "next/image";
 import Image from 'next-export-optimize-images/picture';
 import { motion } from "motion/react";
@@ -61,45 +62,71 @@ export const OnayamiSection = () => {
             <section className="max-w-3xl md:max-w-7xl grid grid-cols-2 md:grid-cols-4 p-8 pt-0 md:p-0 gap-4 sm:gap-8"
             >
                 <OnayamiItem marginTop title={<>人脈を<br className="sm:hidden" />広げたい</>}
-                    content={<>
-                        交流する<br className="sm:hidden" />機会がない<br />
-                        経営者との<br className="sm:hidden" />つながりが薄い<br />
-                        中四国の人との<br className="sm:hidden" />つながりが薄い<br />
-                    </>}
-                    src={Issue2}
+                    content={<ul className="list-disc">
+                        <li>
+                            交流する<br className="sm:hidden" />機会がない<br />
+                        </li>
+                        <li>
+                            経営者との<br className="sm:hidden" />つながりが薄い<br />
+                        </li>
+                        <li>
+                            中四国の人との<br className="sm:hidden" />つながりが薄い<br />
+                        </li>
+                    </ul>}
+                    src={Issue1}
                 />
 
                 <OnayamiItem
 
                     title={<>宣伝や<br className="sm:hidden" />告知をしたい</>}
-                    content={<>
-                        求人や案件の<br className="sm:hidden" />
-                        掲載費用が高い<br />
-                        イベントを告知する<br className="sm:hidden" />
-                        場所がない<br />
-                        商品やサービスの<br className="sm:hidden" />
-                        宣伝をしたい<br />
-                    </>}
-                    src={Issue3}
+                    content={<ul className="list-disc">
+                        <li>
+                            求人や案件の<br className="sm:hidden" />
+                            掲載費用が高い<br />
+                        </li>
+
+                        <li>
+                            イベントを告知する<br className="sm:hidden" />
+                            場所がない<br />
+                        </li>
+
+                        <li>
+                            商品やサービスの<br className="sm:hidden" />
+                            宣伝をしたい<br />
+                        </li>
+                    </ul>}
+                    src={Issue2}
                 />
 
                 <OnayamiItem marginTop title={<>生産性を<br className="sm:hidden" />高めたい</>}
-                    content={<>
-                        ついつい二度寝を<br className="sm:hidden" />してしまう<br />
-                        時間を<br className="sm:hidden" />有効活用したい<br />
-                        新しいスキルを<br className="sm:hidden" />身につけたい
-                    </>}
-                    src={Issue1}
+                    content={<ul className="list-disc">
+                        <li>
+                            ついつい二度寝を<br className="sm:hidden" />してしまう<br />
+                        </li>
+                        <li>
+                            時間を<br className="sm:hidden" />有効活用したい<br />
+                        </li>
+                        <li>
+                            新しいスキルを<br className="sm:hidden" />身につけたい
+                        </li>
+                    </ul>}
+                    src={Issue3}
                 />
 
 
                 <OnayamiItem title={<>中四国を<br className="sm:hidden" />盛り上げたい</>}
-                    content={<>
-                        地元に<br className="sm:hidden" />恩返しをしたい<br />
-                        地方や地域の問題を<br className="sm:hidden" />解決したい<br />
-                        地方の<br className="sm:hidden" />魅力や文化を広めたい
-                    </>}
-                    src={Issue1}
+                    content={<ul className="list-disc">
+                        <li>
+                            地元に<br className="sm:hidden" />恩返しをしたい<br />
+                        </li>
+                        <li>
+                            地方や地域の問題を<br className="sm:hidden" />解決したい<br />
+                        </li>
+                        <li>
+                            地方の<br className="sm:hidden" />魅力や文化を広めたい
+                        </li>
+                    </ul>}
+                    src={Issue4}
                 />
             </section>
         </div>
@@ -124,12 +151,12 @@ const OnayamiItem = ({ title, content, delay, marginTop, href, src }: {
                 delay={0.2}>
                 <h2 className="text-title3 text-center">{title}</h2>
             </FadeAndSlideScrollTriggerAnimation>
-            <div className="h-36 sm:h-48 w-auto z-50" >
-                <Image src={src} alt="img" className="h-full object-cover" />
+            <div className="h-36 sm:h-48 w-auto z-10 py-4" >
+                <Image src={src} alt="img" className="h-full" />
             </div>
 
-            <FadeAndSlideScrollTriggerAnimation delay={0.3} className="-mt-8 bg-gradient3 pt-8 p-4 rounded-3xl h-fit w-full">
-                <p>{content}</p>
+            <FadeAndSlideScrollTriggerAnimation delay={0.3} className="-mt-12 bg-gradient4 pt-12 p-4 rounded-3xl h-fit w-full">
+                <div className="flex flex-col gap-2 items-center">{content}</div>
             </FadeAndSlideScrollTriggerAnimation>
         </ FadeAndSlideScrollTriggerAnimation>
     );

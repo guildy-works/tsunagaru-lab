@@ -29,8 +29,8 @@ export const ContactSection = () => {
                 <motion.div
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0,}}
+                    whileInView={{ opacity: 1 }}
                     className='w-full text-center text-color10 text-title3'>
                     お気軽に<br className='' />
                     お問い合わせください
