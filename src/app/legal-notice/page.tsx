@@ -42,28 +42,13 @@ export default function LegalNotice() {
             </p>
         </section>
 
-        {/* サイトURL */}
-        <section className="mb-6">
-            <h2 className="text-title2 font-bold mb-4">サイトURL</h2>
-            <p>
-                <a
-                    href="https://adosaru-sns.my.canva.site/dagmhvpj-i4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
-                >
-                    https://adosaru-sns.my.canva.site/dagmhvpj-i4
-                </a>
-            </p>
-        </section>
-
         {/* 販売価格 */}
         <section className="mb-6">
             <h2 className="text-title2 font-bold mb-4">販売価格</h2>
             <ul className="list-disc pl-6 space-y-2">
+                <li>【フリープラン】セールスページの表記に従う</li>
                 <li>【スモールプラン】セールスページの表記に従う</li>
-                <li>【スタンダードプラン】セールスページの表記に従う</li>
-                <li>【プレミアムプラン】セールスページの表記に従う</li>
+                <li>【ビジネスプラン】セールスページの表記に従う</li>
             </ul>
             <p className="mt-4">※時期によって料金が異なる場合がございます</p>
             <p>商品代金以外に必要な費用：特にありません</p>
