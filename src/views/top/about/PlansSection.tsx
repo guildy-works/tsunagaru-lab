@@ -40,11 +40,12 @@ export const PlansSection = () => {
                     <SplideSlide >
                         <PlanItem title={<>フリープラン</>}
                             price="¥0/月"
-                            title2={<>学生に<br />おすすめ！</>}
+                            title2={<>学生におすすめ！</>}
                             content={<ul className="list-disc px-4">
                                 <li>オフライン交流会への参加</li>
                                 <li>セミナーや講演会への参加</li>
-                                <li>地域や企業のイベント情報受け取り</li>
+                                <li>地域や企業のイベント情報<br/>
+                                    受け取り</li>
                             </ul>}
                             src={Issue1}
                         />
@@ -54,7 +55,7 @@ export const PlansSection = () => {
                             title={<>スモールプラン</>}
                             price="¥1,980/月"
 
-                            title2={<>フリーランスに<br />おすすめ！</>}
+                            title2={<>フリーランスにおすすめ！</>}
                             content={<ul className="list-disc px-4">
                                 <li>フリープラン機能が全て使える</li>
                                 <li>Zoom朝活</li>
@@ -68,7 +69,7 @@ export const PlansSection = () => {
                     <SplideSlide >
                         <PlanItem title={<>ビジネスプラン</>}
                             price="¥3,980/月"
-                            title2={<>経営者に<br />おすすめ！</>}
+                            title2={<>経営者におすすめ！</>}
                             content={<ul className="list-disc px-4">
                                 <li>スモールプラン機能が<br />
                                     全て使える</li>
@@ -110,7 +111,7 @@ const PlanItem = ({ title, title2, price, content, delay, colorClass, href, src 
             }}
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            className="h-full w-80 flex flex-col items-center justify-center bg-color3 p-6 gap-3 rounded-3xl overflow-hidden">
+            className="h-full w-80 flex flex-col items-center justify-center bg-color3 p-8 gap-3 rounded-3xl overflow-hidden">
             <h3 className=" text-title4 font-bold text-center">{title2}</h3>
             <h2 className=" text-title2 font-bold text-center">{title}</h2>
 

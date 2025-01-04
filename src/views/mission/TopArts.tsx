@@ -9,7 +9,7 @@ import { SkewScrollTriggerAnimation } from '@/libs/ScrollTriggerAnimations/SkewS
 
 export const MissionTopArt = () => {
     return (
-        <div className='-mt-2  absolute flex flex-col justify-center items-center overflow-hidden rotate w-full h-[90vh]'>
+        <div className='-mt-2  absolute flex flex-col justify-center items-center overflow-hidden rotate w-full h-[90svh]'>
 
             <motion.div
                 transition={{ duration: 1, delay: 0.1 }}

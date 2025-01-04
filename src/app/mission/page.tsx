@@ -214,7 +214,7 @@ const VisionItem = ({
                 <h3 className="mt-1 text-title2 text-color3 font-bold">{title}</h3>
             </SkewScrollTriggerAnimation>
 
-            <SkewScrollTriggerAnimation tag="p" className="mx-auto mt-2 sm:mt-8 text-title4">
+            <SkewScrollTriggerAnimation tag="p" className="mx-auto mt-6 sm:mt-8 text-title4">
                 {desctiption}
             </SkewScrollTriggerAnimation>
         </motion.div>

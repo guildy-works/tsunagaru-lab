@@ -25,9 +25,6 @@ export const Footer = () => {
                 <Image className="" src={Logo} alt="つながるラボ" width={160} height={160} />
             </motion.div>
 
-
-
-
             <div className="max-w-6xl mx-auto px-4  w-full mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div className="space-y-4 flex flex-col items-center">
@@ -49,7 +46,7 @@ export const Footer = () => {
                                     whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
                                     transition={{ duration: 0.2, delay: index * 0.05 }}
                                     key={item.label}>
-                                    <Link href={item.href} className="text-white hover:text-gray-900 transition-colors">
+                                    <Link href={item.href} className="text-white hover:text-gray-300 transition-colors">
                                         {item.label}
                                     </Link>
                                 </motion.li>
@@ -67,7 +64,7 @@ export const Footer = () => {
                                     whileInView={{ opacity: 1, translateY: 0, scale: 1 }}
                                     transition={{ duration: 0.2, delay: index * 0.05 }}
                                     key={item.label}>
-                                    <Link href={item.href} className="text-white hover:text-gray-900 transition-colors">
+                                    <Link href={item.href} className="text-white hover:text-gray-300 transition-colors">
                                         {item.label}
                                     </Link>
                                 </motion.li>
