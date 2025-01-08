@@ -47,7 +47,7 @@ export const SkewScrollTriggerAnimation = (props: SkewAnimationProp) => {
             viewport={{ once: true }}
             transition={{ duration: time, delay: props.delay ?? 0.2 }}
             className={clsx("bg-white absolute inset-0 origin-right", props.skewPanelClass)}
-            initial={{ transform: "scaleX(1.25) translateX(12%) skewX(-30deg)" }}
+            initial={{ transform: "scaleX(1.25) translateX(12%) skewX(-20deg)" }}
             whileInView={{ transform: "scaleX(0) skewX(-10deg)" }}
         />
         {props.children as any}

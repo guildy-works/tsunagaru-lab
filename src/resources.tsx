@@ -3,6 +3,7 @@ import Rin from '@/assets/members/りん.jpg'
 import 田口雅弘 from '@/assets/members/田口雅弘.jpg'
 import 宮本 from '@/assets/members/宮本.jpg'
 import たけうちまりえ from '@/assets/members/たけうちまりえ.jpg'
+import 早川優衣 from '@/assets/members/早川優衣.jpg'
 
 import Issue1 from "@/assets/issue1.svg";
 import Issue2 from "@/assets/issue2.svg";
@@ -11,10 +12,15 @@ import Issue4 from "@/assets/issue4.svg";
 import Issue5 from "@/assets/issue5.svg";
 import Issue6 from "@/assets/issue6.svg";
 import Issue7 from "@/assets/issue7.svg";
-
+import Issue8 from "@/assets/issue8.svg";
+import Balloon1 from "@/assets/balloon1.svg";
+import CommingSoon from "@/assets/comming-soon.svg";
 
 export const resources = {
-
+    links: {
+        line: "https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9",
+        discord: "https://discord.gg/J8chE8qKky?openExternalBrowser=1",
+    },
     members1: [
 
     ],
@@ -31,6 +37,20 @@ export const resources = {
                 ゆるダン体操 書籍販売
             </>,
             image: Ryo
+        },
+        {
+            name: "早川優衣",
+            job: "BMXレーサー",
+            details: <>
+                全日本自転車連盟の<br />
+                公式アンバサダー<br />
+                YouTubeチャンネル登録者13万人<br /><br />
+
+                2024年の全日本選手権年齢別クラスで優勝し、2025年の7月末の世界選手権への出場決定<br />
+                2023年相席食堂上半期おかわり賞ランキング、第８位入賞<br />
+                実は…千鳥のノブの姪っ子！<br />
+            </>,
+            image: 早川優衣
         },
 
         {
@@ -118,7 +138,7 @@ export const resources = {
                 ポモドーロタイマーを活用した<br />
                 Zoom朝活で生産性が高まります
             </>,
-            baloon: true,
+            baloon: Balloon1,
             image: Issue5,
         },
         {
@@ -135,9 +155,11 @@ export const resources = {
             num: "06",
             title: "経済圏の構築",
             content: <>
-                Coming soon
+                あのキャラクターがNFTに？<br />
+                デジタルトークンを活用した地域創生
             </>,
-            image: null,
+            image: Issue8,
+            baloon: CommingSoon,
         },
     ],
     planTable: {
@@ -162,16 +184,28 @@ export const resources = {
                 "チャンネル名": "イベント告知",
                 "内容": "地域や企業のイベントなど宣伝広報",
                 "一言": "マルシェやお祭り、自社の懇親会など宣伝して集客してみよう！",
-                "フリープラン": "△（情報の受け取りのみ）",
-                "スモールプラン": "△（情報の受け取りのみ）",
+                "フリープラン": <>
+                    △<br />
+                    <small>※情報の受け取りのみ</small>
+                </>,
+                "スモールプラン": <>
+                    △<br />
+                    <small>※情報の受け取りのみ</small>
+                </>,
                 "ビジネスプラン": "○"
             },
             {
                 "チャンネル名": "プロモーション",
                 "内容": "サービスや事業内容など宣伝広報",
                 "一言": "新商品やサービス、自社の活動を告知して認知拡大していこう！",
-                "フリープラン": "△（情報の受け取りのみ）",
-                "スモールプラン": "△（情報の受け取りのみ）",
+                "フリープラン": <>
+                    △<br />
+                    <small>※情報の受け取りのみ</small>
+                </>,
+                "スモールプラン": <>
+                    △<br />
+                    <small>※情報の受け取りのみ</small>
+                </>,
                 "ビジネスプラン": "○"
             },
             {
@@ -211,7 +245,10 @@ export const resources = {
                 "内容": "求人案内や募集し放題",
                 "一言": "新卒や中途採用、アルバイトなど求人を出してみよう！",
                 "フリープラン": "×",
-                "スモールプラン": "△（問い合わせや応募のみ）",
+                "スモールプラン": <>
+                    △<br />
+                    <small>※問い合わせや応募のみ</small>
+                </>,
                 "ビジネスプラン": "○"
             },
             {
@@ -219,7 +256,10 @@ export const resources = {
                 "内容": "業務委託やお仕事の依頼し放題",
                 "一言": "Web制作や動画編集、コンサルタントなど見つけてみよう！",
                 "フリープラン": "×",
-                "スモールプラン": "△（受注や応募のみ）",
+                "スモールプラン": <>
+                    △<br />
+                    <small>受注や応募のみ</small>
+                </>,
                 "ビジネスプラン": "○"
             },
         ]

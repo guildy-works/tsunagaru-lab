@@ -14,6 +14,7 @@ import Image from 'next-export-optimize-images/picture';
 import { SkewScrollTriggerAnimation } from '@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation'
 import { SectionType1 } from '@/components/SectionType1'
 import { Button2 } from '@/components/Button2'
+import { resources } from '@/resources'
 
 export const TopArt = () => {
     return (
@@ -155,7 +156,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
             className="max-w-4xl mx-auto p-6 bg-[#893be2] flex flex-col justify-center items-center gap-2 rounded-3xl z-10">
             <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">早期入会特典</SkewScrollTriggerAnimation>
             <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title4 text-white">会費永年割引キャンペーン</SkewScrollTriggerAnimation>
-            <Button2 href="#" subTitle="Click!">
+            <Button2 href={resources.links.line} subTitle="Click!">
                 早期入会特典をGET！
             </Button2>
         </motion.div>
@@ -294,7 +295,7 @@ const Mobile = () => <div
             className="max-w-4xl mx-auto p-6 bg-[#893be2] flex flex-col justify-center items-center gap-2 rounded-3xl z-10">
             <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title2 text-white">早期入会特典</SkewScrollTriggerAnimation>
             <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">会費永年割引キャンペーン</SkewScrollTriggerAnimation>
-            <Button2 href="#" subTitle="Click!">
+            <Button2 href={resources.links.line} subTitle="Click!">
                 早期入会特典をGET！
             </Button2>
         </motion.div>

@@ -10,8 +10,9 @@ import { SectionType1 } from "@/components/SectionType1";
 import { Button3 } from "@/components/Button3";
 import Issue1 from "@/assets/issue1.webp";
 import { ServiceDialog } from "@/components/ServiceDialog";
-import { PlanTable } from "./PlanTable";
+import { PlanSheet, PlanTable } from "./PlanTable";
 import { DOMMotionComponents, motion, useInView } from "motion/react"
+import { resources } from "@/resources";
 
 export const PlansSection = () => {
     return (
@@ -83,9 +84,10 @@ export const PlansSection = () => {
             </div>
 
             <ServiceDialog buttonText="詳細" >
+                <PlanSheet />
                 <PlanTable />
             </ServiceDialog>
-            <Button2 href="#" subTitle="Click!">
+            <Button2 href={resources.links.line} subTitle="Click!">
                 早期入会特典をGET！
             </Button2>
         </SectionBox>

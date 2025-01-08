@@ -11,7 +11,7 @@ export const MembersSection2 = () => {
     return (
         <div className="w-full flex flex-col items-center mx-auto gap-8 justify-center">
 
-            <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold">早期入会者の紹介</SkewScrollTriggerAnimation>
+            <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold">入会者の紹介</SkewScrollTriggerAnimation>
 
             <Splide
                 className="mx-auto max-w-full"
@@ -48,7 +48,7 @@ export const MembersSection2 = () => {
                 多数のSNSフォロワー数万人のインフルエンサー<br />
                 中四国地方で活躍する経営者/フリーランス<br />
                 マルシェ運営者/イベンター<br />
-                行政関連<br />
+                地方行政関連の方<br />
                 学生<br />
                 の方々が入会しております！
             </p>

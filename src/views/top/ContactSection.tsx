@@ -11,6 +11,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import Line from '@/assets/sns/LINE.svg'
 import Discord from '@/assets/sns/Discord.svg'
+import { resources } from "@/resources";
 
 export const ContactSection = () => {
 
@@ -38,13 +39,13 @@ export const ContactSection = () => {
 
                 <Link
                     target="_blank"
-                    href={"https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"}
+                    href={resources.links.line}
                     className="mx-auto mt-8 flex items-center gap-3 bg-color3 rounded-full text-white text-title3 px-8 py-2 hover:bg-color3/70">
                     <Image src={Line} alt="Line" className="w-12" />
                     公式LINEを追加する
                 </Link>
 
-                <ButtonRightArrow className="w-fit mx-auto mt-8">
+                <ButtonRightArrow className="w-fit mx-auto mt-8" href={resources.links.discord} >
                     <div className="flex items-center gap-3">
                         <Image src={Discord} alt="Line" className="w-12" />
                         <div className="flex flex-col items-center gap-2 text-[1rem] leading-[1.6rem]">

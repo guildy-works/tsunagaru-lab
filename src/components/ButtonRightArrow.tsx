@@ -1,16 +1,17 @@
 import { MouseEventHandler, ReactNode } from "react"
 import styles from "./ButtonRightArrow.module.scss"
 import clsx from "clsx"
+import Link from "next/link"
 
-export const ButtonRightArrow = ({ onClick, children ,className}: { onClick?: MouseEventHandler, className?:string, children: ReactNode }) => {
+export const ButtonRightArrow = ({ onClick,href,children ,className}: {href:string, onClick?: MouseEventHandler, className?:string, children: ReactNode }) => {
 
 
     return (
-        <button onClick={onClick} className={clsx("flex cursor-pointer overflow-hidden", styles.button,className)}>
-            <div className={clsx("h-full  bg-[#5865f2] flex-1",styles.left)}>
+        <Link target="_blank" href={href} onClick={onClick} className={clsx("flex cursor-pointer overflow-hidden group", styles.button,className)}>
+            <div className={clsx("h-full  bg-[#5865f2] flex-1 group-hover:bg-color1",styles.left)}>
                 {children}
             </div>
-            <div className={styles.triangle}></div>
-        </button>
+            <div className={clsx(styles.triangle,"group-hover:border-l-color1")}></div>
+        </Link>
     )
 }

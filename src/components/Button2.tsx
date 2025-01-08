@@ -11,6 +11,7 @@ export const Button2 = ({ children, subTitle, className, href }: {
 }) => {
     return (
         <motion.a
+            target="_blank"
             viewport={{ once: true }}
             transition={{ duration: 0.1 }}
             initial={{ opacity: 0, translateY: "20px", scale: 0.6 }}

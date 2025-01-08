@@ -1,40 +1,30 @@
 import Line from '@/assets/sns/LINE.svg'
-import Instagram from '@/assets/sns/Instagram.svg'
+import Discord from '@/assets/sns/discord-square.svg'
 import X from '@/assets/sns/X.svg'
 import Image from 'next-export-optimize-images/picture';
 import { DOMMotionComponents, motion, useInView } from "motion/react"
+import { resources } from '@/resources';
 
 export const SnsLinkList = ({ disableMessage }: { disableMessage?: boolean }) => {
     return (
         <div className="flex gap-2 md:gap-4 flex-wrap justify-center p-6">
             <motion.a
                 viewport={{ once: true }}
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                href="/"
-                target="_blank"
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Instagram"
-            >
-                <Image src={X} alt="X" className="w-12" />
-            </motion.a>
-            <motion.a
-                viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                href="/"
+                href={resources.links.discord}
                 target="_blank"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="X (Twitter)">
-                <Image src={Instagram} alt="Instagram" className="w-12" />
+                aria-label="Discord">
+                <Image src={Discord} alt="Instagram" className="w-12" />
             </motion.a>
             <motion.a
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                href="https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"
+                href={resources.links.line}
                 target="_blank"
                 className="text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="LINE">

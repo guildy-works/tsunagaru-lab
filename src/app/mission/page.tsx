@@ -163,11 +163,10 @@ const Top = () => <>
 
             <VisionItem
                 num="05"
-                title="経済圏の構築"
+                title="経済圏の構築"                
                 desctiption={<>
                     NFTやトークンを活用し、独自の経済圏を形成。<br />
                     中国四国地方のコミュニティが協力し価値を生む仕組みを構築する
-
                 </>}
             >
             </VisionItem>

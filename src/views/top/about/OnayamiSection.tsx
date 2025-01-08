@@ -11,6 +11,8 @@ import { motion } from "motion/react";
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 import clsx from "clsx";
 
+import Line1 from "@/assets/line1.svg";
+
 export const OnayamiSection = () => {
     const Chip = ({ children, delay }: { children: ReactNode, delay: number }) =>
         <FadeAndSlideScrollTriggerAnimation
@@ -48,13 +50,12 @@ export const OnayamiSection = () => {
                         transition={{ type: "spring", bounce: 0.4, damping: 5, mass: 0.2 }}
                         initial={{ width: 0 }}
                         whileInView={{ width: "100%" }}
-                        className="border-b-2 border-black" />
-                    <div className="greaterthan flex size-[20px] md:size-[35px] -mt-[11px] md:-mt-[18px] border-t-2 border-r-2 bg-white border-black" style={{
-                        transform: "rotateZ(135deg)",
-                        marginTop: "",
-                    }}></div>
+                        className="" >
+                        <Image src={Line1} alt="img" className="w-full" />
+                    </motion.div>
                 </div>
             </div>
+
             <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold mt-2 mx-auto">
                 こんな悩みありませんか？
             </SkewScrollTriggerAnimation>

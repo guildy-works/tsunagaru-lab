@@ -6,6 +6,7 @@ import { SnsLinkList } from '@/components/SnsLinkList';
 import Logo from "@/assets/logo_circle.png";
 import Image from 'next-export-optimize-images/picture';
 import { DOMMotionComponents, motion } from "motion/react"
+import { resources } from '@/resources';
 
 type MenuItem = {
     href: string;
@@ -100,13 +101,16 @@ export const Header = () => {
                         )
                     })}
 
-                    <Button className=" min-w-32 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
+                    <Link
+                        href={resources.links.line}
+                        target='_blank'
+                        className=" min-w-32 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
                         入会はコチラ
-                    </Button>
+                    </Link>
                 </nav>
 
                 <Link
-                    href="https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9"
+                    href={resources.links.line}
                     target='_blank'
                     className="md:hidden ml-auto min-w-32 mr-0 gap-2 rounded-lg flex items-center justify-center bg-color2 py-2 px-4 font-semibold text-white shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-color2/80">
                     入会はコチラ
