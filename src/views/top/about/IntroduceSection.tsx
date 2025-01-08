@@ -89,7 +89,7 @@ const IntroduceItem = ({ title, content, num, delay, baloon, image }: {
             }}
             initial={{ translateY: "60px", opacity: 0.4 }}
             whileInView={{ translateY: "0px", opacity: 1 }}
-            className="relative p-8 w-full h-full flex flex-col items-center gap-4 bg-gradient4 rounded-3xl" >
+            className="relative p-8 w-full h-full flex flex-col items-center gap-4 bg-gradient3 rounded-3xl" >
 
             <h3 className="text-color2 flex flex-col text-[3rem]">
                 <span> Point</span>

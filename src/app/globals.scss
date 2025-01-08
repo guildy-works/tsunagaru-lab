@@ -12,9 +12,10 @@
     src: url("/Slight.woff");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap");
 
-body ,html{
+body,
+html {
     color: rgb(var(--foreground-rgb));
     background: #ffffff;
     @apply text-size-p text-font1;
@@ -44,6 +45,9 @@ div {
 
 .bg-gradient-opacity {
     background: var(--bg-gradient-opacity);
+}
+.bg-gradient5 {
+    background: linear-gradient(90deg, #ac32fe98 0%, #ff761b99 100%);
 }
 
 .bg-gradient1 {

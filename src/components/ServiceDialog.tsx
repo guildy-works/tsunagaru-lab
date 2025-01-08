@@ -32,7 +32,7 @@ export const ServiceDialog = ({ children, buttonText }: { children: React.ReactN
                     <div className="flex min-h-full items-center justify-center p-4">
                         <DialogPanel
                             transition
-                            className="overflow-auto flex flex-col z-50 max-h-[90svh] rounded-xl bg-white duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+                            className="overflow-auto flex flex-col z-50 max-h-[90svh] rounded-xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
                         >
                             {children}
                         </DialogPanel>

@@ -4,13 +4,13 @@ import clsx from "clsx"
 export const PlanSheet = () => {
 
     return (
-        <div className="md:hidden p-8 w-full bg-gradient1">
+        <div className="md:hidden p-8 w-full bg-gradient5 backdrop-blur-md">
 
             <h1 className="text-title1 text-color3 text-center"> チャンネル一覧</h1>
 
             <div className="flex flex-col gap-12 mt-8">
                 {resources.planTable.rows.map((row, rowIndex) => (
-                    <div key={rowIndex} className="flex flex-col gap-3">
+                    <div key={rowIndex} className="flex flex-col gap-3 text-white">
                         <h3 className="text-title3 text-color3 text-center">{row.チャンネル名}</h3>
 
                         <div>
@@ -23,7 +23,7 @@ export const PlanSheet = () => {
                             <p className="text-size1 mt-1">{row.一言}</p>
                         </div>
 
-                        <ul className="grid grid-cols-3 w-full bg-color1/40 p-3 rounded-xl">
+                        <ul className="grid grid-cols-3 w-full bg-color3/80 p-3 rounded-xl">
                             <li className="flex flex-col items-center text-center">
                                 <span>フリープラン</span>
                                 <span className="">{row.フリープラン}</span>
