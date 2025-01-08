@@ -2,7 +2,7 @@
  * @type {import('next-export-optimize-images').Config}
  */
 const config = {
-    basePath: '/tsunagaru-lab',
+    basePath: '/',
     convertFormat: [
         ['png', 'webp'],
         ['jpg', 'webp'],
