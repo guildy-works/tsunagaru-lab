@@ -11,7 +11,7 @@ import { Metadata } from "next";
 import { useState } from "react";
 import Script from "next/script";
 
-const gaId = 'G-LWY1EF8E1D'
+const gaId = 'G-LNW2KVTFE1'
 
 export default function RootLayout({
     children,
@@ -24,7 +24,7 @@ export default function RootLayout({
                 <title>{"つながるラボ"}</title>
                 <meta name="description" content={"つながるラボ"} />
 
-                {/* <Script
+                <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
                     strategy='afterInteractive'
                     async
@@ -36,7 +36,7 @@ export default function RootLayout({
                         gtag('js', new Date());
                         gtag('config', '${gaId}');
                     `}
-                </Script> */}
+                </Script>
             </head>
 
             <body className="flex flex-col relative w-svw overflow-x-hidden">
