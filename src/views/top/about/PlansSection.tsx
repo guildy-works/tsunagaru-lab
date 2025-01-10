@@ -84,7 +84,6 @@ export const PlansSection = () => {
             </div>
 
             <ServiceDialog buttonText="詳細" >
-                <PlanSheet />
                 <PlanTable />
             </ServiceDialog>
             <Button2 href={resources.links.line} subTitle="Click!">

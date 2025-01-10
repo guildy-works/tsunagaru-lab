@@ -42,8 +42,7 @@ const config: Config = {
             xl: '1920px',
         },
         fontFamily: {
-            asterdam: ['Amsterdam', 'sans-serif'],
-            slight: ['Slight', 'sans-serif'],
+            maru: ['Zen Maru Gothic', 'sans-serif'],
         },
         colors: {
             ...colors,

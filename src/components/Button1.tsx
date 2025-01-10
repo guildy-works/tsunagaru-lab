@@ -9,7 +9,7 @@ export const Button1 = ({ children, className,onClick }: {
     onClick: MouseEventHandler | undefined, className?: string,
 }) => {
     return (
-        <Button className={clsx(css.button,className)} onClick={onClick}>
+        <Button className={clsx(css.button,className,"text-[1.4rem] font-bold py-2 px-2 tracking-wider")} onClick={onClick}>
             {children}
         </Button>
     )

@@ -45,7 +45,7 @@ export const MembersSection2 = () => {
 
             <p>
                 その他に<br />
-                多数のSNSフォロワー数万人のインフルエンサー<br />
+                SNSインフルエンサー<br />
                 中四国地方で活躍する経営者/フリーランス<br />
                 マルシェ運営者/イベンター<br />
                 地方行政関連の方<br />
@@ -76,7 +76,7 @@ const OnayamiItem = ({ title, title2, content, delay, colorClass, href, src }: {
                     <h3 className="text-title3 font-bold">{title}</h3>
                 </div>
             </div>
-            <h4 className="text-title4 font-bold">{title2}</h4>
+            <h4 className="text-[1.2rem] leading-8 font-bold">{title2}</h4>
             <p className="p-4 h-full bg-white w-full rounded-lg">{content}</p>
         </ FadeAndSlideScrollTriggerAnimation>
     );

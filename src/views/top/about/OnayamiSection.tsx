@@ -17,7 +17,7 @@ export const OnayamiSection = () => {
     const Chip = ({ children, delay }: { children: ReactNode, delay: number }) =>
         <FadeAndSlideScrollTriggerAnimation
             delay={delay}
-            className="rounded-full font-bold px-1 py-1 bg-color3 text-md  tracking-tighter mt-2">
+            className="rounded-full font-bold px-1 py-1 bg-color3 text-lg  tracking-tighter mt-2">
             {children}
         </FadeAndSlideScrollTriggerAnimation>
 
@@ -32,16 +32,16 @@ export const OnayamiSection = () => {
 
         <div className="w-full flex flex-col items-center mx-auto justify-center">
 
-            <div className="flex flex-col items-center mx-auto">
-                <h2 className="flex items-baseline gap-0 z-10">
+            <div className="flex flex-col items-center mx-auto w-fit">
+                <h2 className="flex items-baseline gap-0 z-10 w-fit">
                     <Chip delay={0}>フリーランス</Chip>
                     <Dot delay={0.1} />
                     <Chip delay={0.2}> 経営者</Chip>
                     <Dot delay={0.3} />
-                    <Chip delay={0.4}>大学生</Chip>
+                    <Chip delay={0.4}>学生</Chip>
                     <Dot delay={0.5} />
-                    <Chip delay={0.6}>独立を考えている方</Chip>
-                    <FadeAndSlideScrollTriggerAnimation delay={0.7} className="-ml-1 z-10 leading-tight mt-1 text-md ">へ</FadeAndSlideScrollTriggerAnimation>
+                    <Chip delay={0.6}>独立したい方</Chip>
+                    <FadeAndSlideScrollTriggerAnimation delay={0.7} className="-ml-1 z-10 leading-tight mt-1 text-lg ">へ</FadeAndSlideScrollTriggerAnimation>
                 </h2>
 
                 <div className="mt-2 w-full flex flex-col items-center justify-center">
@@ -50,7 +50,7 @@ export const OnayamiSection = () => {
                         transition={{ type: "spring", bounce: 0.4, damping: 5, mass: 0.2 }}
                         initial={{ width: 0 }}
                         whileInView={{ width: "100%" }}
-                        className="" >
+                        className="w-full " >
                         <Image src={Line1} alt="img" className="w-full" />
                     </motion.div>
                 </div>
@@ -63,75 +63,82 @@ export const OnayamiSection = () => {
             <section className="max-w-3xl md:max-w-7xl grid grid-cols-2 md:grid-cols-4 p-8 pt-0 md:p-0 gap-4 sm:gap-8"
             >
                 <OnayamiItem marginTop title={<>人脈を<br className="sm:hidden" />広げたい</>}
-                    content={<ul className="list-disc">
-                        <li>
-                            交流する<br className="sm:hidden" />機会がない<br />
-                        </li>
-                        <li>
+                    content={<>
+                        <ListItem >
+                            交流する機会がない
+                        </ListItem>
+                        <ListItem >
                             経営者との<br className="sm:hidden" />つながりが薄い<br />
-                        </li>
-                        <li>
+                        </ListItem>
+                        <ListItem >
                             中四国の人との<br className="sm:hidden" />つながりが薄い<br />
-                        </li>
-                    </ul>}
+                        </ListItem>
+                    </>}
                     src={Issue1}
                 />
 
                 <OnayamiItem
 
                     title={<>宣伝や<br className="sm:hidden" />告知をしたい</>}
-                    content={<ul className="list-disc">
-                        <li>
+                    content={<>
+                        <ListItem >
                             求人や案件の<br className="sm:hidden" />
                             掲載費用が高い<br />
-                        </li>
-
-                        <li>
+                        </ListItem>
+                        <ListItem >
                             イベントを告知する<br className="sm:hidden" />
-                            場所がない<br />
-                        </li>
-
-                        <li>
+                            場所がない
+                        </ListItem>
+                        <ListItem >
                             商品やサービスの<br className="sm:hidden" />
-                            宣伝をしたい<br />
-                        </li>
-                    </ul>}
+                            宣伝をしたい
+                        </ListItem>
+                    </>}
                     src={Issue2}
                 />
 
                 <OnayamiItem marginTop title={<>生産性を<br className="sm:hidden" />高めたい</>}
-                    content={<ul className="list-disc">
-                        <li>
-                            ついつい二度寝を<br className="sm:hidden" />してしまう<br />
-                        </li>
-                        <li>
-                            時間を<br className="sm:hidden" />有効活用したい<br />
-                        </li>
-                        <li>
-                            新しいスキルを<br className="sm:hidden" />身につけたい
-                        </li>
-                    </ul>}
+                    content={<   >
+                        <ListItem >
+                            今のスキルをもっと磨きたい
+                        </ListItem>
+                        <ListItem >
+                            時間を有効活用したい
+                        </ListItem>
+                        <ListItem >
+                            朝の時間を有効活用したい
+                        </ListItem>
+                    </>}
                     src={Issue3}
                 />
 
 
                 <OnayamiItem title={<>中四国を<br className="sm:hidden" />盛り上げたい</>}
-                    content={<ul className="list-disc">
-                        <li>
-                            地元に<br className="sm:hidden" />恩返しをしたい<br />
-                        </li>
-                        <li>
-                            地方や地域の問題を<br className="sm:hidden" />解決したい<br />
-                        </li>
-                        <li>
-                            地方の<br className="sm:hidden" />魅力や文化を広めたい
-                        </li>
-                    </ul>}
+                    content={< >
+                        <ListItem >
+                            地元に恩返しをしたい
+                        </ListItem>
+                        <ListItem >
+                            地方や地域の問題を<br className="sm:hidden" />解決したい
+                        </ListItem>
+                        <ListItem >
+                            地方の魅力や<br className="sm:hidden" />文化を広めたい
+                        </ListItem>
+                    </>}
                     src={Issue4}
                 />
             </section>
         </div>
     </SectionBox>
+}
+
+const ListItem = ({ children }: { children: ReactNode }) => {
+    return (
+        <div className="flex w-full">
+            <div>・</div>
+            <div>{children}</div>
+        </div>
+    )
 }
 
 const OnayamiItem = ({ title, content, delay, marginTop, href, src }: {
@@ -145,7 +152,7 @@ const OnayamiItem = ({ title, content, delay, marginTop, href, src }: {
 }) => {
     return (
         <FadeAndSlideScrollTriggerAnimation className={clsx(
-            marginTop ? "md:mb-12" : "md:mt-12",
+            marginTop ? "md:pb-12" : "md:pt-12",
             "mt-8 overflow-hidden flex flex-col items-center justify-center",
         )}>
             <FadeAndSlideScrollTriggerAnimation
@@ -156,8 +163,10 @@ const OnayamiItem = ({ title, content, delay, marginTop, href, src }: {
                 <Image src={src} alt="img" className="h-full" />
             </div>
 
-            <FadeAndSlideScrollTriggerAnimation delay={0.3} className="-mt-12 bg-gradient4 pt-12 p-4 rounded-3xl h-fit w-full">
-                <div className="flex flex-col gap-2 items-center">{content}</div>
+            <FadeAndSlideScrollTriggerAnimation delay={0.3} className="-mt-12 h-full bg-gradient3 pt-12 p-4 rounded-3xl w-full">
+                <div className="w-full flex flex-col gap-2 items-center">
+                    {content}
+                    </div>
             </FadeAndSlideScrollTriggerAnimation>
         </ FadeAndSlideScrollTriggerAnimation>
     );

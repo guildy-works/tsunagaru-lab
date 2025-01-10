@@ -117,13 +117,13 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
                 </motion.div>
             </div>
             <div className='flex flex-col justify-center items-center px-8 gap-8'>
-                <SkewScrollTriggerAnimation tag="h1" className='text-title1 text-center' delay={1.7}>
-                    つながる、広がる、<br className='sm:hidden' />中四国。
+                <SkewScrollTriggerAnimation tag="h1" className='font-maru text-title1 text-center' delay={1.7}>
+                    つながる、広がる、<br className='sm:hidden' />中四国
                 </SkewScrollTriggerAnimation>
 
-                <SkewScrollTriggerAnimation tag="h2" className='text-title3 text-center' delay={1.9}>
-                    朝活、人脈、求人、仕事<br />
-                    あなたと未来、全てがつながる。
+                <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title3 text-center' delay={1.9}>
+                    人脈、仕事、情報<br />
+                    未来がつながる
                 </SkewScrollTriggerAnimation>
             </div>
         </div>
@@ -256,13 +256,13 @@ const Mobile = () => <div
             </motion.div>
         </div>
         <div className='flex flex-col justify-center items-center px-8 gap-4'>
-            <SkewScrollTriggerAnimation tag="h1" className='text-[2rem] text-center leading-[2.4rem]' delay={1.7}>
-                つながる、広がる、<br className='sm:hidden' />中四国。
+            <SkewScrollTriggerAnimation tag="h1" className='text-[2rem] font-maru text-center leading-[2.4rem]' delay={1.7}>
+                つながる、広がる、<br className='sm:hidden' />中四国
             </SkewScrollTriggerAnimation>
 
-            <SkewScrollTriggerAnimation tag="h2" className='text-title3 text-center' delay={1.9}>
-                朝活、人脈、求人、仕事<br />
-                あなたと未来、全てがつながる。
+            <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title4 text-center' delay={1.9}>
+                人脈、仕事、情報<br />
+                未来がつながる
             </SkewScrollTriggerAnimation>
         </div>
     </div>

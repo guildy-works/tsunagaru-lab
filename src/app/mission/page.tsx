@@ -4,14 +4,15 @@ import { SectionType1 } from "@/components/SectionType1"
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation"
 import { MissionTopArt } from "@/views/mission/TopArts"
-import { DOMMotionComponents, motion, useInView } from "motion/react"
+import { motion } from "motion/react"
 import { ReactNode } from "react"
 import ProfileImage from "@/assets/profile.webp";
 import Image from 'next-export-optimize-images/picture';
 import clsx from "clsx"
 import Line from '@/assets/sns/LINE.svg'
 import Instagram from '@/assets/sns/Instagram.svg'
-import X from '@/assets/sns/X.svg'
+import { resources } from "@/resources"
+import Discord from '@/assets/sns/discord-square.svg'
 
 export default function Mission() {
     return (
@@ -26,10 +27,10 @@ export default function Mission() {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="w-fit mx-auto flex flex-col justify-center items-center py-8">
                     <div className="flex  text-title1 font-bold tracking-wider">
-                        <span className="text-color2">O</span>
-                        ur
-                        <span className="text-color3 ml-3">M</span>
-                        issions
+                        <span className="text-color2">M</span>
+                        i
+                        <span className="text-color3 ml-3">s</span>
+                        ion
                     </div>
 
                     <span className="w-[60%] border-b-2 border-black mt-2 md:mt-4 " />
@@ -43,7 +44,7 @@ export default function Mission() {
                     whileInView={{ opacity: 1, y: 0 }}
                     className="mx-auto text-title1 text-center">
                     デジタル x リアルで<br />
-                    中国地方に新たな<br className="sm:hidden" />
+                    中四国地方に新たな<br className="sm:hidden" />
                     つながりと可能性を創出
                 </motion.div>
 
@@ -102,7 +103,7 @@ const Top = () => <>
                 desctiption={<>
                     発信力を活用して、地域イベントの活性化、<br />
                     雇用創出を促し、<br />
-                    広島の県域超認知改善などの中国四国地方の課題解決に貢献する
+                    広島の転出超過改善などの中国四国地方の課題解決に貢献する
                 </>}
             >
             </VisionItem>
@@ -125,7 +126,7 @@ const Top = () => <>
                 num="01"
                 title="影響力と魅力発信"
                 desctiption={<>
-                    あらゆるデジタルの要素を活用し、地域の魅力を発信する。<br />
+                    つながるラボや個々の影響力を活かし、地域の魅力を発信する。<br />
                     またマスコットやキャラクターを活用して、<br />
                     地域に新しい楽しさと活力を提供する
                 </>}
@@ -146,7 +147,7 @@ const Top = () => <>
                 title="多様なつながりと共生"
                 desctiption={<>
                     子供から経営者の方々、積極的に参加できるプログラムやイベントを開催。<br />
-                    独自の視点や発想を取り入れて、デジタルビジネスへ貢献させる
+                    独自の視点や才能を見つけて、つながりやビジネスへ昇華させる
                 </>}
             >
             </VisionItem>
@@ -166,7 +167,7 @@ const Top = () => <>
                 title="経済圏の構築"                
                 desctiption={<>
                     NFTやトークンを活用し、独自の経済圏を形成。<br />
-                    中国四国地方のコミュニティが協力し価値を生む仕組みを構築する
+                    中四国地方とつながるラボが連動し循環する仕組みを構築する
                 </>}
             >
             </VisionItem>
@@ -274,7 +275,7 @@ const Profile = () => {
                                 ・元大手小売業の総合職<br />
                                 ・アドサル代表<br />
                                 ・一般社団法人創業事業継続振興会　学生部会理事<br />
-                                ・HIT 広島観光大使<br />
+                                ・HIT ひろしま観光大使<br />
                             </SkewScrollTriggerAnimation>
                         </>
 
@@ -299,32 +300,31 @@ const Profile = () => {
 const Sns = () => <div className="flex gap-4">
     <motion.a
         viewport={{ once: true }}
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        href="/"
-        target="_blank"
-        className="text-gray-400 hover:text-gray-600 transition-colors"
-        aria-label="Instagram"
-    >
-        <Image src={X} alt="X" className="w-12" />
-    </motion.a>
-    <motion.a
-        viewport={{ once: true }}
         transition={{ delay: 0.2 }}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        href="/"
+        href={resources.links.personalInstagram}
         target="_blank"
-        className="text-gray-400 hover:text-gray-600 transition-colors"
-        aria-label="X (Twitter)">
+        className="text-gray-400 hover:text-gray-600 transition-colors">
         <Image src={Instagram} alt="Instagram" className="w-12" />
     </motion.a>
+    <motion.a
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                href={resources.links.discord}
+                target="_blank"
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+                aria-label="Discord">
+                <Image src={Discord} alt="Instagram" className="w-12" />
+            </motion.a>
     <motion.a
         viewport={{ once: true }}
         transition={{ delay: 0.4 }}
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        href="/"
+        href={resources.links.personalLine}
         target="_blank"
         className="text-gray-400 hover:text-gray-600 transition-colors"
         aria-label="LINE">
