@@ -32,8 +32,8 @@ export const OnayamiSection = () => {
 
         <div className="w-full flex flex-col items-center mx-auto justify-center">
 
-            <div className="flex flex-col items-center mx-auto w-fit">
-                <h2 className="flex items-baseline gap-0 z-10 w-fit">
+            <div className="flex flex-col items-center mx-auto w-full px-8 max-w-lg">
+                <h2 className="flex items-baseline gap-0 z-10 w-full">
                     <Chip delay={0}>フリーランス</Chip>
                     <Dot delay={0.1} />
                     <Chip delay={0.2}> 経営者</Chip>

@@ -1,19 +1,14 @@
 import { SectionBox } from "@/components/SectionBox"
 import { ReactNode } from "react"
-
 import { StaticImageData } from "next/image";
-import Image from 'next-export-optimize-images/picture';
+import Image from 'next-export-optimize-images/image';
 import { MdOutlinePhoto, MdPerson, MdPersonOutline, MdPhoto } from "react-icons/md";
-import { Button3 } from "@/components/Button3";
-import { title } from "process";
-import styles from "./IntroduceSection.module.scss";
-import { DOMMotionComponents, motion, useInView } from "motion/react"
-import clsx from "clsx";
+import { motion } from "motion/react"
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
 import { resources } from "@/resources";
-import Triangle1 from "@/assets/triangle1.svg";
-import Triangle2 from "@/assets/triangle2.svg";
+import Triangle1 from "@/assets/triangle1.png";
+import Triangle2 from "@/assets/triangle2.png";
 
 export const IntroduceSection = () => {
     return <SectionBox disablePx disableMaxWidth className="!mt-0">
@@ -22,7 +17,10 @@ export const IntroduceSection = () => {
         <div
             className="w-full relative flex flex-col overflow-hidden"
         >
-            <Image src={Triangle1} className="w-full" alt="" />
+            <div className="w-full flex justify-center items-center">
+                <Image src={Triangle1} className="w-full h-20" alt="" />
+            </div>
+
             <div
                 className="w-full flex justify-center items-center bg-[#6e35df] pt-8 py-4">
                 <SkewScrollTriggerAnimation skewPanelClass="!bg-[#6e35df]"
@@ -32,7 +30,11 @@ export const IntroduceSection = () => {
                     中四国でつながる
                 </SkewScrollTriggerAnimation>
             </div>
-            <Image src={Triangle2} className="w-full" alt="" />
+
+            <div className="w-full flex justify-center items-center">
+                <Image src={Triangle2} className="w-full h-20" alt="" />
+            </div>
+
         </div>
 
         <div className="md:hidden hiddlen w-full max-w-6xl px-8 space-y-8" >
@@ -112,7 +114,7 @@ const IntroduceItem = ({ title, content, num, delay, baloon, image }: {
             {baloon ? <FadeAndSlideScrollTriggerAnimation delay={0.4}
                 className="pt-0 md:pt-12 z-10 absolute -right-[32px] top-0 bottom-0 m-auto pb-24 size-fit" >
                 <Image src={baloon} alt="img" className="w-40" />
-            </FadeAndSlideScrollTriggerAnimation>:<></>}
+            </FadeAndSlideScrollTriggerAnimation> : <></>}
         </ motion.div >
     );
 }
