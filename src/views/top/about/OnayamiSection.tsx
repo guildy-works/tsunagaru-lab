@@ -97,13 +97,13 @@ export const OnayamiSection = () => {
                     src={Issue2}
                 />
 
-                <OnayamiItem marginTop title={<>生産性を<br className="sm:hidden" />高めたい</>}
+                <OnayamiItem marginTop title={<>スキルアップ<br className="sm:hidden" />したい</>}
                     content={<   >
                         <ListItem >
                             今のスキルをもっと磨きたい
                         </ListItem>
                         <ListItem >
-                            時間を有効活用したい
+                            新しいスキルを身につけたい
                         </ListItem>
                         <ListItem >
                             朝の時間を有効活用したい
@@ -166,7 +166,7 @@ const OnayamiItem = ({ title, content, delay, marginTop, href, src }: {
             <FadeAndSlideScrollTriggerAnimation delay={0.3} className="-mt-12 h-full bg-gradient3 pt-12 p-4 rounded-3xl w-full">
                 <div className="w-full flex flex-col gap-2 items-center">
                     {content}
-                    </div>
+                </div>
             </FadeAndSlideScrollTriggerAnimation>
         </ FadeAndSlideScrollTriggerAnimation>
     );

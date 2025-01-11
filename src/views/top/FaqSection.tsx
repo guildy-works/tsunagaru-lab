@@ -35,7 +35,7 @@ export const FaqSection = () => {
                             <span className="mb-auto size-10 bg-color2 text-white font-bold rounded-md px-4 py-2 flex items-center justify-center">
                                 A
                             </span>
-                            <p className="ml-3 text-start text-title4 text-gray-600">入会した日が会費の引き落とし日となります
+                            <p className="ml-3 text-start text-title4 text-gray-600">
                                 {x.a}
                             </p>
                         </div>
