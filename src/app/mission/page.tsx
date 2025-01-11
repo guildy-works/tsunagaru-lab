@@ -29,7 +29,8 @@ export default function Mission() {
                     <div className="flex  text-title1 font-bold tracking-wider">
                         <span className="text-color2">M</span>
                         i
-                        <span className="text-color3 ml-3">s</span>
+                        <span className="text-color3">s</span>
+                        <span className="text-color0">s</span>
                         ion
                     </div>
 

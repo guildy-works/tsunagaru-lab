@@ -17,7 +17,7 @@ export const OnayamiSection = () => {
     const Chip = ({ children, delay }: { children: ReactNode, delay: number }) =>
         <FadeAndSlideScrollTriggerAnimation
             delay={delay}
-            className="rounded-full font-bold px-1 py-1 bg-color3 text-lg  tracking-tighter mt-2">
+            className="rounded-full font-bold px-1 py-2 bg-color3 text-[1.3rem]  tracking-tighter mt-2">
             {children}
         </FadeAndSlideScrollTriggerAnimation>
 
@@ -41,7 +41,7 @@ export const OnayamiSection = () => {
                     <Chip delay={0.4}>学生</Chip>
                     <Dot delay={0.5} />
                     <Chip delay={0.6}>独立したい方</Chip>
-                    <FadeAndSlideScrollTriggerAnimation delay={0.7} className="-ml-1 z-10 leading-tight mt-1 text-lg ">へ</FadeAndSlideScrollTriggerAnimation>
+                    <FadeAndSlideScrollTriggerAnimation delay={0.7} className="-ml-1 z-10 leading-tight mt-1 text-[1.3rem] ">へ</FadeAndSlideScrollTriggerAnimation>
                 </h2>
 
                 <div className="mt-2 w-full flex flex-col items-center justify-center">

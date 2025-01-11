@@ -165,7 +165,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
 
 
 const Mobile = () => <div
-    style={{ height: 'calc(100svh - 62px)' }}
+    style={{ minHeight: 'calc(100svh - 62px)' }}
     className='sm:hidden relative flex flex-col justify-center items-center overflow-hidden rotate'>
     <motion.div
         transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.5 }}
@@ -281,7 +281,7 @@ const Mobile = () => <div
     </svg>
 
     <motion.div
-        className="w-full p-4 flex flex-col justify-center items-center gap-4">
+        className="w-full p-4 flex flex-col justify-center items-center gap-4 mb-6">
         <motion.div
             viewport={{ once: true }}
             transition={{
