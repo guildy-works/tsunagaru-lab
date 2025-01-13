@@ -11,13 +11,14 @@ import { MdPerson, MdPersonOutline } from "react-icons/md";
 import { Button3 } from "@/components/Button3";
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 import { MembersSection2 } from "./MembersSection.member2";
+import { resources } from "@/resources";
 
 export const MembersSection = () => {
     return <SectionBox disablePx disableMaxWidth>
         <div className="w-full flex flex-col items-center mx-auto gap-8 justify-center">
             <MembersSection2 />
 
-            <Button3 href="/#contacts" subTitle="お気軽にお問い合わせください！" >
+            <Button3 href={resources.links.line} subTitle="お気軽にお問い合わせください！" >
                 無料で入会する
             </Button3>
         </div>

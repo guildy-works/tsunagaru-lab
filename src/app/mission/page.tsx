@@ -91,7 +91,7 @@ const Top = () => <>
                 num="02"
                 title={<>デジタルで紡ぐ、<br />地方の伝統と未来</>}
                 desctiption={<>
-                    中国四国地方のデジタルリテラシーの格差を是正し、<br />
+                    中四国地方のデジタルリテラシーの格差を是正し、<br />
                     デジタル技術で地域資源の継承並びに最大化を図り、<br />
                     地方経済の活性化を推進する
                 </>}
@@ -104,7 +104,7 @@ const Top = () => <>
                 desctiption={<>
                     発信力を活用して、地域イベントの活性化、<br />
                     雇用創出を促し、<br />
-                    広島の転出超過改善などの中国四国地方の課題解決に貢献する
+                    広島の転出超過改善などの中四国地方の課題解決に貢献する
                 </>}
             >
             </VisionItem>
@@ -147,7 +147,7 @@ const Top = () => <>
                 num="03"
                 title="多様なつながりと共生"
                 desctiption={<>
-                    子供から経営者の方々、積極的に参加できるプログラムやイベントを開催。<br />
+                    子供から経営者の方々が積極的に参加できるプログラムやイベントを開催。<br />
                     独自の視点や才能を見つけて、つながりやビジネスへ昇華させる
                 </>}
             >
@@ -167,7 +167,7 @@ const Top = () => <>
                 num="05"
                 title="経済圏の構築"                
                 desctiption={<>
-                    NFTやトークンを活用し、独自の経済圏を形成。<br />
+                    NFTやトークンを活用し、独自の経済圏を形成<br />
                     中四国地方とつながるラボが連動し循環する仕組みを構築する
                 </>}
             >
@@ -309,29 +309,7 @@ const Sns = () => <div className="flex gap-4">
         className="text-gray-400 hover:text-gray-600 transition-colors">
         <Image src={Instagram} alt="Instagram" className="w-12" />
     </motion.a>
-    <motion.a
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                href={resources.links.discord}
-                target="_blank"
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Discord">
-                <Image src={Discord} alt="Instagram" className="w-12" />
-            </motion.a>
-    <motion.a
-        viewport={{ once: true }}
-        transition={{ delay: 0.4 }}
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        href={resources.links.personalLine}
-        target="_blank"
-        className="text-gray-400 hover:text-gray-600 transition-colors"
-        aria-label="LINE">
-        <Image src={Line} alt="Line" className="w-12" />
-    </motion.a>
-
+   
 </div>
 
 const Hr = () => <motion.div

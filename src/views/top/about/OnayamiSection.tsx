@@ -17,14 +17,14 @@ export const OnayamiSection = () => {
     const Chip = ({ children, delay }: { children: ReactNode, delay: number }) =>
         <FadeAndSlideScrollTriggerAnimation
             delay={delay}
-            className="rounded-full font-bold px-1 py-2 bg-color3 text-[1.3rem]  tracking-tighter mt-2">
+            className="rounded-full font-bold px-6 py-2 bg-color3 text-[1.6rem]  tracking-tighter">
             {children}
         </FadeAndSlideScrollTriggerAnimation>
 
-    const Dot = ({ delay }: { delay: number }) =>
+    const Dot = ({ delay, className }: { delay: number, className?: string }) =>
         <FadeAndSlideScrollTriggerAnimation
             delay={delay}
-            className="rounded-full font-bold mt-2">
+            className={clsx("rounded-full font-bold text-[1.2rem]", className)}>
             ・
         </FadeAndSlideScrollTriggerAnimation>
 
@@ -32,31 +32,32 @@ export const OnayamiSection = () => {
 
         <div className="w-full flex flex-col items-center mx-auto justify-center">
 
-            <div className="flex flex-col items-center mx-auto w-full px-8 max-w-lg">
-                <h2 className="flex items-baseline gap-0 z-10 w-full">
-                    <Chip delay={0}>フリーランス</Chip>
-                    <Dot delay={0.1} />
-                    <Chip delay={0.2}> 経営者</Chip>
-                    <Dot delay={0.3} />
-                    <Chip delay={0.4}>学生</Chip>
-                    <Dot delay={0.5} />
-                    <Chip delay={0.6}>独立したい方</Chip>
-                    <FadeAndSlideScrollTriggerAnimation delay={0.7} className="-ml-1 z-10 leading-tight mt-1 text-[1.3rem] ">へ</FadeAndSlideScrollTriggerAnimation>
+            <div className="flex flex-col items-center mx-auto md:max-w-3xl max-w-[328px] md:w-full">
+                <h2 className="flex  gap-2 md:gap-1 z-10 w-fit md:w-full justify-center flex-wrap items-center">
+                    <div className="flex items-baseline justify-center w-full md:w-fit gap-1">
+                        <Chip delay={0}>フリーランス</Chip>
+                        <Dot delay={0.1} />
+                        <Chip delay={0.2}> 経営者</Chip>
+                    </div>
+                    <Dot delay={0.3} className="hidden md:block" />
+                    <div className="flex items-baseline justify-center w-full md:w-fit gap-1">
+                        <Chip delay={0.4}>学生</Chip>
+                        <Dot delay={0.5} />
+                        <Chip delay={0.6}>独立したい方</Chip>
+                    </div>
                 </h2>
 
-                <div className="mt-2 w-full flex flex-col items-center justify-center">
-                    <motion.div
-                        viewport={{ once: true }}
-                        transition={{ type: "spring", bounce: 0.4, damping: 5, mass: 0.2 }}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "100%" }}
-                        className="w-full " >
-                        <Image src={Line1} alt="img" className="w-full" />
-                    </motion.div>
-                </div>
+                <motion.div
+                    viewport={{ once: true }}
+                    transition={{ type: "spring", bounce: 0.4, damping: 5, mass: 0.2 }}
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    className="mt-2 w-fit px-8" >
+                    <Image src={Line1} alt="img" className="w-full" />
+                </motion.div>
             </div>
 
-            <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold mt-2 mx-auto">
+            <SkewScrollTriggerAnimation tag="h2" className="text-title1 leading-[2.5rem] font-bold mx-auto">
                 こんな悩みありませんか？
             </SkewScrollTriggerAnimation>
 

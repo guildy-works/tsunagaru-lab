@@ -118,12 +118,11 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
             </div>
             <div className='flex flex-col justify-center items-center px-8 gap-8'>
                 <SkewScrollTriggerAnimation tag="h1" className='font-maru text-title1 text-center' delay={1.7}>
-                    つながる、広がる、<br className='sm:hidden' />中四国
+                    つながる、広がる、中四国
                 </SkewScrollTriggerAnimation>
 
                 <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title3 text-center' delay={1.9}>
-                    人脈、仕事、情報<br />
-                    未来がつながる
+                    人脈、仕事、情報、未来がつながる
                 </SkewScrollTriggerAnimation>
             </div>
         </div>
@@ -154,11 +153,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
             initial={{ translateY: "60px", opacity: 0, scale: 0.9 }}
             whileInView={{ translateY: "0px", opacity: 1, scale: 1 }}
             className="max-w-4xl mx-auto p-6 bg-[#893be2] flex flex-col justify-center items-center gap-2 rounded-3xl z-10">
-            <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">早期入会特典</SkewScrollTriggerAnimation>
-            <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title4 text-white">会費永年割引キャンペーン</SkewScrollTriggerAnimation>
-            <Button2 href={resources.links.line} subTitle="Click!">
-                早期入会特典をGET！
-            </Button2>
+            <Campaign />
         </motion.div>
     </motion.div>
 </div>
@@ -257,12 +252,11 @@ const Mobile = () => <div
         </div>
         <div className='flex flex-col justify-center items-center px-8 gap-4'>
             <SkewScrollTriggerAnimation tag="h1" className='text-[2rem] font-maru text-center leading-[2.4rem]' delay={1.7}>
-                つながる、広がる、<br className='sm:hidden' />中四国
+                つながる、広がる、中四国
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title4 text-center' delay={1.9}>
-                人脈、仕事、情報<br />
-                未来がつながる
+                人脈、仕事、情報、未来がつながる
             </SkewScrollTriggerAnimation>
         </div>
     </div>
@@ -293,11 +287,15 @@ const Mobile = () => <div
             initial={{ translateY: "60px", opacity: 0, scale: 0.9 }}
             whileInView={{ translateY: "0px", opacity: 1, scale: 1 }}
             className="max-w-4xl mx-auto p-6 bg-[#893be2] flex flex-col justify-center items-center gap-2 rounded-3xl z-10">
-            <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title2 text-white">早期入会特典</SkewScrollTriggerAnimation>
-            <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">会費永年割引キャンペーン</SkewScrollTriggerAnimation>
-            <Button2 href={resources.links.line} subTitle="Click!">
-                早期入会特典をGET！
-            </Button2>
+            <Campaign />
         </motion.div>
     </motion.div>
 </div>
+
+const Campaign = () => <>
+    <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">LINE登録者限定 !</SkewScrollTriggerAnimation>
+    <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title4 text-white">会費永年割引キャンペーン</SkewScrollTriggerAnimation>
+    <Button2 href={resources.links.line} subTitle="Click!">
+        LINEを追加する
+    </Button2>
+</>

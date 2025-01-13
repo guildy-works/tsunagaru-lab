@@ -36,7 +36,7 @@ export const ProfileSection = () => <SectionBox className={clsx(
                 初めまして！
             </SkewScrollTriggerAnimation>
             <SkewScrollTriggerAnimation tag="p">
-                広島県と岡山県を拠点に活動している、小早川です<br />
+                中四国を拠点に活動している、小早川です<br />
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation tag="p">   このコミュニティでは<br />

@@ -46,6 +46,7 @@ export const resources = {
         }
     ],
     links: {
+        mail: "mailto:tsunalab.info@gmail.com",
         line: "https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9",
         discord: "https://discord.gg/J8chE8qKky?openExternalBrowser=1",
         personalLine: "https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9",
@@ -127,9 +128,9 @@ export const resources = {
             details: <>
                 デジタル(チラシ、名刺、ロゴなど)から<br />
                 アナログ(似顔絵、壁画など)まで<br />
-                短納期・低予算で承ります。<br />
+                短納期・低予算で承ります<br />
                 広島ものまね軍団のメンバーでもあり、<br />
-                県内外のイベントで歌まねをしている(?)
+                県内外のイベントで歌まねをしている
             </>,
             image: たけうちまりえ
         },
@@ -141,7 +142,7 @@ export const resources = {
             content: <>
                 オフライン交流会や各種イベントの開催<br />
                 チャット上での交流<br />
-                フリーランス、経営者、学生、社会人とつながれる
+                フリーランス、経営者、学生とつながれる
             </>,
             image: Issue1,
         },
@@ -202,7 +203,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        🔔<br />
                         交流会
                     </>
                 ),
@@ -225,7 +225,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        🔔<br />
                         セミナー・講演会
                     </>
                 ),
@@ -253,7 +252,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        📣<br />
                         イベント告知
                     </>
                 ),
@@ -287,7 +285,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        📣<br />
                         プロモーション
                     </>
                 ),
@@ -327,7 +324,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        ☀️<br />
                         朝活
                     </>
                 ),
@@ -348,7 +344,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        💡<br />
                         情報共有
                     </>
                 ),
@@ -369,7 +364,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        💬<br />
                         交流・雑談
                     </>
                 ),
@@ -391,7 +385,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        🏃‍♀️<br />
                         サークル活動
                     </>
                 ),
@@ -413,7 +406,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        👔<br />
                         求人募集
                     </>
                 ),
@@ -444,7 +436,6 @@ export const resources = {
             {
                 チャンネル名: (
                     <>
-                        💻<br />
                         案件募集
                     </>
                 ),
