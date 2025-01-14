@@ -13,12 +13,12 @@ import { ServiceDialog } from "@/components/ServiceDialog";
 import { PlanSheet, PlanTable } from "./PlanTable";
 import { DOMMotionComponents, motion, useInView } from "motion/react"
 import { resources } from "@/resources";
+import { HighlightMarker } from "@/components/HighlightMarker";
 
 export const PlansSection = () => {
     return (
         <SectionBox disablePx disableMaxWidth className="bg-gradient1 w-full py-16 !gap-8 relative">
             <div id="plans" className="absolute -top-24" />
-
             <div className="w-full flex flex-col items-center mx-auto gap-8 justify-center">
 
                 <h2 className="text-title1 font-bold">料金プラン</h2>
@@ -45,9 +45,10 @@ export const PlansSection = () => {
                             content={<ul className="list-disc px-4">
                                 <li>オフライン交流会への参加</li>
                                 <li>セミナーや講演会への参加</li>
-                                <li>地域や企業のイベント情報<br/>
+                                <li>地域や企業のイベント情報<br />
                                     受け取り</li>
                             </ul>}
+                            markerClassName="bg-color4"
                             src={Issue1}
                         />
                     </SplideSlide>
@@ -55,7 +56,7 @@ export const PlansSection = () => {
                         <PlanItem
                             title={<>スモールプラン</>}
                             price="¥1,980/月"
-
+                            markerClassName="bg-color1"
                             title2={<>フリーランスにおすすめ！</>}
                             content={<ul className="list-disc px-4">
                                 <li>フリープラン機能が全て使える</li>
@@ -69,6 +70,7 @@ export const PlansSection = () => {
                     </SplideSlide>
                     <SplideSlide >
                         <PlanItem title={<>ビジネスプラン</>}
+                            markerClassName="bg-color2"
                             price="¥3,980/月"
                             title2={<>経営者におすすめ！</>}
                             content={<ul className="list-disc px-4">
@@ -93,14 +95,15 @@ export const PlansSection = () => {
     )
 }
 
-const PlanItem = ({ title, title2, price, content, delay, colorClass, href, src }: {
+const PlanItem = ({ title, title2, price, content, delay, markerClassName, colorClass, href, src }: {
     delay?: number,
     title: ReactNode,
     title2: ReactNode,
     price: ReactNode,
     content: ReactNode,
     colorClass?: string,
-    href?: string
+    href?: string,
+    markerClassName?: string,
     src: StaticImageData
 }) => {
     return (
@@ -113,7 +116,13 @@ const PlanItem = ({ title, title2, price, content, delay, colorClass, href, src 
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             className="h-full w-80 flex flex-col items-center justify-center bg-color3 p-8 gap-3 rounded-3xl overflow-hidden">
-            <h3 className=" text-title4 font-bold text-center">{title2}</h3>
+            <div>
+                <HighlightMarker
+                    className=" text-title4 font-bold text-center"
+                    markerClassName={markerClassName}
+                >{title2}</HighlightMarker>
+            </div>
+
             <h2 className=" text-title2 font-bold text-center">{title}</h2>
 
             <div className="w-full">

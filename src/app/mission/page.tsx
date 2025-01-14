@@ -273,7 +273,7 @@ const Profile = () => {
                             </SkewScrollTriggerAnimation>
                             <Hr />
                             <SkewScrollTriggerAnimation tag="p" className="mt-2">
-                                ・元大手小売業の総合職<br />
+                                ・つながるラボオーナー<br />
                                 ・アドサル代表<br />
                                 ・一般社団法人創業事業継続振興会　学生部会理事<br />
                                 ・HIT ひろしま観光大使<br />
