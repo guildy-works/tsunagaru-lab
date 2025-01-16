@@ -76,7 +76,7 @@ export default function LegalNotice() {
         <section className="mb-6">
             <h2 className="text-title2 font-bold mb-4">解約について</h2>
             <p>
-                退会のお申し出をいただいた場合、翌月以降のサービス提供及び利用料金の請求を停止いたします。
+                退会のお申し出をいただいた場合、翌月以降のサービス提供及び利用料金の請求を停止いたします
             </p>
         </section>
     </div>)

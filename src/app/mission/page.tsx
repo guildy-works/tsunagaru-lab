@@ -44,7 +44,7 @@ export default function Mission() {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     className="mx-auto text-title1 text-center">
-                    デジタル x リアルで<br />
+                    デジタル × リアルで<br />
                     中四国地方に新たな<br className="sm:hidden" />
                     つながりと可能性を創出
                 </motion.div>
@@ -127,7 +127,7 @@ const Top = () => <>
                 num="01"
                 title="影響力と魅力発信"
                 desctiption={<>
-                    つながるラボや個々の影響力を活かし、地域の魅力を発信する。<br />
+                    つながるラボや個々の影響力を活かし、地域の魅力を発信する<br />
                     またマスコットやキャラクターを活用して、<br />
                     地域に新しい楽しさと活力を提供する
                 </>}
@@ -147,7 +147,7 @@ const Top = () => <>
                 num="03"
                 title="多様なつながりと共生"
                 desctiption={<>
-                    子供から経営者の方々が積極的に参加できるプログラムやイベントを開催。<br />
+                    子供から経営者の方々が積極的に参加できるプログラムやイベントを開催<br />
                     独自の視点や才能を見つけて、つながりやビジネスへ昇華させる
                 </>}
             >
@@ -275,8 +275,8 @@ const Profile = () => {
                             <SkewScrollTriggerAnimation tag="p" className="mt-2">
                                 ・つながるラボオーナー<br />
                                 ・アドサル代表<br />
-                                ・一般社団法人創業事業継続振興会　学生部会理事<br />
-                                ・HIT ひろしま観光大使<br />
+                                ・一般社団法人創業事業継続振興会学生部会理事<br />
+                                ・HITひろしま観光大使<br />
                             </SkewScrollTriggerAnimation>
                         </>
 
@@ -286,7 +286,7 @@ const Profile = () => {
                             </SkewScrollTriggerAnimation>
                             <Hr />
                             <SkewScrollTriggerAnimation tag="p" className="mt-2">
-                                つながるラボは、皆さんが主役です。<br />
+                                つながるラボは、皆さんが主役です<br />
                                 それぞれの目的達成のためにつながりましょう⭐
                             </SkewScrollTriggerAnimation>
                         </>

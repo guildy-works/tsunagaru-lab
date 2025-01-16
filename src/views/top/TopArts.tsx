@@ -293,9 +293,9 @@ const Mobile = () => <div
 </div>
 
 const Campaign = () => <>
-    <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">LINE登録者限定 !</SkewScrollTriggerAnimation>
-    <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title4 text-white">会費永年割引キャンペーン</SkewScrollTriggerAnimation>
+    <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">LINE登録者限定</SkewScrollTriggerAnimation>
+    <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title4 text-white">無料キャンペーン！</SkewScrollTriggerAnimation>
     <Button2 href={resources.links.line} subTitle="Click!">
-        LINEを追加する
+        LINEで受け取る
     </Button2>
 </>

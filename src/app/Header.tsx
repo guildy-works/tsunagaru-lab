@@ -16,10 +16,11 @@ type MenuItem = {
 };
 export const menuItems: MenuItem[] = [
     { href: "/", label: "TOP" },
+    { href: "/mission", label: "ミッション" },
     { href: "/#orner", label: "オーナー挨拶" },
     { href: "/#about", label: "つながるラボでできること" },
     { href: "/#plans", label: "料金プラン" },
-    { href: "/mission", label: "ミッション" },
+
     { href: "/#contacts", label: "お問い合わせ" },
 ];
 

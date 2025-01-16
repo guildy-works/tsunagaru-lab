@@ -23,66 +23,34 @@ export const PlansSection = () => {
 
                 <h2 className="text-title1 font-bold">料金プラン</h2>
 
-                <Splide
-                    className="mx-auto max-w-full"
-                    options={{
-                        autoplay: false,
-                        rewind: false,
-                        interval: 2000, // 自動再生の間隔
-                        speed: 2000, // フェードする時間
-                        arrows: false,
-                        width: 'auto',
-                        gap: '1rem',
-                        padding: { right: '4rem', left: '4rem', },
-                        perPage: 1,
-                        autoWidth: true,
-                    } as Options}
-                >
-                    <SplideSlide >
-                        <PlanItem title={<>フリープラン</>}
-                            price="¥0/月"
-                            title2={<>学生におすすめ！</>}
-                            content={<ul className="list-disc px-4">
-                                <li>オフライン交流会への参加</li>
-                                <li>セミナーや講演会への参加</li>
-                                <li>地域や企業のイベント情報<br />
-                                    受け取り</li>
-                            </ul>}
-                            markerClassName="bg-color4"
-                            src={Issue1}
-                        />
-                    </SplideSlide>
-                    <SplideSlide >
-                        <PlanItem
-                            title={<>スモールプラン</>}
-                            price="¥1,980/月"
-                            markerClassName="bg-color1"
-                            title2={<>フリーランスにおすすめ！</>}
-                            content={<ul className="list-disc px-4">
-                                <li>フリープラン機能が全て使える</li>
-                                <li>Zoom朝活</li>
-                                <li>スキルやノウハウの情報共有</li>
-                                <li>チャット交流 </li>
-                                <li>求人や仕事、案件の応募</li>
-                            </ul>}
-                            src={Issue1}
-                        />
-                    </SplideSlide>
-                    <SplideSlide >
-                        <PlanItem title={<>ビジネスプラン</>}
-                            markerClassName="bg-color2"
-                            price="¥3,980/月"
-                            title2={<>経営者におすすめ！</>}
-                            content={<ul className="list-disc px-4">
-                                <li>スモールプラン機能が<br />
-                                    全て使える</li>
-                                <li>各種イベントの宣伝し放題</li>
-                                <li>求人や仕事、案件の発注し放題</li>
-                            </ul>}
-                            src={Issue1}
-                        />
-                    </SplideSlide>
-                </Splide>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+                    <PlanItem title={<>フリープラン</>}
+                        price="¥0/月"
+                        title2={<>学生におすすめ</>}
+                        content={<ul className="list-disc px-4">
+                            <li>オフライン交流会への参加</li>
+                            <li>セミナー・勉強会への参加</li>
+                            <li>地域イベントや企業情報受け取り
+                            </li>
+                        </ul>}
+                        markerClassName="bg-color1"
+                        src={Issue1}
+                    />
+
+                    <PlanItem title={<>ビジネスプラン</>}
+                        markerClassName="bg-color2"
+                        price="¥2,980/月"
+                        title2={<>フリーランス・経営者におすすめ</>}
+                        content={<ul className="list-disc px-4">
+                            <li>フリープラン機能</li>
+                            <li>ZOOM朝活</li>
+                            <li>スキルやノウハウの情報共有</li>
+                            <li>イベントや事業の宣伝し放題</li>
+                            <li>求人募集や案件の受発注し放題</li>
+                        </ul>}
+                        src={Issue1}
+                    />
+                </div>
             </div>
 
             <ServiceDialog buttonText="詳細" >
@@ -115,7 +83,9 @@ const PlanItem = ({ title, title2, price, content, delay, markerClassName, color
             }}
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            className="h-full w-80 flex flex-col items-center justify-center bg-color3 p-8 gap-3 rounded-3xl overflow-hidden">
+            className={clsx(
+                "h-full flex flex-col items-center justify-center bg-color3  gap-3 overflow-hidden rounded-3xl p-8",
+            )}>
             <div>
                 <HighlightMarker
                     className=" text-title4 font-bold text-center"

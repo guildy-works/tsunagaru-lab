@@ -36,7 +36,7 @@ export const ProfileSection = () => <SectionBox className={clsx(
                 初めまして！
             </SkewScrollTriggerAnimation>
             <SkewScrollTriggerAnimation tag="p">
-                中四国を拠点に活動している、小早川です<br />
+                中四国地方を拠点に活動している、小早川です<br />
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation tag="p">   このコミュニティでは<br />
@@ -45,7 +45,7 @@ export const ProfileSection = () => <SectionBox className={clsx(
                 創り上げることを目標としています<br /><br />
             </SkewScrollTriggerAnimation>
 
-            <SkewScrollTriggerAnimation tag="p" delay={0.1}> 
+            <SkewScrollTriggerAnimation tag="p" delay={0.1}>
                 人脈、仕事、情報をつなげていきましょう！<br />
             </SkewScrollTriggerAnimation>
 

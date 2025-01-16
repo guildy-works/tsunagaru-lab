@@ -29,10 +29,6 @@ export const PlanSheet = () => {
                                 <span className="">{row.フリープラン}</span>
                             </li>
                             <li className="flex flex-col items-center text-center">
-                                <span>スモールプラン</span>
-                                <span>{row.スモールプラン}</span>
-                            </li>
-                            <li className="flex flex-col items-center text-center">
                                 <span>ビジネスプラン</span>
                                 <span>{row.ビジネスプラン}</span>
                             </li>
@@ -81,11 +77,6 @@ export const PlanTable = () => {
                             フリー
                         </th>
                         <th
-                            className="min-w-[48px] text-center sm:px-4 md:px-6  py-3  text-[8px] sm:text-sm font-medium text-white border-b border-black"
-                        >
-                            スモール
-                        </th>
-                        <th
                             className="min-w-[48px] text-center sm:px-4 md:px-6  py-3  text-[8px]  sm:text-sm font-medium text-white border-b border-black"
                         >
                             ビジネス
@@ -113,9 +104,6 @@ export const PlanTable = () => {
                             </td>
                             <td className="text-center tracking-tighter sm:px-4 md:px-6 py-2 text-[8px] leading-[0.8rem] sm:text-sm font-bold bg-color3/60 border-r border-black">
                                 {row.フリープラン}
-                            </td>
-                            <td className="text-center tracking-tighter sm:px-4 md:px-6 py-2 text-[8px] leading-[0.8rem] sm:text-sm font-bold bg-amber-500/60 border-r border-black">
-                                {row.スモールプラン}
                             </td>
                             <td className="text-center tracking-tighter sm:px-4 md:px-6 py-2 text-[8px] leading-[0.8rem] sm:text-sm font-bold bg-color2/60 border-r border-black">
                                 {row.ビジネスプラン}
