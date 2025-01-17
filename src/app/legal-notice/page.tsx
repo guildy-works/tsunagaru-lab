@@ -1,10 +1,5 @@
 'use client'
 
-import { SectionType1 } from "@/components/SectionType1"
-import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation"
-import { DOMMotionComponents, motion, useInView } from "motion/react"
-import { ReactNode } from "react"
-
 export default function LegalNotice() {
     return (<div className="p-8 max-w-2xl mx-auto">
         <h1 className="text-title1 font-bold text-center mb-8">特定商取引法に基づく表記</h1>
