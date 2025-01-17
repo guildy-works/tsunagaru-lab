@@ -22,7 +22,7 @@ export default function RootLayout({
         <html lang="ja" >
             <head>
                 <title>{"つながるラボ"}</title>
-                <meta name="description" content={"つながるラボ"} />
+                <meta name="description" content={"中四国地方特化のオンラインコミュニティ"} />
 
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}

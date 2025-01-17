@@ -17,6 +17,7 @@ import Balloon1 from "@/assets/balloon1.svg";
 import CommingSoon from "@/assets/comming-soon.svg";
 
 export const resources = {
+    host :"https://tsunagaru-lab.jp",
     faq: [
         {
             q: "中四国地方以外の人も参加できますか？",

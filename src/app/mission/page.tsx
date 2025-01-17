@@ -165,7 +165,7 @@ const Top = () => <>
 
             <VisionItem
                 num="05"
-                title="経済圏の構築"                
+                title="経済圏の構築"
                 desctiption={<>
                     NFTやトークンを活用し、独自の経済圏を形成<br />
                     中四国地方とつながるラボが連動し循環する仕組みを構築する
@@ -229,13 +229,13 @@ const Profile = () => {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 className={clsx(
-                    "grid !max-w-5xl w-full",
+                    "grid !max-w-5xl w-full relative",
                     "grid-cols-1  mx-auto !gap-4",
                     "md:grid-cols-2 md:!gap-16",
                     "bg-white border-2 border-color0 p-8 md:p-16 overflow-hidden rounded-3xl"
                 )}
             >
-
+                <div id="orner" className="absolute -top-24" />
 
                 <div className="flex flex-col items-center justify-center gap-4">
                     <FadeAndSlideScrollTriggerAnimation className="text-title2 font-bold">オーナー</FadeAndSlideScrollTriggerAnimation>
@@ -309,7 +309,7 @@ const Sns = () => <div className="flex gap-4">
         className="text-gray-400 hover:text-gray-600 transition-colors">
         <Image src={Instagram} alt="Instagram" className="w-12" />
     </motion.a>
-   
+
 </div>
 
 const Hr = () => <motion.div

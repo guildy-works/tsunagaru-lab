@@ -15,6 +15,7 @@ import { SkewScrollTriggerAnimation } from '@/libs/ScrollTriggerAnimations/SkewS
 import { SectionType1 } from '@/components/SectionType1'
 import { Button2 } from '@/components/Button2'
 import { resources } from '@/resources'
+import { Campaign } from './Campain'
 
 export const TopArt = () => {
     return (
@@ -291,11 +292,3 @@ const Mobile = () => <div
         </motion.div>
     </motion.div>
 </div>
-
-const Campaign = () => <>
-    <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#893be2]" className="text-title3 text-white">LINE登録者限定</SkewScrollTriggerAnimation>
-    <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#893be2]" className="text-title4 text-white">無料キャンペーン！</SkewScrollTriggerAnimation>
-    <Button2 href={resources.links.line} subTitle="Click!">
-        LINEで受け取る
-    </Button2>
-</>

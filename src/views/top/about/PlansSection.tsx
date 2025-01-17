@@ -14,6 +14,7 @@ import { PlanSheet, PlanTable } from "./PlanTable";
 import { DOMMotionComponents, motion, useInView } from "motion/react"
 import { resources } from "@/resources";
 import { HighlightMarker } from "@/components/HighlightMarker";
+import { Button4 } from "@/components/Button4";
 
 export const PlansSection = () => {
     return (
@@ -28,7 +29,7 @@ export const PlansSection = () => {
                         price="¥0/月"
                         title2={<>学生におすすめ</>}
                         content={<ul className="list-disc px-4">
-                            <li>オフライン交流会への参加</li>
+                            <li>交流会やイベントへの参加</li>
                             <li>セミナー・勉強会への参加</li>
                             <li>地域イベントや企業情報受け取り
                             </li>
@@ -44,6 +45,7 @@ export const PlansSection = () => {
                         content={<ul className="list-disc px-4">
                             <li>フリープラン機能</li>
                             <li>ZOOM朝活</li>
+                            <li>地元チャットトーク</li>
                             <li>スキルやノウハウの情報共有</li>
                             <li>イベントや事業の宣伝し放題</li>
                             <li>求人募集や案件の受発注し放題</li>
@@ -56,9 +58,10 @@ export const PlansSection = () => {
             <ServiceDialog buttonText="詳細" >
                 <PlanTable />
             </ServiceDialog>
-            <Button2 href={resources.links.line} subTitle="Click!">
-                早期入会特典をGET！
-            </Button2>
+
+            <Button4 href={resources.links.line} subTitle="お気軽にお問い合わせください！" >
+                無料で入会する
+            </Button4>
         </SectionBox>
     )
 }

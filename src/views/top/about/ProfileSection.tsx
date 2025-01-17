@@ -14,8 +14,6 @@ export const ProfileSection = () => <SectionBox className={clsx(
     "grid-cols-1  mx-auto !gap-4 !max-w-xl",
     "md:grid-cols-2 md:!max-w-5xl md:!gap-12"
 )}>
-    <div id="orner" className="absolute -top-24" />
-
     <div className="flex flex-col items-center justify-center gap-4">
         <FadeAndSlideScrollTriggerAnimation className="text-title2 font-bold">小早川（こばやかわ）</FadeAndSlideScrollTriggerAnimation>
         <FadeAndSlideScrollTriggerAnimation className="rounded-3xl border-2 border-black overflow-hidden">

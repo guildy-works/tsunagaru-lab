@@ -17,7 +17,7 @@ type MenuItem = {
 export const menuItems: MenuItem[] = [
     { href: "/", label: "TOP" },
     { href: "/mission", label: "ミッション" },
-    { href: "/#orner", label: "オーナー挨拶" },
+    { href: "/mission#orner", label: "オーナー挨拶" },
     { href: "/#about", label: "つながるラボでできること" },
     { href: "/#plans", label: "料金プラン" },
 
