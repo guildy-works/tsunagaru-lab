@@ -24,6 +24,10 @@ export default function RootLayout({
                 <title>{"つながるラボ"}</title>
                 <meta name="description" content={"中四国地方特化のオンラインコミュニティ"} />
 
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet" />
+
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
                     strategy='afterInteractive'
