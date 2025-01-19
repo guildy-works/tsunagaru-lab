@@ -120,6 +120,7 @@ export const Header = () => {
                 {/* Mobile */}
                 <nav className="flex md:hidden gap-6">
                     <button
+                        aria-label="Menu"
                         onClick={() => setIsMenuOpen(true)}
                         className="ml-2 mr-4 flex items-center justify-center px-2 w-16 h-12 rounded-full text-color1 hover:bg-color3/10">
                         <MdMenu size={52} />
