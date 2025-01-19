@@ -31,7 +31,7 @@ export const Header = () => {
         <>
             <header className="flex w-full items-center sticky top-0 mt-0 bg-gradient-opacity backdrop-blur-lg z-50 border-b border-black/5">
                 <Link href="/" className='p-2'>
-                    <Image src={Logo} alt="Logo" className='w-[50px] md:w-[80px]' />
+                    <Image src={Logo} alt="Logo" width={80} className='w-[50px] md:w-[80px]' />
                 </Link>
 
                 {/* Desktop */}

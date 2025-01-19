@@ -1,17 +1,12 @@
 import { SectionBox } from "@/components/SectionBox";
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation";
 import clsx from "clsx";
-import Image from 'next-export-optimize-images/picture';
-import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import { ReactNode } from "react";
 import { StaticImageData } from "next/image";
-import { Button2 } from "@/components/Button2";
-import { SectionType1 } from "@/components/SectionType1";
-import { Button3 } from "@/components/Button3";
 import Issue1 from "@/assets/issue1.webp";
 import { ServiceDialog } from "@/components/ServiceDialog";
-import { PlanSheet, PlanTable } from "./PlanTable";
-import { DOMMotionComponents, motion, useInView } from "motion/react"
+import { PlanTable } from "./PlanTable";
+import { motion } from "motion/react"
 import { resources } from "@/resources";
 import { HighlightMarker } from "@/components/HighlightMarker";
 import { Button4 } from "@/components/Button4";

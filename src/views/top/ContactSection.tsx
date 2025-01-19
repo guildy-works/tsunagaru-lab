@@ -27,7 +27,7 @@ export const ContactSection = () => {
                     initial={{ scale: 1.1, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 !mb-8 flex flex-col">
-                    <h2 className="text-title2 font-jost text-center mb-2">お問い合わせ</h2>
+                    <h2 className="text-title2 text-center mb-2">お問い合わせ</h2>
                     <p className="text-center text-color0/60 mb-8">詳細、入会などはこちらから</p>
 
                     <motion.div

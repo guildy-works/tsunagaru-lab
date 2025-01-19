@@ -1,17 +1,5 @@
 import { SectionBox } from "@/components/SectionBox"
-import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
-import { ReactNode } from "react"
-import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
-import Issue1 from "@/assets/issue1.webp";
-import Issue2 from "@/assets/issue2.webp";
-import Issue3 from "@/assets/issue3.webp";
-import { StaticImageData } from "next/image";
-import Image from 'next-export-optimize-images/picture';
-import { MdPerson, MdPersonOutline } from "react-icons/md";
-import { Button3 } from "@/components/Button3";
-import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 import { MembersSection2 } from "./MembersSection.member2";
-import { resources } from "@/resources";
 import { Campaign } from "../Campain";
 import { motion } from "motion/react";
 

@@ -1,13 +1,8 @@
 import { SectionBox } from "@/components/SectionBox"
 import { FadeAndSlideScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/FadeAndSlideScrollTriggerAnimation"
 import { ReactNode } from "react"
-import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
 import { StaticImageData } from "next/image";
 import Image from 'next-export-optimize-images/picture';
-import { MdOutlinePhoto, MdPerson, MdPersonOutline, MdPhoto } from "react-icons/md";
-import { Button3 } from "@/components/Button3";
-import { title } from "process";
-import { DOMMotionComponents, motion, useInView } from "motion/react"
 import Join1 from "@/assets/join1.png";
 import Join2 from "@/assets/join2.png";
 import Join3 from "@/assets/join3.png";

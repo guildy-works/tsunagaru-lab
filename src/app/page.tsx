@@ -11,8 +11,6 @@ import { HowToJoinSection } from "@/views/top/HowToJoinSection";
 export default function Home() {
     return (
         <>
-            <div className="bg_noise"></div>
-
             <TopSection />
 
             <AboutSection />
