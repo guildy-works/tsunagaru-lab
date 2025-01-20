@@ -14,8 +14,8 @@ export const MembersSection = () => {
                     viewport={{ once: true }}
                     transition={{
 
-                        translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay: 2, },
-                        scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, delay: 2, },
+                        translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3,  },
+                        scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, },
                         opacity: { duration: 0.3, delay: 2, },
                     }}
                     initial={{ translateY: "60px", opacity: 0, scale: 0.9 }}
