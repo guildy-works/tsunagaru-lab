@@ -147,9 +147,9 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
             viewport={{ once: true }}
             transition={{
 
-                translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay: 2, },
-                scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, delay: 2, },
-                opacity: { duration: 0.3, delay: 2, },
+                translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay: 1, },
+                scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, delay: 1, },
+                opacity: { duration: 0.3, delay: 1, },
             }}
             initial={{ translateY: "60px", opacity: 0, scale: 0.9 }}
             whileInView={{ translateY: "0px", opacity: 1, scale: 1 }}
@@ -281,9 +281,9 @@ const Mobile = () => <div
             viewport={{ once: true }}
             transition={{
 
-                translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay: 2, },
-                scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, delay: 2, },
-                opacity: { duration: 0.3, delay: 2, },
+                translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay: 1, },
+                scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, delay: 1, },
+                opacity: { duration: 0.3, delay: 1, },
             }}
             initial={{ translateY: "60px", opacity: 0, scale: 0.9 }}
             whileInView={{ translateY: "0px", opacity: 1, scale: 1 }}
