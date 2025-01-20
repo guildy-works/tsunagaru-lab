@@ -173,7 +173,7 @@ export const resources = {
             content: <>
                 平日の朝7時から8時まで<br />
                 ポモドーロタイマーを活用した<br />
-                Zoom朝活で生産性が高まります
+                オンライン朝活で生産性が高まります
             </>,
             baloon: Balloon1,
             image: Issue5,
@@ -399,7 +399,7 @@ export const resources = {
                 内容: (
                     <>
                         朝7時〜8時まで<br />
-                        Zoom朝活
+                        オンライン朝活
                     </>
                 ),
                 一言: (

@@ -39,7 +39,7 @@ export const PlansSection = () => {
                         title2={<>フリーランス・経営者におすすめ</>}
                         content={<ul className="list-disc px-4">
                             <li>フリープラン機能</li>
-                            <li>ZOOM朝活</li>
+                            <li>オンライン朝活</li>
                             <li>地元チャットトーク</li>
                             <li>スキルやノウハウの情報共有</li>
                             <li>イベントや事業の宣伝し放題</li>
