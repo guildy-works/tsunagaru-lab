@@ -16,6 +16,7 @@ import { SectionType1 } from '@/components/SectionType1'
 import { Button2 } from '@/components/Button2'
 import { resources } from '@/resources'
 import { Campaign } from './Campain'
+import css from "@/components/Balloon.module.scss"
 
 export const TopArt = () => {
     return (
@@ -123,7 +124,8 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
                 </SkewScrollTriggerAnimation>
 
                 <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title3 text-center' delay={1.9}>
-                    中四国地方専用オンラインコミュニティ
+                    中四国地方専用<br />
+                    ビジネスオンラインコミュニティ
                 </SkewScrollTriggerAnimation>
             </div>
         </div>
@@ -141,22 +143,12 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
                 d="M.5,43.3c61.63,15.81,124.1,28.89,187.14,38.08,125.96,18.3,253.78,18.9,380.78,24.91,78.79,2.62,157.78,2.05,236.45-3.06,24.47-1.84,49.47-3.94,71.61-14.82,21.65-10.73,36.65-33.26,28.34-56.26-7.59-23.36-38.23-38.33-60.43-25.38-16.44,9.17-18.9,30.59-10.31,46.72,26.76,49.04,114.62,57.02,172.81,58.12,62.61.52,119.56-13.77,179.27-28.72C1451.86,8.51,1668.46,1.2,1929.5,102.3" />
         </svg>
     </div>
-    <motion.div
-        className="h-[20svh] bg-gradient1 w-full flex flex-col justify-center items-center gap-4">
-        <motion.div
-            viewport={{ once: true }}
-            transition={{
 
-                translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay: 1, },
-                scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, delay: 1, },
-                opacity: { duration: 0.3, delay: 1, },
-            }}
-            initial={{ translateY: "60px", opacity: 0, scale: 0.9 }}
-            whileInView={{ translateY: "0px", opacity: 1, scale: 1 }}
-            className="max-w-4xl mx-auto p-6 bg-[#893be2] flex flex-col justify-center items-center gap-2 rounded-3xl z-10">
-            <Campaign />
-        </motion.div>
-    </motion.div>
+    <div
+        className="h-[20svh] bg-gradient1 w-full flex flex-col justify-center items-center gap-4">
+        <Campaign />
+
+    </div>
 </div>
 
 
@@ -257,7 +249,8 @@ const Mobile = () => <div
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title4 text-center' delay={1.9}>
-                中四国地方専用オンラインコミュニティ
+                中四国地方専用<br />
+                ビジネスオンラインコミュニティ
             </SkewScrollTriggerAnimation>
         </div>
     </div>
@@ -275,20 +268,5 @@ const Mobile = () => <div
             d="M.5,43.3c61.63,15.81,124.1,28.89,187.14,38.08,125.96,18.3,253.78,18.9,380.78,24.91,78.79,2.62,157.78,2.05,236.45-3.06,24.47-1.84,49.47-3.94,71.61-14.82,21.65-10.73,36.65-33.26,28.34-56.26-7.59-23.36-38.23-38.33-60.43-25.38-16.44,9.17-18.9,30.59-10.31,46.72,26.76,49.04,114.62,57.02,172.81,58.12,62.61.52,119.56-13.77,179.27-28.72C1451.86,8.51,1668.46,1.2,1929.5,102.3" />
     </svg>
 
-    <motion.div
-        className="w-full p-4 flex flex-col justify-center items-center gap-4 mb-6">
-        <motion.div
-            viewport={{ once: true }}
-            transition={{
-
-                translateY: { type: "spring", bounce: 1, damping: 5, mass: 0.3, delay: 1, },
-                scale: { type: "spring", bounce: 1, damping: 2, mass: 0.3, delay: 1, },
-                opacity: { duration: 0.3, delay: 1, },
-            }}
-            initial={{ translateY: "60px", opacity: 0, scale: 0.9 }}
-            whileInView={{ translateY: "0px", opacity: 1, scale: 1 }}
-            className="max-w-4xl mx-auto p-6 bg-[#893be2] flex flex-col justify-center items-center gap-2 rounded-3xl z-10">
-            <Campaign />
-        </motion.div>
-    </motion.div>
+    <Campaign />
 </div>

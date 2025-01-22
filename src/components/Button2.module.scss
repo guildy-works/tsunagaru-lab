@@ -1,60 +1,18 @@
 .button {
+    @apply px-12 py-4;
     position: relative;
     display: inline-block;
     font-weight: bold;
     line-height: 1.5;
-    padding: 20px 30px 20px 50px;
     transition: 0.3s;
     text-decoration: none;
     color: #fff;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     background: linear-gradient(220deg, rgba(191, 95, 255, 1) 0%, rgba(255, 150, 80, 1) 100%);
     box-shadow: 0 5px 0 rgb(184, 57, 162);
-    margin-left: 10px;
 
     &:hover {
         transform: translate(0, 3px);
         box-shadow: 0 2px 0 rgb(184, 57, 162);
     }
-}
-
-.balloon_container {
-    position: absolute;
-    bottom: 0.8em;
-    line-height: 5em;
-    left: -10px;
-    width: 48px;
-    height: 48px;
-    font-family: "Noto Sans JP", serif;
-}
-
-.balloon {
-    text-align: center;
-    color: #3616a8;
-    font-size: 12px;
-    font-weight: bold;
-    background: #fff;
-    border: 3px solid #50149e;
-    border-radius: 50%;
-    box-sizing: border-box;
-    width: 48px;
-    height: 48px;
-    transform: rotate(0deg);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.balloon2 {
-    position: absolute;
-    content: "";
-    font-weight: bold;
-    bottom: 0px;
-    right: -10px;
-    border: 9px solid #0000;
-    border-left: 15px solid #3616a8;
-    transform: rotate(34deg);
-    z-index: 0;
 }
