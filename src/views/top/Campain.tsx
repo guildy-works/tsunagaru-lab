@@ -36,8 +36,8 @@ export const Campaign = () => <>
             </div>
 
             <div className="w-full overflow-hidden flex flex-col items-center justify-center">
-                <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#8355f6]" className={clsx("text-[1.6rem] text-white", styles.tooltip)}>LINE登録者限定</SkewScrollTriggerAnimation>
-                <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#8355f6]" className="-mt-2 text-[2.4rem] pt-6 pb-2 font-bold text-white relative">
+                <SkewScrollTriggerAnimation tag="h2" skewPanelClass="!bg-[#8355f6]" className={clsx("text-[1.6rem] leading-[1.6rem] text-white", styles.tooltip)}>LINE登録者限定</SkewScrollTriggerAnimation>
+                <SkewScrollTriggerAnimation tag="h3" skewPanelClass="!bg-[#8355f6]" className="-mt-2 text-[2.4rem] leading-[2.4rem] pt-6 pb-2 font-bold text-white relative">
                     無料キャンペーン！
 
                     <Image src={Lines3} alt="lines" className="absolute -top-2 right-3 w-7 -rotate-12" />

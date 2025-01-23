@@ -57,7 +57,7 @@ export const OnayamiSection = () => {
                 </motion.div>
             </div>
 
-            <SkewScrollTriggerAnimation tag="h2" className="text-title1 leading-[2.5rem] font-bold mx-auto">
+            <SkewScrollTriggerAnimation tag="h2" className="text-title1 leading-[3.5rem] font-bold mx-auto">
                 こんな悩みありませんか？
             </SkewScrollTriggerAnimation>
 
