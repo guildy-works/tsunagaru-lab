@@ -17,7 +17,7 @@ export const OnayamiSection = () => {
     const Chip = ({ children, delay }: { children: ReactNode, delay: number }) =>
         <FadeAndSlideScrollTriggerAnimation
             delay={delay}
-            className="rounded-full font-bold px-6 py-2 bg-color3 text-[1.6rem]  tracking-tighter">
+            className="rounded-full font-bold px-6 py-2 bg-color3 text-[1.56rem]  tracking-tighter">
             {children}
         </FadeAndSlideScrollTriggerAnimation>
 
@@ -32,7 +32,7 @@ export const OnayamiSection = () => {
 
         <div className="w-full flex flex-col items-center mx-auto justify-center">
 
-            <div className="flex flex-col items-center mx-auto md:max-w-3xl max-w-[328px] md:w-full">
+            <div className="flex flex-col items-center mx-auto md:max-w-4xl max-w-[398px] md:w-full">
                 <h2 className="flex  gap-2 md:gap-1 z-10 w-fit md:w-full justify-center flex-wrap items-center">
                     <div className="flex items-baseline justify-center w-full md:w-fit gap-1">
                         <Chip delay={0}>フリーランス</Chip>
@@ -41,7 +41,7 @@ export const OnayamiSection = () => {
                     </div>
                     <Dot delay={0.3} className="hidden md:block" />
                     <div className="flex items-baseline justify-center w-full md:w-fit gap-1">
-                        <Chip delay={0.4}>学生</Chip>
+                        <Chip delay={0.4}>大学生や社会人</Chip>
                         <Dot delay={0.5} />
                         <Chip delay={0.6}>独立したい方</Chip>
                     </div>

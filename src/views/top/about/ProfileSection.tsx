@@ -38,7 +38,7 @@ export const ProfileSection = () => <SectionBox className={clsx(
             </SkewScrollTriggerAnimation>
 
             <SkewScrollTriggerAnimation tag="p">   このコミュニティでは<br />
-                フリーランス、経営者、大学生、独立したい方が中心となって<br />
+                フリーランス、経営者、大学生や社会人、独立したい方が中心となって<br />
                 「中四国地方で一番盛り上がるコミュニティ」を<br />
                 創り上げることを目標としています<br /><br />
             </SkewScrollTriggerAnimation>

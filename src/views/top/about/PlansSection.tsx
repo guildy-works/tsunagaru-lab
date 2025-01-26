@@ -22,12 +22,12 @@ export const PlansSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
                     <PlanItem title={<>フリープラン</>}
                         price="¥0/月"
-                        title2={<>学生におすすめ</>}
+                        title2={<>大学生・社会人におすすめ</>}
                         content={<ul className="list-disc px-4">
-                            <li>交流会やイベントへの参加</li>
-                            <li>セミナー・勉強会への参加</li>
-                            <li>地域イベントや企業情報受け取り
-                            </li>
+                            <li>交流会の参加</li>
+                            <li>セミナーや勉強会の参加</li>
+                            <li>地域や企業イベントの参加</li>
+                            <li>求人情報受け取り</li>
                         </ul>}
                         markerClassName="bg-color1"
                         src={Issue1}
@@ -39,11 +39,11 @@ export const PlansSection = () => {
                         title2={<>フリーランス・経営者におすすめ</>}
                         content={<ul className="list-disc px-4">
                             <li>フリープラン機能</li>
+                            <li>イベントや事業の宣伝</li>
+                            <li>求人や仕事の募集</li>
                             <li>オンライン朝活</li>
-                            <li>地元チャットトーク</li>
-                            <li>スキルやノウハウの情報共有</li>
-                            <li>イベントや事業の宣伝し放題</li>
-                            <li>求人募集や案件の受発注し放題</li>
+                            <li>情報共有</li>
+                            <li>チャット交流</li>
                         </ul>}
                         src={Issue1}
                     />

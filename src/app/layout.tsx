@@ -22,7 +22,7 @@ export default function RootLayout({
         <html lang="ja" >
             <head>
                 <title>{"つながるラボ"}</title>
-                <meta name="description" content="つながるラボは中四国地方専用のビジネスオンラインコミュニティです。フリーランス、経営者、大学生、独立を目指す方が集まり、人脈作りやスキルアップ、集客、地域課題解決に取り組みます。無料プランから始められ、イベントやセミナーも充実！LINE登録でお得なキャンペーン実施中！"/>
+                <meta name="description" content="つながるラボは中四国地方専用のビジネスオンラインコミュニティです。フリーランス、経営者、大学生や社会人、独立を目指す方が集まり、人脈作りやスキルアップ、集客、地域課題解決に取り組みます。無料プランから始められ、イベントやセミナーも充実！LINE登録でお得なキャンペーン実施中！"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@900&display=swap" rel="stylesheet" />
