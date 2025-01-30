@@ -52,6 +52,7 @@ export const resources = {
         discord: "https://discord.gg/J8chE8qKky?openExternalBrowser=1",
         personalLine: "https://s.lmes.jp/landing-qr/2006439228-oBz5G5DO?uLand=NxpEQ9",
         personalInstagram: "https://www.instagram.com/tsuna_lab?igsh=aGVidzA2czQzcjk3",
+        discordOfficial: "https://discord.com/",
     },
     members1: [
 

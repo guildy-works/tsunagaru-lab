@@ -1,3 +1,4 @@
+import { DiscordSection } from "./about/DiscordSection";
 import { IntroduceSection } from "./about/IntroduceSection";
 import { MembersSection } from "./about/MembersSection";
 import { OnayamiSection } from "./about/OnayamiSection";
@@ -12,7 +13,7 @@ export default function AboutSection() {
             <OnayamiSection />
 
             <IntroduceSection />
-
+            <DiscordSection />
             <MembersSection />
 
             <PlansSection />

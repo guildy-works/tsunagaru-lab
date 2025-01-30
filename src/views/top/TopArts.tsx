@@ -31,7 +31,7 @@ export const TopArt = () => {
 const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
     <div className='-mt-2 min-h-[75svh] relative flex flex-col justify-center items-center overflow-hidden'>
         <motion.div
-            transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.5 }}
+            transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.25 }}
             initial={{ translateX: "-100%", opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -39,7 +39,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <motion.div
-            transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.8 }}
+            transition={{ type: "spring", mass: 0.4, duration: 1, }}
             initial={{ translateY: "100%", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -47,7 +47,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <motion.div
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 1, delay: 0.2 }}
             initial={{ translateY: "100%", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -55,7 +55,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <motion.div
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.1 }}
             initial={{ translateY: "100%", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -63,7 +63,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <motion.div
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
             initial={{ translateY: "-100%", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -71,7 +71,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <motion.div
-            transition={{ mass: 0.4, duration: 1, delay: 0.4 }}
+            transition={{ mass: 0.4, duration: 1,   }}
             initial={{ translateY: "-100%", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -79,7 +79,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <motion.div
-            transition={{ duration: 1, delay: 0.7 }}
+            transition={{ duration: 1, delay: 0.3 }}
             initial={{ translateY: "-100%", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -87,7 +87,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <motion.div
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ duration: 1, delay: 0.25 }}
             initial={{ translateY: "-100%", opacity: 0 }}
             animate={{ translateY: 0, opacity: 1 }}
             className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -112,18 +112,18 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
 
         <div className='mt-32 flex flex-wrap gap-4 justify-center'>
             <div>
-                <motion.div transition={{ type: "spring", damping: 5, mass: 0.4, delay: 2.2 }}
+                <motion.div transition={{ type: "spring", damping: 5, mass: 0.4,  }}
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}>
                     <Image src={Logo} alt="Logo" className="w-40 md:w-48 object-cover" />
                 </motion.div>
             </div>
             <div className='flex flex-col justify-center items-center px-8 gap-8'>
-                <SkewScrollTriggerAnimation tag="h1" className='font-maru text-title1 text-center' delay={1.7}>
+                <SkewScrollTriggerAnimation tag="h1" className='font-maru text-title1 text-center'>
                     つながる、広がる、中四国
                 </SkewScrollTriggerAnimation>
 
-                <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title3 text-center' delay={1.9}>
+                <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title3 text-center' >
                     中四国地方専用<br />
                     ビジネスオンラインコミュニティ
                 </SkewScrollTriggerAnimation>
@@ -135,7 +135,7 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
             viewBox="0 0 1530 113"
             className='mb-40 mt-12 w-full stroke-[6px] md:!stroke-2'>
             <motion.path
-                transition={{ duration: 2.2, delay: 1.5 }}
+                transition={{ duration: 0.8,  }}
                 initial={{ strokeDasharray: 1930, strokeDashoffset: 1930 }}
                 animate={{ strokeDasharray: 1930, strokeDashoffset: 0 }}
                 className=' stroke-orange-600 z-50 '
@@ -156,7 +156,7 @@ const Mobile = () => <div
     style={{ minHeight: 'calc(100svh - 62px)' }}
     className='sm:hidden relative flex flex-col justify-center items-center overflow-hidden rotate'>
     <motion.div
-        transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.5 }}
+        transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.25 }}
         initial={{ translateX: "-100%", opacity: 0 }}
         animate={{ translateX: 0, opacity: 1 }}
         className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -164,7 +164,7 @@ const Mobile = () => <div
     </motion.div>
 
     <motion.div
-        transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.8 }}
+        transition={{ type: "spring", mass: 0.4, duration: 1, delay: 0.4 }}
         initial={{ translateY: "100%", opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -172,7 +172,7 @@ const Mobile = () => <div
     </motion.div>
 
     <motion.div
-        transition={{ duration: 1, delay: 0.4 }}
+        transition={{ duration: 1, delay: 0.2 }}
         initial={{ translateY: "100%", opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         className='absolute bottom-0 left-0 size-fit flex justify-center items-center'>
@@ -180,7 +180,7 @@ const Mobile = () => <div
     </motion.div>
 
     <motion.div
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 0.1 }}
         initial={{ translateY: "100%", opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -188,7 +188,7 @@ const Mobile = () => <div
     </motion.div>
 
     <motion.div
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay:0.3}}
         initial={{ translateY: "-100%", opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -196,7 +196,7 @@ const Mobile = () => <div
     </motion.div>
 
     <motion.div
-        transition={{ mass: 0.4, duration: 1, delay: 0.4 }}
+        transition={{ mass: 0.4, duration: 1, delay: 0.14 }}
         initial={{ translateY: "-100%", opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -204,7 +204,7 @@ const Mobile = () => <div
     </motion.div>
 
     <motion.div
-        transition={{ duration: 1, delay: 0.7 }}
+        transition={{ duration: 1, delay: 0.1 }}
         initial={{ translateY: "-100%", opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -212,7 +212,7 @@ const Mobile = () => <div
     </motion.div>
 
     <motion.div
-        transition={{ duration: 1, delay: 0.6 }}
+        transition={{ duration: 1,  }}
         initial={{ translateY: "-100%", opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}
         className='absolute top-0 left-0 inset-0 flex justify-center items-center'>
@@ -237,18 +237,18 @@ const Mobile = () => <div
 
     <div className='mt-32 flex flex-wrap gap-4 justify-center'>
         <div>
-            <motion.div transition={{ type: "spring", damping: 5, mass: 0.4, delay: 2.2 }}
+            <motion.div transition={{ type: "spring", damping: 5, mass: 0.4, }}
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}>
                 <Image src={Logo} alt="Logo" className="w-40 md:w-48 object-cover" />
             </motion.div>
         </div>
         <div className='flex flex-col justify-center items-center px-8 gap-4'>
-            <SkewScrollTriggerAnimation tag="h1" className='text-[2rem] font-maru text-center leading-[2.4rem]' delay={1.7}>
+            <SkewScrollTriggerAnimation tag="h1" className='text-[2rem] font-maru text-center leading-[2.4rem]' >
                 つながる、広がる、中四国
             </SkewScrollTriggerAnimation>
 
-            <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title4 text-center' delay={1.9}>
+            <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title4 text-center' >
                 中四国地方専用<br />
                 ビジネスオンラインコミュニティ
             </SkewScrollTriggerAnimation>
@@ -260,7 +260,7 @@ const Mobile = () => <div
         viewBox="0 0 1530 113"
         className='mb-3 mt-4 w-full stroke-[6px] md:!stroke-2'>
         <motion.path
-            transition={{ duration: 2.2, delay: 1.5 }}
+            transition={{ duration: 1.2,  }}
             initial={{ strokeDasharray: 1930, strokeDashoffset: 1930 }}
             animate={{ strokeDasharray: 1930, strokeDashoffset: 0 }}
             className=' stroke-orange-600 z-50 '

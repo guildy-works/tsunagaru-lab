@@ -4,7 +4,6 @@ import { ScrollIndicator } from "@/components/ScrollIndicatior";
 import { TopSection } from "@/views/top/TopSection";
 import AboutSection from "@/views/top/AboutSection";
 import { ContactSection } from "@/views/top/ContactSection";
-import { FeaturesSection } from "@/views/top/FeaturesSection";
 import { FaqSection } from "@/views/top/FaqSection";
 import { HowToJoinSection } from "@/views/top/HowToJoinSection";
 

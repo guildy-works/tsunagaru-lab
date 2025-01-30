@@ -1,17 +1,9 @@
 import { SectionType1 } from "@/components/SectionType1"
-import { SnsLinkList } from "@/components/SnsLinkList"
 import Image from 'next-export-optimize-images/picture';
-
-import LineQR from "@/assets/LineQR.png"
-import { Button2 } from "@/components/Button2";
-import { Button3 } from "@/components/Button3";
-import { Button } from "@headlessui/react";
-import { ButtonRightArrow } from "@/components/ButtonRightArrow";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Line from '@/assets/sns/LINE.svg'
 import ReccomendsBalloon from '@/assets/recommends-balloon.png'
-import Discord from '@/assets/sns/Discord.svg'
 import { resources } from "@/resources";
 import { MdEmail } from "react-icons/md";
 
@@ -58,16 +50,6 @@ export const ContactSection = () => {
                     </Link>
 
                 </motion.div>
-
-                <ButtonRightArrow className="w-fit mx-auto md:mb-32" href={resources.links.discord} >
-                    <div className="flex items-center gap-3">
-                        <Image src={Discord} alt="Line" className="w-12" />
-                        <div className="flex flex-col items-center gap-2 text-[1rem] leading-[1.6rem]">
-                            無料で<br />
-                            つながるラボを覗く
-                        </div>
-                    </div>
-                </ButtonRightArrow>
             </SectionType1>
         </>
     )

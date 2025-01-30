@@ -1,9 +1,6 @@
 import { SectionBox } from "@/components/SectionBox"
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react"
 import { MdArrowDownward, MdArrowDropDown } from "react-icons/md"
-import Image from 'next-export-optimize-images/picture';
-import Illust from "@/assets/illust1.webp";
-import { motion } from "motion/react";
 import { resources } from "@/resources";
 
 export const FaqSection = () => {
@@ -43,13 +40,6 @@ export const FaqSection = () => {
                 </Disclosure>)
                 }
             </div>
-
-            <motion.div
-                transition={{ delay: 0.5 }}
-                initial={{ scale: 1.1, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}>
-                <Image src={Illust} alt="Q&A" />
-            </motion.div>
         </SectionBox>
     )
 }

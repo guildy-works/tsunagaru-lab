@@ -4,7 +4,7 @@
 }
 
 .left {
-    @apply flex items-center justify-center text-white px-8;
+    @apply flex items-center justify-center text-white pl-6 pr-2;
     height: 80px;
 }
 
@@ -14,7 +14,7 @@
     border-style: solid;
     border-top: 42px solid transparent;
     border-bottom: 42px solid transparent;
-    border-left: 30px solid #5865f2;
+    border-left: 30px solid #8c52ff;
     border-right: 0;
     margin-left: -1px;
 }

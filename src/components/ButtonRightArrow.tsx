@@ -8,10 +8,10 @@ export const ButtonRightArrow = ({ onClick,href,children ,className}: {href:stri
 
     return (
         <Link target="_blank" href={href} onClick={onClick} className={clsx("flex cursor-pointer overflow-hidden group", styles.button,className)}>
-            <div className={clsx("h-full  bg-[#5865f2] flex-1 group-hover:bg-color1",styles.left)}>
+            <div className={clsx("h-full  bg-[#8c52ff] flex-1 group-hover:bg-[#9865ff]",styles.left)}>
                 {children}
             </div>
-            <div className={clsx(styles.triangle,"group-hover:border-l-color1")}></div>
+            <div className={clsx(styles.triangle,"group-hover:border-l-[#9865ff]")}></div>
         </Link>
     )
 }
