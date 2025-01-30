@@ -37,9 +37,9 @@ export const DiscordSection = () => {
                 <ButtonRightArrow className="w-fit mx-auto" href={resources.links.discord} >
                     <div className="flex items-center gap-3">
                         <Image src={Discord} alt="Line" className="w-12" />
-                        <div className="flex flex-col items-center text-center gap-2 text-[1rem] leading-[1.6rem]">
+                        <div className="flex flex-col items-center text-center gap-0 text-[1.2rem] leading-[1.6rem]">
                             <big className="pr-2">つながるラボを覗く</big>
-                            <small className="pr-2"> (招待を受ける)</small>
+                            <span className="pr-8 mt-1"> (招待を受ける)</span>
                         </div>
                     </div>
                 </ButtonRightArrow>
