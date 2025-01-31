@@ -21,15 +21,14 @@ export const DiscordSection = () => {
                 initial={{ scale: 1.1, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 className="rounded-3xl bg-[#5e18eb] py-8 px-4 md:p-16 md:px-48 w-full my-8 md:my-32 !mb-8 flex flex-col">
-                <h2 className="text-white text-center mb-2  text-title1">コミュニティの様子</h2>
+                <h2 className="text-white text-center mb-2 text-title1">コミュニティの様子</h2>
 
                 <p className="text-center text-white text-title3 mt-2 leading-[2.4rem]">
                     つながるラボでは<br/>
                     <Link href={resources.links.discordOfficial} target="_blank" className="text-color10 underline">
                         Discord
                     </Link>
-                    という<br/>
-                    無料アプリ内を活用します
+                    という無料アプリを活用します
                 </p>
 
                 <Image src={DiscordPng} alt="Discord" className="w-full mx-auto my-8" />
