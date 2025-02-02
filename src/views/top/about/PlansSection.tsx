@@ -27,7 +27,7 @@ export const PlansSection = () => {
                             <li>交流会の参加</li>
                             <li>セミナーや勉強会の参加</li>
                             <li>地域や企業イベントの参加</li>
-                            <li>求人情報受け取り</li>
+                            <li>求人や案件情報の受け取り</li>
                         </ul>}
                         markerClassName="bg-color1"
                         src={Issue1}

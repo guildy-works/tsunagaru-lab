@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/css": "^11.11.2",
-    "@emotion/react": "^11.11.4",
     "@headlessui/react": "^0.0.0-insiders.b6f355d",
     "@splidejs/react-splide": "^0.7.12",
     "clsx": "^2.1.1",
