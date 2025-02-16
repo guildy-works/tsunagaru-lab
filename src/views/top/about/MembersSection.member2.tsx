@@ -10,7 +10,6 @@ export const MembersSection2 = () => {
 
     return (
         <div className="w-full flex flex-col items-center mx-auto gap-8 justify-center">
-
             <SkewScrollTriggerAnimation tag="h2" className="text-title1 font-bold">入会者の紹介</SkewScrollTriggerAnimation>
 
             <Splide
@@ -30,7 +29,6 @@ export const MembersSection2 = () => {
                     autoWidth: true,
                 } as Options}
             >
-
                 {resources.members2.map((resource, index) => (<SplideSlide key={resource.name} >
                     <OnayamiItem title={resource.name}
                         key={index}

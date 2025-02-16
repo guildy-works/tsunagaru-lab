@@ -10,7 +10,6 @@ import Image from 'next-export-optimize-images/picture';
 import { motion } from "motion/react";
 import { SkewScrollTriggerAnimation } from "@/libs/ScrollTriggerAnimations/SkewScrollTriggerAnimation";
 import clsx from "clsx";
-
 import Line1 from "@/assets/line1.svg";
 
 export const OnayamiSection = () => {
