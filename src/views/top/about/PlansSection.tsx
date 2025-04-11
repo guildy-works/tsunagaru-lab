@@ -35,7 +35,7 @@ export const PlansSection = () => {
 
                     <PlanItem title={<>ビジネスプラン</>}
                         markerClassName="bg-color2"
-                        price="¥2,980/月"
+                        price="¥1,980/月"
                         title2={<>フリーランス・経営者におすすめ</>}
                         content={<ul className="list-disc px-4">
                             <li>フリープラン機能</li>
