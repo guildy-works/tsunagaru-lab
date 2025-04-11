@@ -44,7 +44,7 @@ export const IntroduceSection = () => {
                         image={x.image}
                         baloon={x.baloon}
                         delay={0}
-                        key={x.title}
+                        key={i}
                         num={x.num}
                         title={x.title}
                         content={x.content}
@@ -53,18 +53,20 @@ export const IntroduceSection = () => {
             }
         </div>
 
-        <div className="hidden mt-16 hiddlen w-full md:grid grid-cols-3 gap-8 max-w-7xl px-8" >
+        <div className="hidden mt-16 hiddlen w-full md:flex justify-center flex-wrap max-w-7xl px-8" >
             {
                 resources.introduces.map((x, i) =>
-                    <IntroduceItem
-                        image={x.image}
-                        baloon={x.baloon}
-                        delay={i * 0.1}
-                        key={x.title}
-                        num={x.num}
-                        title={x.title}
-                        content={x.content}
-                    />
+                    <div className="p-4 md:w-1/3">
+                        <IntroduceItem
+                            image={x.image}
+                            baloon={x.baloon}
+                            delay={i * 0.1}
+                            key={x.num}
+                            num={x.num}
+                            title={x.title}
+                            content={x.content}
+                        />
+                    </div>
                 )
             }
         </div>
@@ -98,7 +100,7 @@ const IntroduceItem = ({ title, content, num, delay, baloon, image }: {
                 <span className="text-[4rem] mx-auto mt-8">{num}</span>
             </h3>
 
-            <h3 className="text-[1.72rem] mt-8">
+            <h3 className="text-[1.72rem] mt-8 leading-[2rem] text-center font-bold">
                 {title}
             </h3>
 

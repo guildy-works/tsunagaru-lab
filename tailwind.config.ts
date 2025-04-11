@@ -33,6 +33,7 @@ const config: Config = {
             title3: ['min(4.6vw, 1.8rem)', { letterSpacing: "0rem", lineHeight: "2rem", fontWeight: "700" }],
             title2: ['min(5.8vw, 2.2rem)', { letterSpacing: "0rem", lineHeight: "2.5rem", fontWeight: "700" }],
             title1: ['min(6.5vw, 2.8rem)', { letterSpacing: "0rem", lineHeight: "3.8rem", fontWeight: "700" }],
+            titleLarge: ['min(7vw, 4rem)', { letterSpacing: "0rem", lineHeight: "3.8rem", fontWeight: "700" }],
         },
 
         screens: {

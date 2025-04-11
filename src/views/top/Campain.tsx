@@ -9,7 +9,7 @@ import Lines3 from "@/assets/lines3.png"
 import Image from 'next-export-optimize-images/picture';
 
 export const Campaign = () => <>
-    <div className="w-full p-4 flex flex-col justify-center items-center gap-4 relative">
+    <div className="w-full p-8 md:p-12 flex flex-col justify-center items-center gap-4 relative">
 
         <motion.div
             viewport={{ once: true }}

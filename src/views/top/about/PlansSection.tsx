@@ -39,8 +39,8 @@ export const PlansSection = () => {
                         title2={<>フリーランス・経営者におすすめ</>}
                         content={<ul className="list-disc px-4">
                             <li>フリープラン機能</li>
-                            <li>イベントや事業の宣伝</li>
-                            <li>求人や仕事の募集</li>
+                            <li>イベントや事業の宣伝し放題</li>
+                            <li>求⼈や仕事の募集し放題</li>
                             <li>オンライン朝活</li>
                             <li>情報共有</li>
                             <li>チャット交流</li>
@@ -53,10 +53,6 @@ export const PlansSection = () => {
             <ServiceDialog buttonText="詳細" >
                 <PlanTable />
             </ServiceDialog>
-
-            <Button4 href={resources.links.line} subTitle="お気軽にお問い合わせください！" >
-                無料で入会する
-            </Button4>
         </SectionBox>
     )
 }

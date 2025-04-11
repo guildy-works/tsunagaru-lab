@@ -19,8 +19,8 @@ export const ContactSection = () => {
                     initial={{ scale: 1.1, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 !mb-8 flex flex-col">
-                    <h2 className="text-title2 text-center mb-2">お問い合わせ</h2>
-                    <p className="text-center text-color0/60 mb-8">詳細、入会などはこちらから</p>
+                    <h2 className="text-title2 text-center mb-2">⼊会はコチラ</h2>
+                    <p className="text-center text-color0/60 mb-8">お気軽にお問い合わせください</p>
 
                     <motion.div
                         viewport={{ once: true }}
@@ -28,17 +28,16 @@ export const ContactSection = () => {
                         initial={{ opacity: 0, }}
                         whileInView={{ opacity: 1 }}
                         className='w-full text-center text-color10 text-title3'>
-                        お気軽に<br className='' />
-                        お問い合わせください
+                        ＼無料キャンペーン実施中∕
                     </motion.div>
 
                     <Link
                         target="_blank"
                         href={resources.links.line}
-                        className="relative mx-auto mt-8 flex items-center gap-3 bg-color3 rounded-full text-white text-title3 px-8 py-2 hover:bg-color3/90 w-full max-w-[380px]">
+                        className="relative mx-auto mt-8 flex items-center gap-3 bg-color3 rounded-full text-center text-white text-title3 px-8 py-2 hover:bg-color3/90 w-full max-w-[380px]">
                         <Image src={Line} alt="Line" className="w-12" />
                         <Image src={ReccomendsBalloon} alt="Line" className="absolute -right-4 top-0 w-32 translate-x-1/4 -translate-y-1/2" />
-                        公式LINEを追加する
+                       <span className="ml-10 md:ml-14">⼊会する</span> 
                     </Link>
 
                     <Link
