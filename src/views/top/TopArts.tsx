@@ -330,14 +330,14 @@ const DiscordWidget = () => {
     return (
         <motion.div
             transition={{ type: "spring", damping: 5, mass: 0.4, }}
-            className='text-title3 text-center bg-[#ffde58] p-4 sm:p-5 md:p-8 rounded-3xl mt-8 z-10'
+            className='text-title3 text-center bg-[#ffde58] p-4 md:p-6 md:px-8 rounded-3xl mt-8 z-10'
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
         >
-            <h3>つながるラボの⼊会者数</h3>
-            <p className='mt-2 sm:mt-4'>{date.getFullYear()}年{date.getMonth() + 1}月時点の入会者数 </p>
+            <h3>つながるラボ</h3>
+            <p className='mt-2'>{date.getFullYear()}年{date.getMonth() + 1}月時点の入会者数 </p>
             <div className='flex flex-wrap gap-4'>
-                <div className='flex items-center gap-2 mt-2 sm:mt-3 md:mt-4 text-title4'>
+                <div className='flex items-center gap-2 mt-1 text-title4'>
                     <span className="relative flex size-5">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-50"></span>
                         <span className="relative inline-flex size-5 rounded-full bg-green-500 animate-pulse"></span>
@@ -348,7 +348,7 @@ const DiscordWidget = () => {
                     </span>
                 </div>
 
-                <div className='flex items-center gap-2 mt-2 sm:mt-3 md:mt-4 text-title4'>
+                <div className='flex items-center gap-2 mt-1 text-title4'>
                     <span className="relative flex size-5">
                         <span className="relative inline-flex size-5 rounded-full bg-gray-300"></span>
                     </span>

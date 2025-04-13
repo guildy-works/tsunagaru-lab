@@ -43,7 +43,7 @@ const config: Config = {
             xl: '1920px',
         },
         fontFamily: {
-            maru: ['Zen Maru Gothic', 'sans-serif'],
+            maru: ['rounded-mplus-1c', 'sans-serif'],
         },
         colors: {
             ...colors,
