@@ -17,7 +17,7 @@ import { Button2 } from '@/components/Button2'
 import { resources } from '@/resources'
 import { Campaign } from './Campain'
 import css from "@/components/Balloon.module.scss"
-import { useEffect, useState } from 'react'
+import { use, useEffect, useState } from 'react'
 
 // Discord widget type definition
 type DiscordWidgetData = {
@@ -326,6 +326,7 @@ const DiscordWidget = () => {
     const onlineCount = widgetData?.online || 0;
     const totalMembers = widgetData?.total || 0;
 
+    const [date] = useState(() => new Date())
     return (
         <motion.div
             transition={{ type: "spring", damping: 5, mass: 0.4, }}
@@ -334,6 +335,7 @@ const DiscordWidget = () => {
             animate={{ opacity: 1, scale: 1 }}
         >
             <h3>つながるラボの⼊会者数</h3>
+            <p className='mt-2 sm:mt-4'>{date.getFullYear()}年{date.getMonth() + 1}月時点の入会者数 </p>
             <div className='flex flex-wrap gap-4'>
                 <div className='flex items-center gap-2 mt-2 sm:mt-3 md:mt-4 text-title4'>
                     <span className="relative flex size-5">
@@ -352,7 +354,7 @@ const DiscordWidget = () => {
                     </span>
                     <span className='ml-2 sm:ml-4 items-baseline'>
                         <big> {totalMembers}</big>
-                        <span>人が登録済み</span>
+                        <span>人がメンバー</span>
                     </span>
                 </div>
             </div>

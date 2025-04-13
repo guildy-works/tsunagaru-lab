@@ -36,8 +36,7 @@ export const ContactSection = () => {
                         href={resources.links.line}
                         className="relative mx-auto mt-8 flex items-center gap-3 bg-color3 rounded-full text-center text-white text-title3 px-8 py-2 hover:bg-color3/90 w-full max-w-[380px]">
                         <Image src={Line} alt="Line" className="w-12" />
-                        <Image src={ReccomendsBalloon} alt="Line" className="absolute -right-4 top-0 w-32 translate-x-1/4 -translate-y-1/2" />
-                       <span className="ml-10 md:ml-14">⼊会する</span> 
+                       <span className="mx-auto pr-12">⼊会する</span> 
                     </Link>
 
                     <Link

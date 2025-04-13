@@ -30,8 +30,9 @@ export const Header = () => {
     return (
         <>
             <header className="flex w-full items-center sticky top-0 mt-0 bg-gradient-opacity backdrop-blur-lg z-50 border-b border-black/5">
-                <Link href="/" className='p-2'>
+                <Link href="/" className='p-2 flex items-center'>
                     <Image src={Logo} alt="Logo" width={80} className='w-[50px] md:w-[80px]' />
+                   <span className='text-[1.8rem] sm:text-[2.4rem] text-white ml-2 tracking-tighter'>つながるラボ</span> 
                 </Link>
 
                 {/* Desktop */}

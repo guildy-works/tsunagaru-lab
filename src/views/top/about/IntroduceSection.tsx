@@ -93,7 +93,7 @@ const IntroduceItem = ({ title, content, num, delay, baloon, image }: {
             }}
             initial={{ translateY: "60px", opacity: 0.4 }}
             whileInView={{ translateY: "0px", opacity: 1 }}
-            className="relative p-8 w-full h-full flex flex-col items-center gap-4 bg-gradient4 rounded-3xl" >
+            className="relative py-8 px-6 w-full h-full flex flex-col items-center gap-4 bg-gradient4 rounded-3xl" >
 
             <h3 className="text-color2 flex flex-col text-[3rem]">
                 <span> Point</span>
@@ -112,7 +112,7 @@ const IntroduceItem = ({ title, content, num, delay, baloon, image }: {
                     : <MdOutlinePhoto className="text-[12rem]" />
             }
 
-            <p className="text-size2">{content}</p>
+            <p className="text-size2 text-center">{content}</p>
             {baloon ? <FadeAndSlideScrollTriggerAnimation delay={0.4}
                 className="pt-0 md:pt-12 z-10 absolute -right-[32px] top-0 bottom-0 m-auto pb-24 size-fit" >
                 <Image src={baloon} alt="img" className="w-40" />
