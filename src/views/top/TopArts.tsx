@@ -148,14 +148,14 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
         </motion.div>
 
         <div className='mt-32 flex flex-wrap gap-4 justify-center'>
-            <div>
+            <div className=' z-10'>
                 <motion.div transition={{ type: "spring", damping: 5, mass: 0.4, }}
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}>
                     <Image src={Logo} alt="Logo" className="w-64 md:w-72 lg:w-96 object-cover" />
                 </motion.div>
             </div>
-            <div className='flex flex-col justify-center items-center px-8 gap-8 -z-10'>
+            <div className='flex flex-col justify-center items-center px-8 gap-8'>
                 <SkewScrollTriggerAnimation tag="h1"  className='font-maru text-titleLarge text-center leading-[4.2rem]' >
                     つながる、広がる、中四国
                 </SkewScrollTriggerAnimation>
