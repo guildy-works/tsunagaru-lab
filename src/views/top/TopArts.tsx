@@ -155,8 +155,8 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
                     <Image src={Logo} alt="Logo" className="w-64 md:w-72 lg:w-96 object-cover" />
                 </motion.div>
             </div>
-            <div className='flex flex-col justify-center items-center px-8 gap-8'>
-                <SkewScrollTriggerAnimation tag="h1" className='font-maru text-titleLarge text-center leading-[4.2rem]' >
+            <div className='flex flex-col justify-center items-center px-8 gap-8 -z-10'>
+                <SkewScrollTriggerAnimation tag="h1"  className='font-maru text-titleLarge text-center leading-[4.2rem]' >
                     つながる、広がる、中四国
                 </SkewScrollTriggerAnimation>
 
@@ -189,7 +189,6 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
     <div
         className="bg-gradient1 w-full flex flex-col justify-center items-center gap-4">
         <Campaign />
-
     </div>
 </div >
 
@@ -287,7 +286,7 @@ const Mobile = () => <div className='sm:hidden '>
                 </motion.div>
             </div>
             <div className='flex flex-col justify-center items-center px-8 gap-4'>
-                <SkewScrollTriggerAnimation tag="h1" className='text-[2.2rem] font-maru text-center leading-[2.4rem]' >
+                <SkewScrollTriggerAnimation tag="h1" className='text-[2.1rem] tracking-tight font-maru text-center leading-[2.4rem]' >
                     つながる、広がる、中四国
                 </SkewScrollTriggerAnimation>
 
@@ -330,11 +329,11 @@ const DiscordWidget = () => {
     return (
         <motion.div
             transition={{ type: "spring", damping: 5, mass: 0.4, }}
-            className='text-title3 text-center bg-[#ffde58] p-4 md:p-6 md:px-8 rounded-3xl mt-8 z-10'
+            className=' text-center bg-[#ffde58] p-4 md:p-6 md:px-8 rounded-3xl mt-8 z-10'
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
         >
-            <h3>つながるラボ</h3>
+            <h3 className='text-[1.5rem] leading-[1.2rem] mt-1 sm:text-title3'>つながるラボ</h3>
             <p className='mt-2'>{date.getFullYear()}年{date.getMonth() + 1}月時点の入会者数 </p>
             <div className='flex flex-wrap gap-4'>
                 <div className='flex items-center gap-2 mt-1 text-title4'>
