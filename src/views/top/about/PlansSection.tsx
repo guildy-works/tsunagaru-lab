@@ -39,11 +39,11 @@ export const PlansSection = () => {
                         title2={<>フリーランス・経営者におすすめ</>}
                         content={<ul className="list-disc px-4">
                             <li>フリープラン機能</li>
+                            <li>交流会と朝活が無料</li>
+                            <li>求人や仕事の募集し放題</li>
                             <li>イベントや事業の宣伝し放題</li>
-                            <li>求⼈や仕事の募集し放題</li>
-                            <li>オンライン朝活</li>
-                            <li>情報共有</li>
-                            <li>チャット交流</li>
+                            <li>情報共有（賞金獲得チャンス）</li>
+                            <li>チャット交流とメンバー情報一覧＆DM</li>
                         </ul>}
                         src={Issue1}
                     />
