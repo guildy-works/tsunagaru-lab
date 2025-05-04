@@ -40,9 +40,9 @@ export const OnayamiSection = () => {
                     </div>
                     <Dot delay={0.3} className="hidden md:block" />
                     <div className="flex items-baseline justify-center w-full md:w-fit gap-1">
-                        <Chip delay={0.4}>大学生や社会人</Chip>
+                        <Chip delay={0.4}>社会人</Chip>
                         <Dot delay={0.5} />
-                        <Chip delay={0.6}>独立したい方</Chip>
+                        <Chip delay={0.6}>大学生</Chip>
                     </div>
                 </h2>
 
