@@ -5,7 +5,7 @@ import Link from "next/link";
 import Line from '@/assets/sns/LINE.svg'
 import ReccomendsBalloon from '@/assets/recommends-balloon.png'
 import { resources } from "@/resources";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdPlayCircle } from "react-icons/md";
 
 export const ContactSection = () => {
 
@@ -19,7 +19,7 @@ export const ContactSection = () => {
                     initial={{ scale: 1.1, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     className="rounded-2xl bg-white p-8 md:p-16 md:px-48 w-full my-8 md:my-32 !mb-8 flex flex-col">
-                    <h2 className="text-title2 text-center mb-2">⼊会はコチラ</h2>
+                    <h2 className="text-title2 text-center mb-2">入会はコチラ</h2>
                     <p className="text-center text-color0/60 mb-8">お気軽にお問い合わせください</p>
 
                     <motion.div
@@ -34,9 +34,14 @@ export const ContactSection = () => {
                     <Link
                         target="_blank"
                         href={resources.links.line}
-                        className="relative mx-auto mt-8 flex items-center gap-3 bg-color3 rounded-full text-center text-white text-title3 px-8 py-2 hover:bg-color3/90 w-full max-w-[380px]">
+                        className="relative mx-auto mt-8 flex items-center gap-3 bg-gradient6 border-[#ffde59] border-4 rounded-full text-center text-white text-title3 px-8 py-2 hover:bg-color3/90 w-full max-w-[380px]">
                         <Image src={Line} alt="Line" className="w-12" />
-                       <span className="mx-auto pr-12">⼊会する</span> 
+                        <span className="mx-auto text-title2">入会する</span>
+
+                        <div className="relative w-[3.3rem] h-[3.3rem]">
+                            <div className=" bg-yellow-400 absolute inset-3" />
+                            <MdPlayCircle className="text-[3.3rem] text-white absolute inset-0 m-auto" />
+                        </div>
                     </Link>
 
                     <Link

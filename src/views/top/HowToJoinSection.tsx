@@ -22,7 +22,7 @@ const data = [
     },
     {
         num: "02",
-        title: "入会申し込み",
+        title: "申し込み",
         img: Join2,
         content: <>
             Discordの確認をするために<br />
@@ -41,7 +41,7 @@ const data = [
     },
     {
         num: "04",
-        title: "正式入会",
+        title: "正式",
         img: Join4,
         content: <>
             問題がなければ<br />
@@ -54,7 +54,7 @@ const data = [
 export const HowToJoinSection = () => {
     return <SectionBox disablePx disableMaxWidth className="mx-auto max-w-4xl !gap-8">
         <h2 className="text-title1 w-full border-b-2 border-color3 pb-4 text-center border-dotted max-w-md">
-            入会方法
+            方法
         </h2>
 
         <div className="w-full flex flex-col  px-8" >

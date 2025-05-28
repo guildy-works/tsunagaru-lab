@@ -7,8 +7,6 @@ export const MembersSection = () => {
     return <SectionBox disablePx disableMaxWidth>
         <div className="w-full flex flex-col items-center mx-auto gap-4 justify-center">
             <MembersSection2 />
-
-            <Campaign />
         </div>
 
     </SectionBox>

@@ -161,8 +161,8 @@ const Desktop = () => <div className="hidden sm:flex flex-col gap-0">
                 </SkewScrollTriggerAnimation>
 
                 <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title2 text-center' >
-                    中四国地方専用<br />
-                    ビジネスオンラインコミュニティ
+                    中四国限定<br />
+                    ビジネスコミュニティ
                 </SkewScrollTriggerAnimation>
             </div>
         </div>
@@ -291,8 +291,8 @@ const Mobile = () => <div className='sm:hidden '>
                 </SkewScrollTriggerAnimation>
 
                 <SkewScrollTriggerAnimation tag="h2" className='font-maru text-title3 text-center' >
-                    中四国地方専用<br />
-                    ビジネスオンラインコミュニティ
+                    中四国限定<br />
+                    ビジネスコミュニティ
                 </SkewScrollTriggerAnimation>
             </div>
         </div>
